@@ -1,0 +1,16 @@
+{
+    "name": "Dyson-Sphere-Program-Lib",
+    "version": "0.0.5",
+    "title": "Dyson Sphere Program",
+    "author": "LUIS DAS ARTIMANAHS",
+    "contact": "luisaugustodesouza785@gmail.com",
+    "homepage": "https://github.com/LUISDASARTIMANHAS",
+    "description": "Objetivo desse mod para o jogo factorio e teleportar o jogador para qualquer lugar do mapa e dos planetas da dlc space age.",
+    "factorio_version": "2.0",
+    "dependencies": [
+        "base >= 2.0.0",
+        "space-age"
+    ],
+    "license": "GNU General Public License v3.0",
+    "thumbnail": "thumbnail.png"
+}
