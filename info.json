@@ -1,16 +1,22 @@
 {
     "name": "Dyson-Sphere-Program-Lib",
-    "version": "0.0.5",
+    "version": "0.0.1",
     "title": "Dyson Sphere Program",
     "author": "LUIS DAS ARTIMANAHS",
     "contact": "luisaugustodesouza785@gmail.com",
     "homepage": "https://github.com/LUISDASARTIMANHAS",
-    "description": "Objetivo desse mod para o jogo factorio e teleportar o jogador para qualquer lugar do mapa e dos planetas da dlc space age.",
+    "description": "Mod que importa tudo do jogo dyson sphere program, inspirado (mas não afiliado ao jogo dyson sphere program).",
     "factorio_version": "2.0",
     "dependencies": [
         "base >= 2.0.0",
         "space-age"
     ],
     "license": "GNU General Public License v3.0",
-    "thumbnail": "thumbnail.png"
+    "thumbnail": "thumbnail.png",
+    "quality_required": true,
+    "space_travel_required": true,
+    "spoiling_required": true,
+    "freezing_required": true,
+    "segmented_units_required": true,
+    "expansion_shaders_required": true
 }
