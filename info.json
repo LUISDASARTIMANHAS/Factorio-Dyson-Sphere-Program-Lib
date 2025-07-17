@@ -4,7 +4,7 @@
     "title": "Dyson Sphere Program Lib",
     "author": "LUIS DAS ARTIMANAHS",
     "contact": "luisaugustodesouza785@gmail.com",
-    "homepage": "https://github.com/LUISDASARTIMANHAS",
+    "homepage": "https://github.com/LUISDASARTIMANHAS/Factorio-Dyson-Sphere-Program-Lib",
     "description": "Mod que importa tudo do jogo dyson sphere program, inspirado (mas não afiliado ao jogo dyson sphere program).",
     "factorio_version": "2.0",
     "dependencies": [
