@@ -8,6 +8,12 @@ if exist .env (
     )
 )
 
+set allItemsExclude=
+
+for /f "usebackq delims=" %%x in ("%exclusionsFile%") do (
+    set allItemsExclude=!allItemsExclude! --exclude="%%x"
+)
+
 :: Verifica se a chave de API foi carregada
 if "%API_KEY%"=="" (
     echo API_KEY=default_preset >> .env
@@ -46,7 +52,7 @@ if "%MOD_NAME%"=="" (
 )
 
 :: Configurações do script
-set STEAM_FILE="D:\SteamLibrary\steamapps\common\Factorio\mods"
+set STEAM_FILE="Z:\SteamLibrary\steamapps\common\Factorio\mods"
 set AUTO_SEND=False
 set ZIP_FILE=%MOD_NAME%_%MOD_VERSION%.zip
 
@@ -57,8 +63,8 @@ if exist "%ZIP_FILE%" (
 
 :: Compacta todos os arquivos na pasta atual em um arquivo ZIP, excluindo .env e outros arquivos indesejados
 echo Compactando o mod em %ZIP_FILE%...
-tar -c -a -v -f "%ZIP_FILE%" --exclude=".env" --exclude="*.cmd" --exclude=".gitignore" --exclude="*.zip" --exclude="*.git" -o "."
-tar -c -a -v -f "%STEAM_FILE%/%ZIP_FILE%" --exclude=".env" --exclude="*.cmd" --exclude=".gitignore" --exclude="*.zip" --exclude="*.git" -o "."
+tar -c -a -v -f "%ZIP_FILE%" %allItemsExclude% -o "."
+tar -c -a -v -f "%STEAM_FILE%/%ZIP_FILE%" %allItemsExclude% -o "."
 
 :: Verifica se o arquivo ZIP foi criado com sucesso
 if not exist "%ZIP_FILE%" (

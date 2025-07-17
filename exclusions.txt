@@ -1,0 +1,6 @@
+.env
+*.cmd
+.gitignore
+*.zip
+*.git
+exclusions.txt
