@@ -1,6 +1,6 @@
-@echo on
+@echo off
 setlocal enabledelayedexpansion
-
+set exclusionsFile=exclusions.txt
 :: Carrega as variáveis do arquivo .env
 if exist .env (
     for /f "tokens=* delims=" %%i in (.env) do (
