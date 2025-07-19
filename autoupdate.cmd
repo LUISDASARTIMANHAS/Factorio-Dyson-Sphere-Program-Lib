@@ -1,4 +1,4 @@
-@echo off
+@echo on
 setlocal enabledelayedexpansion
 
 :: Carrega as variáveis do arquivo .env
@@ -11,8 +11,9 @@ if exist .env (
 set allItemsExclude=
 
 for /f "usebackq delims=" %%x in ("%exclusionsFile%") do (
-    set allItemsExclude=!allItemsExclude! --exclude="%%x"
+    set allItemsExclude=!allItemsExclude! --exclude="%%x
 )
+echo %allItemsExclude%
 
 :: Verifica se a chave de API foi carregada
 if "%API_KEY%"=="" (
