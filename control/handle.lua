@@ -9,7 +9,7 @@ local function crafted_item(event)
     end
 
     local item_stack = event.item_stack
-    if item_stack and item_stack.valid and item_stack.name == "quantum-teleporter-equipment" then
+    if item_stack and item_stack.valid and item_stack.name == "Dyson-Sphere-Program-Lib-equipment" then
         guimaker.create_teleport_window(player)
     end
 end
@@ -29,7 +29,7 @@ local function toggle_teleport_equipment(event)
 
     if armor and armor.valid_for_read and armor.grid then
         local grid = armor.grid
-        local has_teleporter = grid.get_contents()["quantum-teleporter-equipment"]
+        local has_teleporter = grid.get_contents()["Dyson-Sphere-Program-Lib-equipment"]
 
         if has_teleporter then
             -- Equipamento foi adicionado ou ainda está presente
@@ -68,7 +68,7 @@ local function check_teleport_equipment_on_respawn(event)
         return
     end
 
-    local has_teleporter = grid.get_contents()["quantum-teleporter-equipment"]
+    local has_teleporter = grid.get_contents()["Dyson-Sphere-Program-Lib-equipment"]
     if has_teleporter then
         -- Reativa a janela de teletransporte
         if not player.gui.screen.teleport_window then
@@ -105,7 +105,7 @@ local function teleport_cords(event)
         local armor = player.get_inventory(defines.inventory.character_armor)[1]
         if armor and armor.valid_for_read and armor.grid then
             local grid = armor.grid
-            local teleporter = grid.get_contents()["quantum-teleporter-equipment"]
+            local teleporter = grid.get_contents()["Dyson-Sphere-Program-Lib-equipment"]
             if teleporter then
                 local selected_index = surface_dropdown.selected_index
                 local surface_name = surface_dropdown.items[selected_index]

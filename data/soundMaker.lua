@@ -1,4 +1,4 @@
-local path_main = "__Quantum-Teleporter__/"
+local path_main = "__Dyson-Sphere-Program-Lib__/"
 
 data:extend(
     {

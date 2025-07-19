@@ -34,7 +34,7 @@ if "%MOD_NAME%"=="" (
 :: Inicializa o repositório Git (se necessário)
 if not exist ".git" (
     git init
-    git remote add origin https://github.com/LUISDASARTIMANHAS/Factorio-Quantum-Teleporter.git
+    git remote add origin https://github.com/LUISDASARTIMANHAS/Factorio-Dyson-Sphere-Program-Lib.git
 )
 
 :: Verifica o status dos arquivos

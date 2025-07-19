@@ -1,15 +1,15 @@
-local path_main = "__Quantum-Teleporter__/"
+local path_main = "__Dyson-Sphere-Program-Lib__/"
 
 data:extend(
   {
-    -------------------------------------------------------------------------- quantum-teleporter-category
+    -- ======= dyson-category ==========
     {
       type = "item-group",
       -- nome da categoria
-      name = "quantum-teleporter-category",
+      name = "dyson-category",
       order = "e",
-      icon = path_main .. "graficos/technology/quantum-teleporter.png",
-      icon_size = 512,
+      icon = path_main .. "graficos/technology/dyson.png",
+      icon_size = 275,
       icon_mipmaps = 2
     },
     {
@@ -17,24 +17,24 @@ data:extend(
       -- nome usado para definir o grupo dos itens
       name = "itens",
       -- indexando o grupo a categoria
-      group = "quantum-teleporter-category",
+      group = "dyson-category",
       -- ordem de A a Z e de cima para baixo para organização dos grupos "modname-name"
-      order = "quantum-teleporter-itens"
+      order = "dyson-itens"
     },
     {
       type = "item-subgroup",
       name = "component",
-      group = "quantum-teleporter-category",
-      order = "quantum-teleporter-component"
+      group = "dyson-category",
+      order = "dyson-component"
     }
   }
 )
--------------------------------------------------------------------------- quantum-teleporter-category
+-- ======= dyson-category ==========
 
 -- categorias de receitas
-data:extend({
-  {
-      type = "recipe-category",
-      name = "portal-parts"
-  }
-})
+-- data:extend({
+--   {
+--       type = "recipe-category",
+--       name = "portal-parts"
+--   }
+-- })

@@ -1,46 +1,13 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.0.5
-Date: 09/01/2025
-  Changes:
-    - add multiple stages of portal.
-    - add images of multiple stages of portal
-    - add songs of multiple stages of portals
-    - add parts-portal T1, T2
-    - add portals T1, T2
-  Bugs Fixed:
-    - Error while loading equipment prototype "quantum-teleporter-equipment" (active-defense-equipment): Key "categories" not found in property tree at ROOT.active-defense-equipment.quantum-teleporter-equipment Modifications: Quantum Teleporter
----------------------------------------------------------------------------------------------------
-Version: 0.0.4
-Date: 07/01/2025
-  Changes:
-    - add technology reseach.
-    - add locale 
-  Bugs Fixed:
-    - sound when loading sound library: __Quantum-Teleporter__/audio/portal.ogg
-    - First argument must be a table or LuaEventType. stack traceback: [C]: in function 'on_event' Quantum-Teleporter__/control/teleport-2.lua:66: in main chunk 
-    - Error while running event Quantum-Teleporter::on_player_crafted_item (ID 14) __Quantum-Teleporter__/control/gui/gui-maker.lua:59: attempt to perform arithmetic on field 'width' (a nil value)
-    - fixed sprites not rendering and loading
-    - fixed very large portal
-    - fixed unequippable personal equipment 
----------------------------------------------------------------------------------------------------
-Version: 0.0.3
-Date: 06/01/2025
-  Bugs Fixed:
-    -  Recipe has no results: quantum-teleporter-equipment-recipe
-    - new properties
-    - "quantum-teleporter-portal-entidade" (assembling-machine): O valor deve ser uma lista ou dicionário na árvore de propriedades em ROOT.assembling-machine.quantum-teleporter-portal-entidade.energy_source.emissions_per_minute
-    - Error while loading equipment prototype "quantum-teleporter-equipment" (movement-bonus-equipment): Key "type" not found in property tree at ROOT.movement-bonus-equipment.quantum-teleporter-equipment.shape
-    - Error while loading equipment prototype "quantum-teleporter-equipment" (movement-bonus-equipment): Key "categories" not found in property tree at ROOT.movement-bonus-equipment.quantum-teleporter-equipment
----------------------------------------------------------------------------------------------------
 Version: 0.0.2
-Date: 06/01/2025
+Date: 19/07/2025
   Changes:
-    - add audios.
-    - add teleporter equipament and teleporter portal
+    - add images and itens.
+    - add category group
   Bugs Fixed:
     - scripts a nul values on init
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.1
-Date: 05/01/2025
+Date: 18/07/2025
   Changes:
     - initial commit.

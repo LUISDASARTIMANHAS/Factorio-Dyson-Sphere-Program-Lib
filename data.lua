@@ -3,7 +3,7 @@ require("graficos/style.lua")
 -- require("data/recursos")
 -- require("data/technology")
 -- require("data/soundMaker")
--- require("data/grupos")
+require("data/grupos")
 
 -- blocos e qeuipamentos
--- require("data/blocos/quantum-teleporter-equipment")
+-- require("data/blocos/Dyson-Sphere-Program-Lib-equipment")

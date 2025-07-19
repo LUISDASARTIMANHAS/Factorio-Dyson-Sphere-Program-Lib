@@ -1,8 +1,8 @@
-local path_main = "__Quantum-Teleporter__/"
+local path_main = "__Dyson-Sphere-Program-Lib__/"
 
 data:extend({ {
     type = "technology",
-    name = "Quantum-Teleporter",
+    name = "Dyson-Sphere-Program-Lib",
     icon = path_main.. "graficos/technology/technology-teleporter-equipment.png",
     icon_size = 126,
     icon_mipmaps = 4,
@@ -13,11 +13,11 @@ data:extend({ {
     {
         {
             type = "unlock-recipe",
-            recipe = "quantum-teleporter-equipment-recipe",
+            recipe = "Dyson-Sphere-Program-Lib-equipment-recipe",
         },
         {
             type = "unlock-recipe",
-            recipe = "quantum-teleporter-portal-T2-recipe",
+            recipe = "Dyson-Sphere-Program-Lib-portal-T2-recipe",
         }
     },
     unit = {
@@ -35,7 +35,7 @@ data:extend({ {
             { "agricultural-science-pack", 1},
             { "cryogenic-science-pack", 1},
         },
-        order = "quantum-teleporter"
+        order = "Dyson-Sphere-Program-Lib"
     }
 }
 })
@@ -44,12 +44,12 @@ data:extend({ {
 data:extend({ 
     {
     type = "technology",
-    name = "Quantum-Teleporter-Portal",
+    name = "Dyson-Sphere-Program-Lib-Portal",
     icon = path_main.. "graficos/technology/technology-portal.png",
     icon_size = 128,
     icon_mipmaps = 4,
     prerequisites = {
-        "Quantum-Teleporter",
+        "Dyson-Sphere-Program-Lib",
     },
     effects =
     {
@@ -59,11 +59,11 @@ data:extend({
         },
         {
             type = "unlock-recipe",
-            recipe = "quantum-teleporter-portal-T2-recipe"
+            recipe = "Dyson-Sphere-Program-Lib-portal-T2-recipe"
         },
         {
             type = "unlock-recipe",
-            recipe = "quantum-teleporter-portal-recipe"
+            recipe = "Dyson-Sphere-Program-Lib-portal-recipe"
         }
     },
     unit = {
@@ -81,7 +81,7 @@ data:extend({
             { "agricultural-science-pack", 1},
             { "cryogenic-science-pack", 1},
         },
-        order = "quantum-teleporter"
+        order = "Dyson-Sphere-Program-Lib"
     }
 }
 })

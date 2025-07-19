@@ -1,4 +1,7 @@
-local path_main = "__Quantum-Teleporter__/"
+local functions = require("functions.init")
+
+
+
 
 -- category = "advanced-crafting" maquinas de montagem tier 2 e 3
 -- category = "basic-crafting" maquinas de montagem tier 1
@@ -8,38 +11,21 @@ local path_main = "__Quantum-Teleporter__/"
 -- category = "portal-parts" feito em portais em construção
 
 -- Define itens
--- data:extend(
---     {
---         -- Item de parte de constução do portal
---         {
---             type = "item",
---             name = "part-portal-T2",
---             icon = path_main .. "graficos/itens/part-portal-T2.png",
---             icon_size = 128,
---             subgroup = "itens",
---             order = "Quantum-Teleporter-itens[part-portal-T2]",
---             stack_size = 10
---         },
---         -- Receita do parte de constução do portal
---         {
---             type = "recipe",
---             name = "part-portal-T2-recipe",
---             category = "portal-parts",
---             enabled = false,
---             energy_required = 120,
---             ingredients = {
---                 {type = "item", name = "quantum-processor", amount = 512},
---                 {type = "item", name = "tungsten-plate", amount = 10240},
---                 {type = "item", name = "superconductor", amount = 2048},
---                 {type = "item", name = "carbon-fiber", amount = 4096}
---             },
---             results = {
---                 {type = "item", name = "part-portal-T2", amount = 1}
---             },
---             maximum_productivity = 2,
---             allow_quality = true,
---             allowed_module_categories = {"productivity", "speed"},
---             alternative_unlock_methods = {"Quantum-Teleporter"}
---         }
---     }
--- )
+data:extend(
+    functions.createItemWithRecipe(
+        "part-portal-T2",
+        "itens",
+        10,
+        "portal-parts",
+        120,
+        {
+            {type = "item", name = "quantum-processor", amount = 512},
+            {type = "item", name = "tungsten-plate", amount = 10240},
+            {type = "item", name = "superconductor", amount = 2048},
+            {type = "item", name = "carbon-fiber", amount = 4096}
+        },
+        {
+            {type = "item", name = "part-portal-T2", amount = 1}
+        }
+    )
+)

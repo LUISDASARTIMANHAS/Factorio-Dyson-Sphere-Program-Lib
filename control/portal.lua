@@ -9,7 +9,7 @@ script.on_event(defines.events.on_tick, function(event)
         
         if character and character.valid then
             local portal = player.surface.find_entities_filtered({
-                name = "quantum-teleporter-portal-entidade",
+                name = "Dyson-Sphere-Program-Lib-portal-entidade",
                 position = player.position,
                 radius = 5 -- Raio de detecção
             })[1]
