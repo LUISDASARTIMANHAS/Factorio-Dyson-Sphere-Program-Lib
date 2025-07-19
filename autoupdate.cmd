@@ -1,19 +1,21 @@
 @echo off
 setlocal enabledelayedexpansion
+
 set exclusionsFile=exclusions.txt
+
+set allItemsExclude=
+
+for /f "usebackq delims=" %%x in ("%exclusionsFile%") do (
+    set allItemsExclude=!allItemsExclude! --exclude="%%x"
+)
+echo %allItemsExclude%
+
 :: Carrega as variáveis do arquivo .env
 if exist .env (
     for /f "tokens=* delims=" %%i in (.env) do (
         set "%%i"
     )
 )
-
-set allItemsExclude=
-
-for /f "usebackq delims=" %%x in ("%exclusionsFile%") do (
-    set allItemsExclude=!allItemsExclude! --exclude="%%x
-)
-echo %allItemsExclude%
 
 :: Verifica se a chave de API foi carregada
 if "%API_KEY%"=="" (
