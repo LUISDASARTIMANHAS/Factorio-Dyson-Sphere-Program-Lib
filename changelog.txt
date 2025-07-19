@@ -5,6 +5,8 @@ Date: 19/07/2025
     - add images and itens.
     - add category group
     - add functions LIB
+    - add matrix for search
+    - add resources
   Bugs Fixed:
     - scripts a nul values on init
 ---------------------------------------------------------------------------------------------------

@@ -4,12 +4,12 @@ local createRecipe = require("functions.createRecipe")
 
 local Module = {}
 
-function Module.createItemWithRecipeMatrix(type, energy, ingredients)
+function Module.createItemWithRecipeMatrix(type, energy,qtde, ingredients)
     local path_main = "__Dyson-Sphere-Program-Lib__/"
     local icon_path = path_main .. "graficos/itens/" .. type .. "-matrix.png"
     local nameMatrix = type .. "-matrix"
     local results = {
-        {type = "item", name = nameMatrix, amount = 1}
+        {type = "item", name = nameMatrix, amount = qtde}
     };
 
     local item = createItem.createItem(nameMatrix, icon_path, 200)

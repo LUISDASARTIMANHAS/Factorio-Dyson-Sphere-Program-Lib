@@ -1,14 +1,16 @@
 -- init.lua
-local createItem = require("functions.createItem")
-local createRecipe = require("functions.createRecipe")
-local createItemWithRecipe = require("functions.createItemWithRecipe") -- ajuste no 
-local createItemWithRecipeMatrix = require("functions.createItemWithRecipeMatrix")
+local CI = require("functions.createItem")
+local CR = require("functions.createRecipe")
+local CIR = require("functions.createItemWithRecipe") -- ajuste no 
+local CIRM = require("functions.createItemWithRecipeMatrix")
+local tech = require("functions.createTechnology")
 
 local functions = {}
 
-functions.createItem = createItem.createItem
-functions.createRecipe = createRecipe.createRecipe
-functions.createItemWithRecipe = createItemWithRecipe.createItemWithRecipe
-functions.createItemWithRecipeMatrix = createItemWithRecipeMatrix.createItemWithRecipeMatrix
+functions.createItem = CI.createItem
+functions.createRecipe = CR.createRecipe
+functions.createItemWithRecipe = CIR.createItemWithRecipe
+functions.createItemWithRecipeMatrix = CIRM.createItemWithRecipeMatrix
+functions.createTechnology = tech.createTechnology
 
 return functions
