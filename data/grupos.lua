@@ -32,9 +32,11 @@ data:extend(
 -- ======= dyson-category ==========
 
 -- categorias de receitas
--- data:extend({
---   {
---       type = "recipe-category",
---       name = "portal-parts"
---   }
--- })
+data:extend(
+  {
+    {
+      type = "recipe-category",
+      name = "science-matrices"
+    }
+  }
+)

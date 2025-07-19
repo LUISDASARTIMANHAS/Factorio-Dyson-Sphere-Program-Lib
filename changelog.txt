@@ -4,6 +4,7 @@ Date: 19/07/2025
   Changes:
     - add images and itens.
     - add category group
+    - add functions LIB
   Bugs Fixed:
     - scripts a nul values on init
 ---------------------------------------------------------------------------------------------------
