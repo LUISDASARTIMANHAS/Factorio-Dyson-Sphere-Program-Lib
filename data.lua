@@ -2,7 +2,7 @@
 require("graficos/style.lua")
 require("data.recursos")
 require("data.matrix")
--- require("data/technology")
+require("data.technology")
 -- require("data/soundMaker")
 require("data/grupos")
 
