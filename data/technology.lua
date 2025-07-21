@@ -194,3 +194,58 @@ data:extend(
         )
     }
 )
+
+-- Crystal Smelting
+data:extend(
+    {
+        tech.createTechnology(
+            "crystal-smelting",
+            -- ingredients
+            {
+                {"electromagnetic-matrix", 5},
+                {"energy-matrix", 5}
+            },
+            -- prerequisites
+            {
+                "steel-processing"
+            },
+            -- unlocks 
+            {
+                {
+                    type = "unlock-recipe",
+                    recipe = "diamond-recipe"
+                }
+            },
+            100,
+            20
+        )
+    }
+)
+
+
+-- High-Strength Crystal
+data:extend(
+    {
+        tech.createTechnology(
+            "high-strength-crystal",
+            -- ingredients
+            {
+                {"electromagnetic-matrix", 6},
+                {"energy-matrix", 6}
+            },
+            -- prerequisites
+            {
+                "steel-processing"
+            },
+            -- unlocks 
+            {
+                {
+                    type = "unlock-recipe",
+                    recipe = "titanium-crystal-recipe"
+                }
+            },
+            100,
+            20
+        )
+    }
+)

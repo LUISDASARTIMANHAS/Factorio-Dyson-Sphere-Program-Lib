@@ -8,18 +8,19 @@ local createItemWithRecipe = require("functions.createItemWithRecipe")
 
 local Module = {}
 
-function Module.createAssemblerItemWithRecipe(name,category, energy, qtde, ingredients)
+function Module.createAssemblerItemWithRecipe(name, time, qtde, ingredients, stack_size)
     local results = {
         {type = "item", name = name, amount = qtde}
     }
+    local size = stack_size or 200
 
     local itemAndRecipe =
-        createItemWithRecipe.createItemWithRecipe(name, "itens", 200, "advanced-crafting", energy, ingredients, results)
+        createItemWithRecipe.createItemWithRecipe(name, "itens", size, "advanced-crafting", time, ingredients, results)
 
     return itemAndRecipe
 end
 
--- example 
+-- example
 --    {
 --         {
 --             type = "item",

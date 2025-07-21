@@ -22,4 +22,42 @@ function Module.createTechnology(name, ingredients, prerequisites, unlocks, pack
     }
 end
 
+
+-- example 
+-- {
+--     type = "technology",
+--     name = "steam-power",
+--     icon = "__base__/graphics/technology/steam-power.png",
+--     icon_size = 256,
+--     effects =
+--     {
+--       {
+--         type = "unlock-recipe",
+--         recipe = "pipe"
+--       },
+--       {
+--         type = "unlock-recipe",
+--         recipe = "pipe-to-ground"
+--       },
+--       {
+--         type = "unlock-recipe",
+--         recipe = "offshore-pump"
+--       },
+--       {
+--         type = "unlock-recipe",
+--         recipe = "boiler"
+--       },
+--       {
+--         type = "unlock-recipe",
+--         recipe = "steam-engine"
+--       }
+--     },
+--     research_trigger =
+--     {
+--       type = "craft-item",
+--       item = "iron-plate",
+--       count = 50
+--     }
+--   },
+
 return Module

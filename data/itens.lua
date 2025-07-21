@@ -99,3 +99,42 @@ data:extend(
 --         }
 --     )
 -- )
+
+
+-- diamond
+data:extend(
+    functions.createSmeltingItemWithRecipe(
+        "diamond",
+        2,
+        1,
+        {
+            {type = "item", name = "energetic-graphite", amount = 2}
+        }
+    )
+)
+
+-- Titanium Ingot
+data:extend(
+    functions.createSmeltingItemWithRecipe(
+        "titanium-ingot",
+        2,
+        1,
+        {
+            {type = "item", name = "titanium-ore", amount = 2},
+        }
+    )
+)
+
+-- Titanium Crystal
+data:extend(
+    functions.createAssemblerItemWithRecipe(
+        "titanium-crystal",
+        4,
+        1,
+        {
+            {type = "item", name = "organic-crystal-ore", amount = 1},
+            {type = "item", name = "titanium-ingot", amount = 3}
+        },
+        100
+    )
+)

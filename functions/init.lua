@@ -1,4 +1,5 @@
 -- init.lua
+local CO = require("functions.createOre")
 local CI = require("functions.createItem")
 local CF = require("functions.createFluid")
 local CG = require("functions.createGas")
@@ -12,6 +13,7 @@ local tech = require("functions.createTechnology")
 
 local functions = {}
 
+functions.createOre = CO.createOre
 functions.createItem = CI.createItem
 functions.createFluid = CF.createFluid
 functions.createGas = CG.createGas
