@@ -5,25 +5,34 @@ local Module = {}
 function Module.createTechnology(name, ingredients, prerequisites, unlocks, pack_count, pack_time)
     return {
         type = "technology",
-        name = "tech-dyson-"..name,
+        name = "tech-dyson-" .. name,
         icon = path_main .. "graficos/technology/tech-dyson-" .. name .. ".png",
         icon_size = 128,
         icon_mipmaps = 4,
-        prerequisites = prerequisites or {
-            "automation"
-        },
-        effects = unlocks or {},
+        prerequisites = prerequisites or
+            {
+                "automation"
+            },
+        effects = unlocks or
+            {
+                {
+                    type = "unlock-recipe",
+                    recipe = "transport-belt"
+                }
+            },
         unit = {
             count = pack_count or 100,
             time = pack_time or 30,
-            ingredients = ingredients or {}
+            ingredients = ingredients or
+                {
+                    {"automation-science-pack", 1}
+                }
         },
         order = "Dyson-Sphere-Program-Lib"
     }
 end
 
-
--- example 
+-- example
 -- {
 --     type = "technology",
 --     name = "steam-power",

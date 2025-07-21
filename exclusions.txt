@@ -5,4 +5,6 @@
 *.git
 *.json
 ./.vscode/
+*.bat
+*.exe
 exclusions.txt

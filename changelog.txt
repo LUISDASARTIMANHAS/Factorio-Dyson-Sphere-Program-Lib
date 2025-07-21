@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.2
-Date: 19/07/2025
+Date: 21/07/2025
   Changes:
     - add images and itens.
     - add category group
@@ -9,6 +9,9 @@ Date: 19/07/2025
     - add resources
   Bugs Fixed:
     - scripts a nul values on init
+    - icon not load in sprites
+    - fixed recipes
+    - fixed functions
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.1
 Date: 18/07/2025
