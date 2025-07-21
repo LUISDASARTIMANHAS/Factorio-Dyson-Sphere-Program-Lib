@@ -5,7 +5,7 @@ function Module.createGas(name, energy)
     local icon_path = path_main .. "graficos/itens/" .. name .. ".png"
     return {
         type = "fluid",
-        name = name .. "-gas",
+        name = name,
         subgroup = "fluid",
         default_temperature = 15,
         max_temperature = 5000,

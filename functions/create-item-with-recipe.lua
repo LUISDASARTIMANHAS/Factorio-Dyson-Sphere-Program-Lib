@@ -9,8 +9,11 @@ function Module.createItemWithRecipe(name, typeIcon, stack_size, category, time,
         error("Tipo inválido para ícone: " .. tostring(typeIcon) .. " (esperado 'itens' ou 'blocos')")
     end
 
-    local item = createItem.createItem(name, stack_size)
-    local recipe = createRecipe.createRecipe(name, category, time, ingredients, results)
+    local path_main = "__Dyson-Sphere-Program-Lib__/"
+    local icon_path = path_main .. "graficos/".. typeIcon .."/" .. name .. ".png"
+
+    local item = createItem.createItem(name, stack_size,icon_path)
+    local recipe = createRecipe.createRecipe(name, category, time,icon_path, ingredients, results)
 
     return {item, recipe}
 end

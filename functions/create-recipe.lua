@@ -1,6 +1,6 @@
 local Module = {}
 
-function Module.createRecipe(name, category, energy, ingredients, results)
+function Module.createRecipe(name, category, time,icon_path, ingredients, results)
     for _, v in ipairs(ingredients) do
         if v.type ~= "item" and v.type ~= "fluid" then
             error("Tipo de ingrediente inválido: '" .. tostring(v.type) .. "' em " .. name)
@@ -14,10 +14,11 @@ function Module.createRecipe(name, category, energy, ingredients, results)
 
     return {
         type = "recipe",
-        name = name .. "-recipe",
+        name = name,
         category = category,
         enabled = true,
-        energy_required = energy,
+        energy_required = time,
+        icon = icon_path,
         ingredients = ingredients,
         results = results,
         maximum_productivity = 2,

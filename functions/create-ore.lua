@@ -7,7 +7,7 @@ function Module.createOre(name, stack_size, kg, fuel_category, fuel_value)
     return {
         {
             type = "item",
-            name = name .. "-ore",
+            name = name,
             icon = icon_path,
             pictures = {
                 {size = 64, filename = "__base__/graphics/icons/iron-ore.png", scale = 0.5, mipmap_count = 4},

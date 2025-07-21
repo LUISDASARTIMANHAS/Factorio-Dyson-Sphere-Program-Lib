@@ -1,11 +1,9 @@
 local Module = {}
 
-function Module.createFluid(name, energy)
-    local path_main = "__Dyson-Sphere-Program-Lib__/"
-    local icon_path = path_main .. "graficos/fluids/" .. name .. ".png"
+function Module.createFluid(name, energy,icon_path)
     return {
         type = "fluid",
-        name = name .. "-fluid",
+        name = name,
         subgroup = "fluid",
         default_temperature = 15,
         max_temperature = 100,

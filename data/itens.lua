@@ -73,7 +73,7 @@ data:extend(
         -- results
         {
             {type = "fluid", name = "heavy-oil", amount = 2},
-            {type = "fluid", name = "hydrogen-fluid", amount = 2}
+            {type = "fluid", name = "hydrogen", amount = 2}
         }
     )
 )
@@ -133,18 +133,4 @@ data:extend(
         },
         100
     )
-)
-
-data:extend(
-    {
-        {
-            type = "item",
-            name = "fake-dyson-item",
-            icon = "__Dyson-Sphere-Program-Lib__/graficos/itens/dark-fog-matrix.png",
-            icon_size = 64,
-            subgroup = "itens",
-            order = "a",
-            stack_size = 1
-        }
-    }
 )

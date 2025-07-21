@@ -10,7 +10,7 @@ function Module.createItemWithRecipeMatrix(name, time,qtde, ingredients)
         {type = "item", name = nameMatrix, amount = qtde}
     };
 
-    local ItemAndRecipe = createItemWithRecipe.createItemWithRecipe(nameMatrix,"item",200,category,time,ingredients, results)
+    local ItemAndRecipe = createItemWithRecipe.createItemWithRecipe(nameMatrix,"itens",200,category,time,ingredients, results)
 
     return ItemAndRecipe
 end

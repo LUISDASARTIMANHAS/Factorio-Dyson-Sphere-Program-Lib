@@ -12,6 +12,11 @@ Date: 21/07/2025
     - icon not load in sprites
     - fixed recipes
     - fixed functions
+    - fixed Falha ao carregar mods: Error while loading recipe prototype "hydrogen-recipe" (recipe): Key "icon" not found in property tree at ROOT.recipe.hydrogen-recipe
+    - Falha ao carregar mods: ...here-Program-Lib__/functions/create-item-with-recipe.lua:9: Tipo inválido para ícone: item (esperado 'itens' ou 'blocos')
+    - stack traceback: [C]: in function 'error'	...here-Program-Lib__/functions/create-item-with-recipe.lua:9: in function 'createItemWithRecipe'...ogram-Lib__/functions/create-item-with-recipe-matrix.lua:13: in function 'createItemWithRecipeMatrix' __Dyson-Sphere-Program-Lib__/data/matrix.lua:6: in main chunk	[C]: in function 'require'	__Dyson-Sphere-Program-Lib__/data.lua:5: in main chunk
+
+
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.1
 Date: 18/07/2025
