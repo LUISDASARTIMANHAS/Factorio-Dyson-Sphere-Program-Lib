@@ -1,9 +1,18 @@
-Get-ChildItem -Recurse -File -Filter *.png | ForEach-Object {
-    $oldName = $_.FullName
-    $newName = ($_.Name -replace '_', '-').ToLower()
+Get-ChildItem -Recurse -File | ForEach-Object {
+    $name = $_.Name
+    # Verifica se contém underscore ou letras maiúsculas
+    if ($name -match "_" -or $name -cmatch "[A-Z]") {
+        $oldFullPath = $_.FullName
+        $newName = $name -replace "_", "-"
+        $newName = $newName.ToLower()
 
-    if ($_.Name -ne $newName) {
-        Rename-Item -Path $oldName -NewName $newName -Force
-        Write-Host "Renomeado: $($_.Name) -> $newName"
+        # Renomeia em dois passos para contornar limitação do Windows
+        $tempName = $newName + "_tmp"
+        $tempFullPath = Join-Path -Path $_.DirectoryName -ChildPath $tempName
+
+        Rename-Item -Path $oldFullPath -NewName $tempName -Force
+        Rename-Item -Path $tempFullPath -NewName $newName -Force
+
+        Write-Host "Renomeado: $name -> $newName"
     }
 }
