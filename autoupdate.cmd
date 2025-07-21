@@ -67,13 +67,15 @@ if exist "%ZIP_FILE%" (
 :: Compacta todos os arquivos na pasta atual em um arquivo ZIP, excluindo .env e outros arquivos indesejados
 echo Compactando o mod em %ZIP_FILE%...
 tar -c -a -v -f "%ZIP_FILE%" %allItemsExclude% -o "."
-tar -c -a -v -f "%STEAM_FILE%/%ZIP_FILE%" %allItemsExclude% -o "."
 
 :: Verifica se o arquivo ZIP foi criado com sucesso
 if not exist "%ZIP_FILE%" (
     echo Erro: Falha ao criar o arquivo ZIP.
     exit /b 1
 )
+
+:: Copia apenas o arquivo ZIP para o diretório do Steam
+Xcopy /Y "%ZIP_FILE%" "%STEAM_FILE%"
 
 :: inicia o sistema de autogit para que seja sincronizado com o git
 :: start /realtime /min autogit.cmd 

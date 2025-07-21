@@ -33,7 +33,7 @@ end
 --         },
 --         {
 --             type = "recipe",
---             name = "quantum-teleporter-equipment-recipe",
+--             name = "quantum-teleporter-equipment",
 --             category = "advanced-crafting",
 --             enabled = false,
 --             energy_required = 120,

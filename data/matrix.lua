@@ -22,7 +22,7 @@ data:extend(
         1,
         {
             {type = "item", name = "energetic-graphite", amount = 2},
-            {type = "item", name = "hydrogen", amount = 2},
+            {type = "fluid", name = "hydrogen", amount = 2},
         }
     )
 )

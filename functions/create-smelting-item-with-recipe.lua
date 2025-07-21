@@ -34,7 +34,7 @@ end
 --         },
 --         {
 --             type = "recipe",
---             name = "iron-ore-recipe",
+--             name = "iron-ore",
 --             category = "smelting",
 --             enabled = false,
 --             energy_required = 120,

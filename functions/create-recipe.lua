@@ -24,14 +24,14 @@ function Module.createRecipe(name, category, time,icon_path, ingredients, result
         maximum_productivity = 2,
         allow_quality = true,
         allowed_module_categories = {"productivity", "speed"},
-        alternative_unlock_methods = {"Dyson-Sphere-Program-Lib"}
+        alternative_unlock_methods = {"tech-dyson-sphere-program"}
     }
 end
 
 -- example
 --      {
 --             type = "recipe",
---             name = "iron-ore-recipe",
+--             name = "iron-ore",
 --             category = "advanced-crafting",
 --             enabled = false,
 --             energy_required = 120,

@@ -2,6 +2,7 @@ local tech = require("functions.create-technology")
 -- default create name
 -- tech-dyson-nameofTech
 
+-- tech-dyson-sphere-program
 data:extend(
     {
         tech.createTechnology(
@@ -241,7 +242,7 @@ data:extend(
             {
                 {
                     type = "unlock-recipe",
-                    recipe = "titanium-crystal-recipe"
+                    recipe = "titanium-crystal"
                 }
             },
             100,
