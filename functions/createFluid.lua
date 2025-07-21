@@ -9,6 +9,8 @@ function Module.createFluid(name, energy, icon)
         max_temperature = 100,
         -- 2kJ,
         heat_capacity = energy,
+        base_color = {0, 0.34, 0.6},
+        flow_color = {0.7, 0.7, 0.7},
         icon = icon,
         order = "a[fluid]-a[" .. name .. "]-a[" .. name .. "]"
     }

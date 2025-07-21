@@ -6,7 +6,7 @@ local Module = {}
 function Module.createFluidWithRecipe(name, heatEnergy, category, time, ingredients, results)
 
     local path_main = "__Dyson-Sphere-Program-Lib__/"
-    local icon_path = path_main .. "graficos/ites" .. "/" .. name .. ".png"
+    local icon_path = path_main .. "graficos/itens" .. "/" .. name .. ".png"
 
     local item = createFluid.createFluid(name, heatEnergy, icon_path)
     local recipe = createRecipe.createRecipe(name, category, time, ingredients, results)
