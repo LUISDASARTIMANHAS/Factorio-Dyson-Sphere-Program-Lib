@@ -71,12 +71,12 @@ data:extend(
         4,
         -- ingredients 
         {
-            {type = "fuid", name = "crude-oil", amount = 2}
+            {type = "fluid", name = "crude-oil", amount = 2}
         },
         -- results
         {
             {type = "fluid", name = "heavy-oil", amount = 2},
-            {type = "fluid", name = "hydrogen", amount = 2}
+            {type = "fluid", name = "hydrogen-fluid", amount = 2}
         }
     )
 )
@@ -90,7 +90,7 @@ data:extend(
 --         4,
 --         -- ingredients 
 --         {
---             {type = "fuid", name = "crude-oil", amount = 2}
+--             {type = "fluid", name = "crude-oil", amount = 2}
 --         },
 --         -- results
 --         {

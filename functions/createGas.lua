@@ -10,6 +10,8 @@ function Module.createGas(name, energy, icon)
         --"0.2kJ",
         heat_capacity = energy,
         icon = icon,
+        base_color = {0.5, 0.5, 0.5},
+        flow_color = {1.0, 1.0, 1.0},
         order = "a[fluid]-a[" .. name .. "]-a[" .. name .. "]",
         gas_temperature = 15,
         auto_barrel = false
