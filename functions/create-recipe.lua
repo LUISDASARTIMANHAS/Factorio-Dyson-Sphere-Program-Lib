@@ -16,7 +16,7 @@ function Module.createRecipe(name, category, energy, ingredients, results)
         type = "recipe",
         name = name .. "-recipe",
         category = category,
-        enabled = false,
+        enabled = true,
         energy_required = energy,
         ingredients = ingredients,
         results = results,

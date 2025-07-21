@@ -1,31 +1,26 @@
-local createItemWithRecipe = require("functions.createItemWithRecipe")
+local createItemWithRecipe = require("functions.create-item-with-recipe")
 -- category = "science-matrices" feito em Matrix Lab
--- category = "advanced-crafting" maquinas de montagem tier 2 e 3
--- category = "basic-crafting" maquinas de montagem tier 1
--- category = "crafting" feito a mão
--- category = "smelting" feito em fornalhas
--- category = "centrifuging" feito na centrifuge
 
 local Module = {}
 
-function Module.createAssemblerItemWithRecipe(name, time, qtde, ingredients, stack_size)
+function Module.createItemWithRecipeMatrix(name, time,qtde, ingredients)
+    local nameMatrix = name .. "-matrix"
+    local category = "science-matrices"
     local results = {
-        {type = "item", name = name, amount = qtde}
-    }
-    local size = stack_size or 200
+        {type = "item", name = nameMatrix, amount = qtde}
+    };
 
-    local itemAndRecipe =
-        createItemWithRecipe.createItemWithRecipe(name, "itens", size, "advanced-crafting", time, ingredients, results)
+    local ItemAndRecipe = createItemWithRecipe.createItemWithRecipe(nameMatrix,"item",200,category,time,ingredients, results)
 
-    return itemAndRecipe
+    return ItemAndRecipe
 end
 
--- example
---    {
---         {
+
+-- example 
+-- {
 --             type = "item",
---             name = "iron-ore",
---             icon = path_main .. "graficos/itens/iron-ore.png",
+--             name = "quantum-teleporter-equipment",
+--             icon = path_main .. "graficos/itens/quantum-teleporter-equipment-128.png",
 --             icon_size = 128,
 --             subgroup = "itens",
 --             -- diz pro jogo que o equipamento deve ser colocado com o item especificado
@@ -35,8 +30,8 @@ end
 --         },
 --         {
 --             type = "recipe",
---             name = "iron-ore-recipe",
---             category = "smelting",
+--             name = "quantum-teleporter-equipment-recipe",
+--             category = "advanced-crafting",
 --             enabled = false,
 --             energy_required = 120,
 --             ingredients = {
@@ -51,5 +46,4 @@ end
 --             alternative_unlock_methods = {"Quantum-Teleporter"}
 --         }
 --     }
-
 return Module

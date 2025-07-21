@@ -1,4 +1,4 @@
-local tech = require("functions.createTechnology")
+local tech = require("functions.create-technology")
 -- default create name
 -- tech-dyson-nameofTech
 

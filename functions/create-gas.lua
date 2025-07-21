@@ -1,6 +1,8 @@
 local Module = {}
 
-function Module.createGas(name, energy, icon)
+function Module.createGas(name, energy)
+    local path_main = "__Dyson-Sphere-Program-Lib__/"
+    local icon_path = path_main .. "graficos/itens/" .. name .. ".png"
     return {
         type = "fluid",
         name = name .. "-gas",
@@ -9,7 +11,7 @@ function Module.createGas(name, energy, icon)
         max_temperature = 5000,
         --"0.2kJ",
         heat_capacity = energy,
-        icon = icon,
+        icon = icon_path,
         base_color = {0.5, 0.5, 0.5},
         flow_color = {1.0, 1.0, 1.0},
         order = "a[fluid]-a[" .. name .. "]-a[" .. name .. "]",

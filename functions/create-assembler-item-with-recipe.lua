@@ -1,26 +1,32 @@
-local createItem = require("functions.createItem")
-local createRecipe = require("functions.createRecipe")
+local createItemWithRecipe = require("functions.create-item-with-recipe")
+-- category = "science-matrices" feito em Matrix Lab
+-- category = "advanced-crafting" maquinas de montagem tier 2 e 3
+-- category = "basic-crafting" maquinas de montagem tier 1
+-- category = "crafting" feito a mão
+-- category = "smelting" feito em fornalhas
+-- category = "centrifuging" feito na centrifuge
 
 local Module = {}
 
-function Module.createItemWithRecipe(name, type, stack_size, category, energy, ingredients, results)
-    local allowed_types = {itens=true, blocos=true}
-    if not allowed_types[type] then
-        error("Tipo inválido para ícone: " .. tostring(type) .. " (esperado 'itens' ou 'blocos')")
-    end
+function Module.createAssemblerItemWithRecipe(name, time, qtde, ingredients, stack_size)
+    local results = {
+        {type = "item", name = name, amount = qtde}
+    }
+    local category = "advanced-crafting"
+    local size = stack_size or 200
 
-    local item = createItem.createItem(name, stack_size)
-    local recipe = createRecipe.createRecipe(name, category, energy, ingredients, results)
+    local itemAndRecipe =
+        createItemWithRecipe.createItemWithRecipe(name, "itens", size, category, time, ingredients, results)
 
-    return {item, recipe}
+    return itemAndRecipe
 end
 
-
--- example 
--- {
+-- example
+--    {
+--         {
 --             type = "item",
---             name = "quantum-teleporter-equipment",
---             icon = path_main .. "graficos/itens/quantum-teleporter-equipment-128.png",
+--             name = "iron-ore",
+--             icon = path_main .. "graficos/itens/iron-ore.png",
 --             icon_size = 128,
 --             subgroup = "itens",
 --             -- diz pro jogo que o equipamento deve ser colocado com o item especificado
@@ -30,8 +36,8 @@ end
 --         },
 --         {
 --             type = "recipe",
---             name = "quantum-teleporter-equipment-recipe",
---             category = "advanced-crafting",
+--             name = "iron-ore-recipe",
+--             category = "smelting",
 --             enabled = false,
 --             energy_required = 120,
 --             ingredients = {
@@ -46,4 +52,5 @@ end
 --             alternative_unlock_methods = {"Quantum-Teleporter"}
 --         }
 --     }
+
 return Module

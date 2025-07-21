@@ -1,8 +1,5 @@
 local functions = require("functions.init")
 
-
-
-
 -- category = "advanced-crafting" maquinas de montagem tier 2 e 3
 -- category = "basic-crafting" maquinas de montagem tier 1
 -- category = "crafting" feito a mão
@@ -69,7 +66,7 @@ data:extend(
         "9MJ",
         "oil-processing",
         4,
-        -- ingredients 
+        -- ingredients
         {
             {type = "fluid", name = "crude-oil", amount = 2}
         },
@@ -88,7 +85,7 @@ data:extend(
 --         "9MJ",
 --         "oil-processing",
 --         4,
---         -- ingredients 
+--         -- ingredients
 --         {
 --             {type = "fluid", name = "crude-oil", amount = 2}
 --         },
@@ -99,7 +96,6 @@ data:extend(
 --         }
 --     )
 -- )
-
 
 -- diamond
 data:extend(
@@ -120,7 +116,7 @@ data:extend(
         2,
         1,
         {
-            {type = "item", name = "titanium-ore", amount = 2},
+            {type = "item", name = "titanium-ore", amount = 2}
         }
     )
 )
@@ -137,4 +133,18 @@ data:extend(
         },
         100
     )
+)
+
+data:extend(
+    {
+        {
+            type = "item",
+            name = "fake-dyson-item",
+            icon = "__Dyson-Sphere-Program-Lib__/graficos/itens/dark-fog-matrix.png",
+            icon_size = 64,
+            subgroup = "itens",
+            order = "a",
+            stack_size = 1
+        }
+    }
 )

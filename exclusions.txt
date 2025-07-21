@@ -3,4 +3,6 @@
 .gitignore
 *.zip
 *.git
+*.json
+./.vscode/
 exclusions.txt
