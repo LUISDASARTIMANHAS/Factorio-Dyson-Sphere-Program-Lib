@@ -11,7 +11,7 @@ data:extend(
                 {"logistic-science-pack", 3}
             },
             {
-                {"automation"}
+                "automation"
             },
             nil,
             500,
@@ -29,7 +29,7 @@ data:extend(
                 {"magnetic-coil", 1}
             },
             {
-                {"tech-dyson-sphere-program"}
+                "tech-dyson-sphere-program"
             },
             nil,
             10,
@@ -48,7 +48,7 @@ data:extend(
                 {"energy-matrix", 4}
             },
             {
-                {"turbo-transport-belt"}
+                "turbo-transport-belt"
             },
             nil,
             100,
@@ -67,7 +67,7 @@ data:extend(
                 {"energy-matrix", 2}
             },
             {
-                {"steel-processing"}
+                "steel-processing"
             },
             nil,
             100,
@@ -87,7 +87,7 @@ data:extend(
                 {"structure-matrix", 8}
             },
             {
-                {"tech-dyson-titanium-smelting"}
+                "tech-dyson-titanium-smelting"
             },
             nil,
             10,
@@ -95,7 +95,6 @@ data:extend(
         )
     }
 )
-
 
 -- reinforced thruster
 data:extend(
@@ -106,7 +105,7 @@ data:extend(
                 {"energy-matrix", 16}
             },
             {
-                {"tech-dyson-sphere-program"}
+                "tech-dyson-sphere-program"
             },
             nil,
             100,
@@ -126,8 +125,8 @@ data:extend(
                 {"structure-matrix", 12}
             },
             {
-                {"tech-dyson-high-strength-titanium-alloy"},
-                {"tech-dyson-reinforced-thruster"},
+                "tech-dyson-high-strength-titanium-alloy",
+                "tech-dyson-reinforced-thruster"
             },
             nil,
             10,
@@ -147,7 +146,7 @@ data:extend(
                 {"structure-matrix", 12}
             },
             {
-                {"tech-dyson-sphere-program"}
+                "tech-dyson-sphere-program"
             },
             nil,
             100,
@@ -167,8 +166,8 @@ data:extend(
                 {"structure-matrix", 12}
             },
             {
-                {"tech-dyson-interstellar-logistics-system"},
-                {"tech-dyson-interstellar-power-transmission"},
+                "tech-dyson-interstellar-logistics-system",
+                "tech-dyson-interstellar-power-transmission"
             },
             nil,
             100,
@@ -177,18 +176,17 @@ data:extend(
     }
 )
 
-
--- High-Efficiency Plasma Control 
+-- High-Efficiency Plasma Control
 data:extend(
     {
         tech.createTechnology(
             "high-efficiency-plasma-control",
             {
-                {"electromagnetic-matrix", 1},
+                {"electromagnetic-matrix", 1}
             },
             {
-                {"tech-dyson-elelectromagnetism"},
-                {"fluid-handling"},
+                "tech-dyson-elelectromagnetism",
+                "fluid-handling"
             },
             nil,
             50,

@@ -9,7 +9,9 @@ function Module.createTechnology(name, ingredients, prerequisites, unlocks, pack
         icon = path_main .. "graficos/technology/tech-dyson-" .. name .. ".png",
         icon_size = 128,
         icon_mipmaps = 4,
-        prerequisites = prerequisites or {},
+        prerequisites = prerequisites or {
+            "automation"
+        },
         effects = unlocks or {},
         unit = {
             count = pack_count or 100,

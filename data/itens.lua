@@ -13,7 +13,7 @@ local functions = require("functions.init")
 -- Define itens
 data:extend(
     functions.createItemWithRecipe(
-        "part-portal-T2",
+        "smelting",
         "itens",
         10,
         "portal-parts",
