@@ -80,6 +80,9 @@ Xcopy /Y "%ZIP_FILE%" "%STEAM_FILE%"
 :: inicia o sistema de autogit para que seja sincronizado com o git
 :: start /realtime /min autogit.cmd 
 
+:: abre o jogo para testes
+start steam://rungameid/427520
+
 :: Remover espaços em branco ao redor de AUTO_SEND
 set "AUTO_SEND=%AUTO_SEND: =%"
 

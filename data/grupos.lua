@@ -37,15 +37,14 @@ data:extend(
     {
       type = "recipe-category",
       name = "science-matrices"
-    }
-  }
-)
-
-data:extend(
-  {
+    },
     {
       type = "recipe-category",
       name = "particle-collider"
+    },
+    {
+      type = "recipe-category",
+      name = "ray-receiver"
     }
   }
 )

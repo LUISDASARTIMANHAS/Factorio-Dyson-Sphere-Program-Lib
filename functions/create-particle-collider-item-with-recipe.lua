@@ -9,8 +9,8 @@ local createItemWithRecipe = require("functions.generic-functions.create-item-wi
 
 local Module = {}
 
-function Module.createParticleColiderItemWithRecipe(name, time, qtde, ingredients, stack_size)
-    local results = {
+function Module.createParticleColiderItemWithRecipe(name, time, qtde,stack_size, ingredients, resultsPersonal)
+    local results = resultsPersonal or {
         {type = "item", name = name, amount = qtde}
     }
     local crafted_in = "particle-collider"

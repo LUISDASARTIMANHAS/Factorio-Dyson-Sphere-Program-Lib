@@ -89,7 +89,6 @@ data:extend(
     )
 )
 
-
 -- carbon-nanotube
 -- Made In		Chemical Facility fix in future
 data:extend(
@@ -199,7 +198,7 @@ data:extend(
         {
             {type = "item", name = "iron-plate", amount = 2},
             {type = "item", name = "gear", amount = 1},
-            {type = "item", name = "magnetic-coil", amount = 1},
+            {type = "item", name = "magnetic-coil", amount = 1}
         },
         100
     )
@@ -213,7 +212,7 @@ data:extend(
         1,
         {
             {type = "item", name = "electric-motor", amount = 2},
-            {type = "item", name = "magnetic-coil", amount = 2},
+            {type = "item", name = "magnetic-coil", amount = 2}
         },
         100
     )
@@ -240,12 +239,12 @@ data:extend(
         "strange-matter",
         8,
         1,
+        100,
         {
             {type = "item", name = "particle-container", amount = 2},
             {type = "item", name = "iron-plate", amount = 2},
             {type = "fluid", name = "deuterium", amount = 10}
-        },
-        100
+        }
     )
 )
 
@@ -318,5 +317,53 @@ data:extend(
             {type = "item", name = "plane-filter", amount = 2}
         },
         200
+    )
+)
+
+-- Critical Photon Receita básica (sem lens)
+data:extend(
+    functions.createItemWithRecipe(
+        "critical-photon",
+        100,
+        "ray-receiver",
+        10,
+        {},
+        {
+            {type = "item", name = "critical-photon", amount = 6}
+        }
+    )
+)
+
+-- Critical Photon Receita com lens
+data:extend({
+    functions.createRecipe(
+        "itens",
+        "critical-photon-lens",
+        "ray-receiver",
+        10,
+        {
+            {type = "item", name = "graviton-lens", amount = 1}
+        },
+        {
+            {type = "item", name = "critical-photon", amount = 12},
+            {type = "item", name = "graviton-lens", amount = 1, catalyst_amount = 1}
+        }
+    )
+})
+
+-- antimatter
+data:extend(
+    functions.createParticleColiderItemWithRecipe(
+        "antimatter",
+        2,
+        nil,
+        20,
+        {
+            {type = "item", name = "critical-photon", amount = 2}
+        },
+        {
+            {type = "item", name = "antimatter", amount = 2},
+            {type = "fluid", name = "hydrogen", amount = 2}
+        }
     )
 )

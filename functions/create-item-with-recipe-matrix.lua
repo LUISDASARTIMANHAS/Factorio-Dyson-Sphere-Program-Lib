@@ -1,22 +1,24 @@
-local createItemWithRecipe = require("functions.generic-functions.create-item-with-recipe")
+local createItemSearch = require("functions.generic-functions.create-item-search")
+local createRecipe = require("functions.generic-functions.create-recipe")
+
 -- category = "science-matrices" feito em Matrix Lab
 
 local Module = {}
 
-function Module.createItemWithRecipeMatrix(name, time,qtde, ingredients)
+function Module.createItemWithRecipeMatrix(name, time, qtde, ingredients)
     local nameMatrix = name .. "-matrix"
     local crafted_in = "science-matrices"
     local results = {
         {type = "item", name = nameMatrix, amount = qtde}
-    };
+    }
 
-    local ItemAndRecipe = createItemWithRecipe.createItemWithRecipe(nameMatrix,200,crafted_in,time,ingredients, results)
+    local item = createItemSearch.createItemSearch(nameMatrix,200)
+    local recipe = createRecipe.createRecipe("itens", nameMatrix, crafted_in, time, ingredients, results)
 
-    return ItemAndRecipe
+    return {item, recipe}
 end
 
-
--- example 
+-- example
 -- {
 --             type = "item",
 --             name = "quantum-teleporter-equipment",

@@ -186,7 +186,7 @@ data:extend(
                 {"electromagnetic-matrix", 1}
             },
             {
-                "tech-dyson-elelectromagnetism",
+                "tech-dyson-electromagnetism",
                 "fluid-handling"
             },
             nil,
