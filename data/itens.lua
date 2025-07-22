@@ -36,25 +36,6 @@ data:extend(
     )
 )
 
--- hydrogen
-data:extend(
-    functions.createFluidWithRecipe(
-        "hydrogen",
-        "9MJ",
-        "oil-processing",
-        4,
-        -- ingredients
-        {
-            {type = "fluid", name = "crude-oil", amount = 2}
-        },
-        -- results
-        {
-            {type = "fluid", name = "heavy-oil", amount = 2},
-            {type = "fluid", name = "hydrogen", amount = 2}
-        }
-    )
-)
-
 -- hydrogen X-ray-craking
 -- data:extend(
 --     functions.createFluidWithRecipe(
@@ -92,9 +73,8 @@ data:extend(
 -- carbon-nanotube
 -- Made In		Chemical Facility fix in future
 data:extend(
-    functions.createItemWithRecipe(
+    functions.createAssemblerItemWithRecipe(
         "carbon-nanotube",
-        "itens",
         4,
         2,
         {

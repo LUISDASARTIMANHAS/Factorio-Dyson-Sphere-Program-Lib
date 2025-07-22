@@ -1,19 +1,11 @@
-local createItem = require("functions.create-item")
-local createRecipe = require("functions.create-recipe")
+local createItem = require("functions.generic-functions.create-item")
+local createRecipe = require("functions.generic-functions.create-recipe")
 
 local Module = {}
 
-function Module.createItemWithRecipe(name, typeIcon, stack_size, category, time, ingredients, results)
-    local allowed_types = {itens=true, blocos=true}
-    if not allowed_types[typeIcon] then
-        error("Tipo inválido para ícone: " .. tostring(typeIcon) .. " (esperado 'itens' ou 'blocos')")
-    end
-
-    local path_main = "__Dyson-Sphere-Program-Lib__/"
-    local icon_path = path_main .. "graficos/".. typeIcon .."/" .. name .. ".png"
-
-    local item = createItem.createItem(name, stack_size,icon_path)
-    local recipe = createRecipe.createRecipe(name, category, time,icon_path, ingredients, results)
+function Module.createItemWithRecipe(name, stack_size, crafted_in, time, ingredients, results)
+    local item = createItem.createItem(name, stack_size)
+    local recipe = createRecipe.createRecipe(name, crafted_in, time, ingredients, results)
 
     return {item, recipe}
 end

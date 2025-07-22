@@ -1,4 +1,4 @@
-local createItemWithRecipe = require("functions.create-item-with-recipe")
+local createItemWithRecipe = require("functions.generic-functions.create-item-with-recipe")
 -- category = "science-matrices" feito em Matrix Lab
 -- category = "advanced-crafting" maquinas de montagem tier 2 e 3
 -- category = "basic-crafting" maquinas de montagem tier 1

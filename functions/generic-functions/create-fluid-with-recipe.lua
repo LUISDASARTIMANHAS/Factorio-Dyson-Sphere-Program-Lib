@@ -1,14 +1,11 @@
-local createFluid = require("functions.create-fluid")
-local createRecipe = require("functions.create-recipe")
+local createFluid = require("functions.generic-functions.create-fluid")
+local createRecipe = require("functions.generic-functions.create-recipe")
 
 local Module = {}
 
-function Module.createFluidWithRecipe(name, heatEnergy, category, time, ingredients, results)
-    local path_main = "__Dyson-Sphere-Program-Lib__/"
-    local icon_path = path_main .. "graficos/fluids/" .. name .. ".png"
-
-    local item = createFluid.createFluid(name, heatEnergy,icon_path)
-    local recipe = createRecipe.createRecipe(name, category, time,icon_path, ingredients, results)
+function Module.createFluidWithRecipe(name, heatEnergy, crafted_in, time, ingredients, results)
+    local item = createFluid.createFluid(name, heatEnergy)
+    local recipe = createRecipe.createRecipe(name, crafted_in, time, ingredients, results)
 
     return {item, recipe}
 end

@@ -12,6 +12,51 @@ data:extend(functions.createOre("organic-crystal", 100, 1, "chemical", "1.80MJ")
 data:extend(functions.createOre("titanium", 100, 1, "chemical", "1.80MJ"))
 data:extend(functions.createOre("silicon", 100, 1, nil, nil))
 
+-- hydrogen
+data:extend(
+    functions.createFluidWithRecipe(
+        "hydrogen",
+        "9MJ",
+        "oil-processing",
+        4,
+        -- ingredients
+        {
+            {type = "fluid", name = "crude-oil", amount = 2}
+        },
+        -- results
+        {
+            {type = "fluid", name = "heavy-oil", amount = 2},
+            {type = "fluid", name = "hydrogen", amount = 2}
+        }
+    )
+)
+
+-- deuterium
+-- make in Fractionator fix in future
+data:extend(
+    functions.createFluidWithRecipe(
+        "deuterium",
+        "9MJ",
+        "oil-processing",
+        2.5,
+        -- ingredients
+        {
+            {type = "fluid", name = "hydrogen", amount = 1}
+        },
+        -- results
+        {
+            {
+                type = "fluid",
+                name = "deuterium",
+                amount_min = 1,
+                amount_max = 1,
+                probability = 0.01,
+                show_amount_in_title = true
+            }
+        }
+    )
+)
+
 -- silicon-ore (STONE)
 data:extend(
     functions.createAssemblerItemWithRecipe(

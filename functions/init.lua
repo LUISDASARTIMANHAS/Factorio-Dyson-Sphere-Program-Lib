@@ -1,11 +1,12 @@
 -- init.lua
-local CO = require("functions.create-ore")
-local CI = require("functions.create-item")
-local CF = require("functions.create-fluid")
-local CG = require("functions.create-gas")
-local CR = require("functions.create-recipe")
-local CIR = require("functions.create-item-with-recipe")
-local CFR = require("functions.create-fluid-with-recipe")
+local CO = require("functions.generic-functions.create-ore")
+local CI = require("functions.generic-functions.create-item")
+local CBI = require("functions.generic-functions.create-block-item")
+local CF = require("functions.generic-functions.create-fluid")
+local CG = require("functions.generic-functions.create-gas")
+local CR = require("functions.generic-functions.create-recipe")
+local CIR = require("functions.generic-functions.create-item-with-recipe")
+local CFR = require("functions.generic-functions.create-fluid-with-recipe")
 local CSIR = require("functions.create-smelting-item-with-recipe") -- ajuste no 
 local CIRM = require("functions.create-item-with-recipe-matrix")
 local CAIR = require("functions.create-assembler-item-with-recipe")
@@ -16,6 +17,7 @@ local functions = {}
 
 functions.createOre = CO.createOre
 functions.createItem = CI.createItem
+functions.crateBlock = CBI.createBlock
 functions.createFluid = CF.createFluid
 functions.createGas = CG.createGas
 functions.createRecipe = CR.createRecipe
