@@ -82,6 +82,19 @@ data:extend(
     )
 )
 
+-- glass
+data:extend(
+    functions.createSmeltingItemWithRecipe(
+        "glass",
+        2,
+        1,
+        {
+            {type = "item", name = "stone", amount = 2}
+        }
+    )
+)
+
+
 -- energetic-graphite
 data:extend(
     functions.createSmeltingItemWithRecipe(

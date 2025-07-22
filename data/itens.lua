@@ -70,6 +70,26 @@ data:extend(
     )
 )
 
+-- plastic
+data:extend(
+    functions.createItemWithRecipe(
+        "plastic",
+        100,
+        "chemistry",
+        3,
+        -- ingredients
+        {
+            {type = "fluid", name = "crude-oil", amount = 2},
+            {type = "item", name = "energetic-graphite", amount = 2}
+        },
+        -- results
+        {
+            {type = "item", name = "plastic", amount = 1}
+        }
+    )
+)
+
+
 -- carbon-nanotube
 -- Made In		Chemical Facility fix in future
 data:extend(
@@ -157,6 +177,63 @@ data:extend(
     )
 )
 
+-- gear
+data:extend(
+    functions.createAssemblerItemWithRecipe(
+        "gear",
+        1,
+        1,
+        {
+            {type = "item", name = "iron-plate", amount = 1}
+        },
+        200
+    )
+)
+
+-- electric-motor
+data:extend(
+    functions.createAssemblerItemWithRecipe(
+        "electric-motor",
+        2,
+        1,
+        {
+            {type = "item", name = "iron-plate", amount = 2},
+            {type = "item", name = "gear", amount = 1},
+            {type = "item", name = "magnetic-coil", amount = 1},
+        },
+        100
+    )
+)
+
+-- electromagnetic-turbine
+data:extend(
+    functions.createAssemblerItemWithRecipe(
+        "electromagnetic-turbine",
+        2,
+        1,
+        {
+            {type = "item", name = "electric-motor", amount = 2},
+            {type = "item", name = "magnetic-coil", amount = 2},
+        },
+        100
+    )
+)
+
+-- particle-container
+data:extend(
+    functions.createAssemblerItemWithRecipe(
+        "particle-container",
+        4,
+        1,
+        {
+            {type = "item", name = "electromagnetic-turbine", amount = 2},
+            {type = "item", name = "copper-plate", amount = 2},
+            {type = "item", name = "graphene", amount = 2}
+        },
+        100
+    )
+)
+
 -- strange-matter
 data:extend(
     functions.createParticleColiderItemWithRecipe(
@@ -183,5 +260,63 @@ data:extend(
             {type = "item", name = "strange-matter", amount = 1}
         },
         100
+    )
+)
+
+-- titanium-glass
+data:extend(
+    functions.createAssemblerItemWithRecipe(
+        "titanium-glass",
+        5,
+        2,
+        {
+            {type = "item", name = "glass", amount = 2},
+            {type = "item", name = "titanium-ingot", amount = 2},
+            {type = "fluid", name = "water", amount = 2}
+        },
+        100
+    )
+)
+
+-- casimir-crystal
+data:extend(
+    functions.createAssemblerItemWithRecipe(
+        "casimir-crystal",
+        4,
+        1,
+        {
+            {type = "item", name = "titanium-crystal", amount = 1},
+            {type = "item", name = "graphene", amount = 2},
+            {type = "fluid", name = "hydrogen", amount = 12}
+        },
+        100
+    )
+)
+
+-- plane-filter
+data:extend(
+    functions.createAssemblerItemWithRecipe(
+        "plane-filter",
+        12,
+        1,
+        {
+            {type = "item", name = "casimir-crystal", amount = 1},
+            {type = "item", name = "titanium-glass", amount = 2}
+        },
+        200
+    )
+)
+
+-- quantum-chip
+data:extend(
+    functions.createAssemblerItemWithRecipe(
+        "quantum-chip",
+        6,
+        1,
+        {
+            {type = "item", name = "processor", amount = 2},
+            {type = "item", name = "plane-filter", amount = 2}
+        },
+        200
     )
 )
