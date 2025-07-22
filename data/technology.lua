@@ -214,7 +214,11 @@ data:extend(
             {
                 {
                     type = "unlock-recipe",
-                    recipe = "diamond-recipe"
+                    recipe = "diamond"
+                },
+                {
+                    type = "unlock-recipe",
+                    recipe = "crystal-silicon"
                 }
             },
             100,
@@ -243,6 +247,33 @@ data:extend(
                 {
                     type = "unlock-recipe",
                     recipe = "titanium-crystal"
+                }
+            },
+            100,
+            20
+        )
+    }
+)
+
+
+-- Processor
+data:extend(
+    {
+        tech.createTechnology(
+            "processor",
+            -- ingredients
+            {
+                {"electromagnetic-matrix", 8}
+            },
+            -- prerequisites
+            {
+                "tech-dyson-sphere-program"
+            },
+            -- unlocks 
+            {
+                {
+                    type = "unlock-recipe",
+                    recipe = "processor"
                 }
             },
             100,

@@ -40,3 +40,12 @@ data:extend(
     }
   }
 )
+
+data:extend(
+  {
+    {
+      type = "recipe-category",
+      name = "particle-collider"
+    }
+  }
+)
