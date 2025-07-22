@@ -5,12 +5,12 @@ local Module = {}
 
 function Module.createItemWithRecipeMatrix(name, time,qtde, ingredients)
     local nameMatrix = name .. "-matrix"
-    local category = "science-matrices"
+    local crafted_in = "science-matrices"
     local results = {
         {type = "item", name = nameMatrix, amount = qtde}
     };
 
-    local ItemAndRecipe = createItemWithRecipe.createItemWithRecipe(nameMatrix,"itens",200,category,time,ingredients, results)
+    local ItemAndRecipe = createItemWithRecipe.createItemWithRecipe(nameMatrix,200,crafted_in,time,ingredients, results)
 
     return ItemAndRecipe
 end

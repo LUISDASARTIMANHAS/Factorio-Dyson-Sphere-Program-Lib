@@ -12,9 +12,11 @@ function Module.createSmeltingItemWithRecipe(name, time, qtde, ingredients)
     local results = {
         {type = "item", name = name, amount = qtde}
     }
+    local crafted_in = "particle-collider"
+    local size = 200
 
     local itemAndRecipe =
-        createItemWithRecipe.createItemWithRecipe(name, "itens", 200, "smelting", time, ingredients, results)
+        createItemWithRecipe.createItemWithRecipe(name, size, crafted_in, time, ingredients, results)
 
     return itemAndRecipe
 end

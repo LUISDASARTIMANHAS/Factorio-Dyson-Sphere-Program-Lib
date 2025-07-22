@@ -13,11 +13,11 @@ function Module.createParticleColiderItemWithRecipe(name, time, qtde, ingredient
     local results = {
         {type = "item", name = name, amount = qtde}
     }
-    local category = "particle-collider"
+    local crafted_in = "particle-collider"
     local size = stack_size or 200
 
     local itemAndRecipe =
-        createItemWithRecipe.createItemWithRecipe(name, "itens", size, category, time, ingredients, results)
+        createItemWithRecipe.createItemWithRecipe(name, size, crafted_in, time, ingredients, results)
 
     return itemAndRecipe
 end

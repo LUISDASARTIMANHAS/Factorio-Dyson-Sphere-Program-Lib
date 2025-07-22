@@ -1,6 +1,6 @@
 local Module = {}
 
-function Module.createRecipe(name, crafted_in, time,icon_path, ingredients, results)
+function Module.createRecipe(typeIcon,name, crafted_in, time, ingredients, results)
     for _, v in ipairs(ingredients) do
         if v.type ~= "item" and v.type ~= "fluid" then
             error("Tipo de ingrediente inválido: '" .. tostring(v.type) .. "' em " .. name)
@@ -11,6 +11,9 @@ function Module.createRecipe(name, crafted_in, time,icon_path, ingredients, resu
             error("Tipo de resultado inválido: '" .. tostring(v.type) .. "' em " .. name)
         end
     end
+
+    local path_main = "__Dyson-Sphere-Program-Lib__/"
+    local icon_path = path_main .. "graficos/" .. typeIcon .. "/" .. name .. ".png"
 
     return {
         type = "recipe",

@@ -64,7 +64,7 @@ data:extend(
         2,
         {
             {type = "item", name = "energetic-graphite", amount = 3},
-            {type = "item", name = "sulfuric-acid", amount = 1}
+            {type = "fluid", name = "sulfuric-acid", amount = 1}
         },
         100
     )
