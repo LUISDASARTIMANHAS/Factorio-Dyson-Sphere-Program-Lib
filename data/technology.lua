@@ -1,4 +1,5 @@
 local tech = require("functions.create-technology")
+local techTrigger = require("functions.create-technology-trigger")
 -- default create name
 -- tech-dyson-nameofTech
 
@@ -21,20 +22,20 @@ data:extend(
     }
 )
 
--- Electromagnetism
+-- Electromagnetism For Trigger
 data:extend(
     {
-        tech.createTechnology(
+        techTrigger.createTechnologyTrigger(
             "electromagnetism",
-            {
-                {"magnetic-coil", 1}
-            },
+            nil,
             {
                 "tech-dyson-sphere-program"
             },
-            nil,
-            10,
-            20
+            {
+                type = "craft-item",
+                item = "magnetic-coil",
+                count = 10
+            }
         )
     }
 )
@@ -210,7 +211,7 @@ data:extend(
             {
                 "steel-processing"
             },
-            -- unlocks 
+            -- unlocks
             {
                 {
                     type = "unlock-recipe",
@@ -227,7 +228,6 @@ data:extend(
     }
 )
 
-
 -- High-Strength Crystal
 data:extend(
     {
@@ -242,7 +242,7 @@ data:extend(
             {
                 "steel-processing"
             },
-            -- unlocks 
+            -- unlocks
             {
                 {
                     type = "unlock-recipe",
@@ -254,7 +254,6 @@ data:extend(
         )
     }
 )
-
 
 -- Processor
 data:extend(
@@ -269,7 +268,7 @@ data:extend(
             {
                 "tech-dyson-sphere-program"
             },
-            -- unlocks 
+            -- unlocks
             {
                 {
                     type = "unlock-recipe",

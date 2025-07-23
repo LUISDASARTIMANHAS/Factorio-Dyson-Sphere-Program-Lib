@@ -13,7 +13,7 @@ function Module.createRecipe(typeIcon,name, crafted_in, time, ingredients, resul
     end
 
     local path_main = "__Dyson-Sphere-Program-Lib__/"
-    local icon_path = path_main .. "graficos/" .. typeIcon .. "/" .. name .. ".png"
+    local icon_path = path_main .. "graficos/" .. typeIcon .. "-128/" .. name .. ".png"
 
     return {
         type = "recipe",
@@ -22,6 +22,7 @@ function Module.createRecipe(typeIcon,name, crafted_in, time, ingredients, resul
         enabled = true,
         energy_required = time,
         icon = icon_path,
+        icon_size = 128,
         ingredients = ingredients,
         results = results,
         maximum_productivity = 2,

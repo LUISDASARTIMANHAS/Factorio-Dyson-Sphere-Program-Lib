@@ -4,7 +4,7 @@ local item_tints = require("__base__.prototypes.item-tints")
 
 function Module.createBlock(name, stack_size)
     local path_main = "__Dyson-Sphere-Program-Lib__/"
-    local icon_path = path_main .. "graficos/blocos/" .. name .. ".png"
+    local icon_path = path_main .. "graficos/blocos-128/" .. name .. ".png"
     return {
         type = "item",
         name = name,

@@ -14,7 +14,7 @@ echo %allItemsExclude%
 if exist .env (
     for /f "tokens=* delims=" %%i in (.env) do (
         set "%%i"
-    )
+    ) 
 )
 
 :: Verifica se a chave de API foi carregada

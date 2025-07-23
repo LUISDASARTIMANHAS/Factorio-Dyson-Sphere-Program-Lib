@@ -3,12 +3,13 @@ local item_sounds = require("__base__.prototypes.item_sounds")
 
 function Module.createOre(name, stack_size, kg, fuel_category, fuel_value)
     local path_main = "__Dyson-Sphere-Program-Lib__/"
-    local icon_path = path_main .. "graficos/itens/" .. name .. "-ore" .. ".png"
+    local icon_path = path_main .. "graficos/itens-128/" .. name .. "-ore" .. ".png"
     return {
         {
             type = "item",
             name = name.."-ore",
             icon = icon_path,
+            icon_size = 128,
             pictures = {
                 {size = 64, filename = "__base__/graphics/icons/iron-ore.png", scale = 0.5, mipmap_count = 4},
                 {size = 64, filename = "__base__/graphics/icons/iron-ore-1.png", scale = 0.5, mipmap_count = 4},

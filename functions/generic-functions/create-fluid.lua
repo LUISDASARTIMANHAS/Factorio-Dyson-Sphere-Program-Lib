@@ -2,7 +2,7 @@ local Module = {}
 
 function Module.createFluid(name, energy)
     local path_main = "__Dyson-Sphere-Program-Lib__/"
-    local icon_path = path_main .. "graficos/fluids/" .. name .. ".png"
+    local icon_path = path_main .. "graficos/fluids-128/" .. name .. ".png"
     return {
         type = "fluid",
         name = name,

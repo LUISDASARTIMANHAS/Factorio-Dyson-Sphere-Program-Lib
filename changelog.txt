@@ -16,7 +16,7 @@ Date: 21/07/2025
     - Falha ao carregar mods: ...here-Program-Lib__/functions/create-item-with-recipe.lua:9: Tipo inválido para ícone: item (esperado 'itens' ou 'blocos')
     - stack traceback: [C]: in function 'error'	...here-Program-Lib__/functions/create-item-with-recipe.lua:9: in function 'createItemWithRecipe'...ogram-Lib__/functions/create-item-with-recipe-matrix.lua:13: in function 'createItemWithRecipeMatrix' __Dyson-Sphere-Program-Lib__/data/matrix.lua:6: in main chunk	[C]: in function 'require'	__Dyson-Sphere-Program-Lib__/data.lua:5: in main chunk
     - fixed Error in assignID: technology with name 'Dyson-Sphere-Program-Lib' does not exist
-
+    - fixed Error while running setup for technology prototype "tech-dyson-electromagnetism" (technology): Invalid research unit (magnetic-coil). Research unit(s) can only be tool type items at the moment.
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.1
