@@ -74,6 +74,7 @@ data:extend(
 data:extend(
     functions.createItemWithRecipe(
         "plastic",
+        "intermediate-products",
         100,
         "chemistry",
         3,
@@ -109,6 +110,7 @@ data:extend(
 -- data:extend(
 --     functions.createItemWithRecipe(
 --         "carbon-nanotube",
+--         "intermediate-products"
 --         "itens",
 --         100,
 --         4,
@@ -324,6 +326,7 @@ data:extend(
 data:extend(
     functions.createItemWithRecipe(
         "critical-photon",
+        "intermediate-products",
         100,
         "ray-receiver",
         10,

@@ -3,8 +3,8 @@ local createRecipe = require("functions.generic-functions.create-recipe")
 
 local Module = {}
 
-function Module.createItemWithRecipe(name, stack_size, crafted_in, time, ingredients, results)
-    local item = createItem.createItem(name, stack_size)
+function Module.createItemWithRecipe(name, subgroup, stack_size, crafted_in, time, ingredients, results)
+    local item = createItem.createItem(name,subgroup, stack_size)
     local recipe = createRecipe.createRecipe("itens",name, crafted_in, time, ingredients, results)
 
     return {item, recipe}

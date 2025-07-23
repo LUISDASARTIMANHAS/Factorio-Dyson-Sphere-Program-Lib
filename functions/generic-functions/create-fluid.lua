@@ -6,7 +6,7 @@ function Module.createFluid(name, energy)
     return {
         type = "fluid",
         name = name,
-        subgroup = "fluid",
+        subgroup = "natural-resources",
         default_temperature = 15,
         max_temperature = 100,
         -- 2kJ,
@@ -15,7 +15,7 @@ function Module.createFluid(name, energy)
         flow_color = {0.7, 0.7, 0.7},
         icon = icon_path,
         icon_size = 128,
-        order = "a[fluid]-a[" .. name .. "]-a[" .. name .. "]"
+        order = "a[natural-resources]-a[" .. name .. "]-a[" .. name .. "]"
     }
 end
 

@@ -1,4 +1,5 @@
 local path_main = "__Dyson-Sphere-Program-Lib__/"
+local icon_path = path_main .. "graficos/blocos/matrix-lab.png"
 
 -- *** Definição do ITEM 'matrix-lab' ***
 -- Este é o item que o jogador terá no inventário e usará para construir o laboratório.
@@ -9,10 +10,10 @@ data:extend(
             -- Nome do item, deve ser o mesmo do laboratório
             name = "matrix-lab",
             -- Ícone do item (o mesmo do laboratório)
-            icon = path_main .. "graficos/blocos/matrix-lab.png",
+            icon = icon_path,
             icon_size = 128,
             -- Subgrupo onde o item aparecerá (ex: "production-machine", "science-building")
-            subgroup = "production-machine",
+            subgroup = "science",
             -- Ordem de exibição no subgrupo
             order = "a[matrix-lab]",
             -- *** Stack Size de 50, conforme especificado ***
@@ -30,7 +31,7 @@ data:extend(
             -- Nome único para o seu laboratório (deve ser o mesmo do item)
             name = "matrix-lab",
             -- Caminho para o ícone do seu laboratório
-            icon = path_main .. "graficos/blocos/matrix-lab.png",
+            icon = icon_path,
             icon_size = 128,
             flags = {"placeable-neutral", "placeable-player", "player-creation"},
             minable = {hardness = 0.2, mining_time = 0.5, result = "matrix-lab"}, -- Item que o laboratório dropa ao ser minerado (referencia o item acima)
@@ -75,7 +76,8 @@ data:extend(
             animation = {
                 layers = {
                     {
-                        filename = path_main .. "graficos/blocos/matrix-lab.png", -- Caminho para a animação do seu laboratório
+                        -- Caminho para a animação do seu laboratório
+                        filename = icon_path,
                         width = 128,
                         height = 128,
                         frame_count = 32, -- Número de frames na animação

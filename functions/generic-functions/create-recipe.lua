@@ -19,7 +19,7 @@ function Module.createRecipe(typeIcon,name, crafted_in, time, ingredients, resul
         type = "recipe",
         name = name,
         category = crafted_in,
-        enabled = true,
+        enabled = false,
         energy_required = time,
         icon = icon_path,
         icon_size = 128,

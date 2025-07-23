@@ -11,7 +11,7 @@ function Module.createTechnology(name, ingredients, prerequisites, unlocks, pack
         icon_mipmaps = 4,
         prerequisites = prerequisites or
             {
-                "automation"
+                "tech-dyson-sphere-program"
             },
         effects = unlocks or
             {

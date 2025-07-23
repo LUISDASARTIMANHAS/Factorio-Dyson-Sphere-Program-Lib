@@ -50,7 +50,8 @@ data:extend(
                 {"energy-matrix", 4}
             },
             {
-                "turbo-transport-belt"
+                "turbo-transport-belt",
+                "tech-dyson-sphere-program"
             },
             nil,
             100,
@@ -69,7 +70,8 @@ data:extend(
                 {"energy-matrix", 2}
             },
             {
-                "steel-processing"
+                "steel-processing",
+                "tech-dyson-sphere-program"
             },
             nil,
             100,
@@ -89,7 +91,8 @@ data:extend(
                 {"structure-matrix", 8}
             },
             {
-                "tech-dyson-titanium-smelting"
+                "tech-dyson-titanium-smelting",
+                "tech-dyson-sphere-program"
             },
             nil,
             10,
@@ -128,7 +131,8 @@ data:extend(
             },
             {
                 "tech-dyson-high-strength-titanium-alloy",
-                "tech-dyson-reinforced-thruster"
+                "tech-dyson-reinforced-thruster",
+                "tech-dyson-sphere-program"
             },
             nil,
             10,
@@ -169,7 +173,8 @@ data:extend(
             },
             {
                 "tech-dyson-interstellar-logistics-system",
-                "tech-dyson-interstellar-power-transmission"
+                "tech-dyson-interstellar-power-transmission",
+                "tech-dyson-sphere-program"
             },
             nil,
             100,
@@ -188,7 +193,8 @@ data:extend(
             },
             {
                 "tech-dyson-electromagnetism",
-                "fluid-handling"
+                "fluid-handling",
+                "tech-dyson-sphere-program"
             },
             nil,
             50,
@@ -209,7 +215,8 @@ data:extend(
             },
             -- prerequisites
             {
-                "steel-processing"
+                "steel-processing",
+                "tech-dyson-sphere-program"
             },
             -- unlocks
             {

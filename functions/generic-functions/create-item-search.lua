@@ -12,7 +12,7 @@ function Module.createItemSearch(name, stack_size)
         icon = icon_path,
         icon_size = 128,
         color_hint = {text = "1"},
-        subgroup = "itens",
+        subgroup = "science",
         order = "a[science]-z[" .. name .. "]",
         inventory_move_sound = item_sounds.metal_small_inventory_move,
         pick_sound = item_sounds.metal_small_inventory_pickup,

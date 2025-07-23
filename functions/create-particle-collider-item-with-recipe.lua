@@ -9,15 +9,18 @@ local createItemWithRecipe = require("functions.generic-functions.create-item-wi
 
 local Module = {}
 
-function Module.createParticleColiderItemWithRecipe(name, time, qtde,stack_size, ingredients, resultsPersonal)
-    local results = resultsPersonal or {
-        {type = "item", name = name, amount = qtde}
-    }
+function Module.createParticleColiderItemWithRecipe(name, time, qtde, stack_size, ingredients, resultsPersonal)
+    local results =
+        resultsPersonal or
+        {
+            {type = "item", name = name, amount = qtde}
+        }
     local crafted_in = "particle-collider"
+    local subgroup = "dark-fog-components"
     local size = stack_size or 200
 
     local itemAndRecipe =
-        createItemWithRecipe.createItemWithRecipe(name, size, crafted_in, time, ingredients, results)
+        createItemWithRecipe.createItemWithRecipe(name, subgroup, size, crafted_in, time, ingredients, results)
 
     return itemAndRecipe
 end
