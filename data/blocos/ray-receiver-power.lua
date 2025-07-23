@@ -4,8 +4,8 @@ data:extend(
     {
         type = "electric-energy-interface",
         name = "ray-receiver-power",
-        icon = path_main .. "graficos/blocos-128/ray-receiver.png",
-        -- icon_size = 64,
+        icon = path_main .. "graficos/blocos/ray-receiver.png",
+        -- icon_size = 128,
         flags = {"placeable-neutral", "player-creation"},
         minable = {mining_time = 1, result = "ray-receiver-power"},
         max_health = 300,

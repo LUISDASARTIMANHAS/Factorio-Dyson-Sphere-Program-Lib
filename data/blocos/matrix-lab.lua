@@ -9,8 +9,8 @@ data:extend(
             -- Nome do item, deve ser o mesmo do laboratório
             name = "matrix-lab",
             -- Ícone do item (o mesmo do laboratório)
-            icon = path_main .. "graficos/blocos-128/matrix-lab.png",
-            icon_size = 64,
+            icon = path_main .. "graficos/blocos/matrix-lab.png",
+            icon_size = 128,
             -- Subgrupo onde o item aparecerá (ex: "production-machine", "science-building")
             subgroup = "production-machine",
             -- Ordem de exibição no subgrupo
@@ -30,8 +30,8 @@ data:extend(
             -- Nome único para o seu laboratório (deve ser o mesmo do item)
             name = "matrix-lab",
             -- Caminho para o ícone do seu laboratório
-            icon = path_main .. "graficos/blocos-128/matrix-lab.png",
-            icon_size = 64,
+            icon = path_main .. "graficos/blocos/matrix-lab.png",
+            icon_size = 128,
             flags = {"placeable-neutral", "placeable-player", "player-creation"},
             minable = {hardness = 0.2, mining_time = 0.5, result = "matrix-lab"}, -- Item que o laboratório dropa ao ser minerado (referencia o item acima)
             -- Vida do laboratório
@@ -75,7 +75,7 @@ data:extend(
             animation = {
                 layers = {
                     {
-                        filename = path_main .. "graficos/blocos-128/matrix-lab.png", -- Caminho para a animação do seu laboratório
+                        filename = path_main .. "graficos/blocos/matrix-lab.png", -- Caminho para a animação do seu laboratório
                         width = 128,
                         height = 128,
                         frame_count = 32, -- Número de frames na animação

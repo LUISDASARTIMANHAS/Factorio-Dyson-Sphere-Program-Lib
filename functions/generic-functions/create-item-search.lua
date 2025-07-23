@@ -4,12 +4,13 @@ local item_tints = require("__base__.prototypes.item-tints")
 
 function Module.createItemSearch(name, stack_size)
     local path_main = "__Dyson-Sphere-Program-Lib__/"
-    local icon_path = path_main .. "graficos/itens-128/" .. name .. ".png"
+    local icon_path = path_main .. "graficos/itens/" .. name .. ".png"
     return {
         type = "tool",
         durability = 1,
         name = name,
         icon = icon_path,
+        icon_size = 128,
         color_hint = {text = "1"},
         subgroup = "itens",
         order = "a[science]-z[" .. name .. "]",

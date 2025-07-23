@@ -4,8 +4,8 @@ data:extend(
     {
         type = "furnace",
         name = "ray-receiver-photon",
-        icon = path_main .. "graficos/blocos-128/ray-receiver.png",
-        -- icon_size = 64,
+        icon = path_main .. "graficos/blocos/ray-receiver.png",
+        -- icon_size = 128,
         energy_source = {
             type = "electric",
             usage_priority = "secondary-input",

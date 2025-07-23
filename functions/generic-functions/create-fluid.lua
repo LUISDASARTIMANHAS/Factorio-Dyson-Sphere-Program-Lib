@@ -2,7 +2,7 @@ local Module = {}
 
 function Module.createFluid(name, energy)
     local path_main = "__Dyson-Sphere-Program-Lib__/"
-    local icon_path = path_main .. "graficos/fluids-128/" .. name .. ".png"
+    local icon_path = path_main .. "graficos/fluids/" .. name .. ".png"
     return {
         type = "fluid",
         name = name,
@@ -14,6 +14,7 @@ function Module.createFluid(name, energy)
         base_color = {0, 0.34, 0.6},
         flow_color = {0.7, 0.7, 0.7},
         icon = icon_path,
+        icon_size = 128,
         order = "a[fluid]-a[" .. name .. "]-a[" .. name .. "]"
     }
 end

@@ -6,7 +6,7 @@ function Module.createTechnology(name, ingredients, prerequisites, unlocks, pack
     return {
         type = "technology",
         name = "tech-dyson-" .. name,
-        icon = path_main .. "graficos/technology-128/tech-dyson-" .. name .. ".png",
+        icon = path_main .. "graficos/technology/tech-dyson-" .. name .. ".png",
         icon_size = 128,
         icon_mipmaps = 4,
         prerequisites = prerequisites or
