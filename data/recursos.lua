@@ -8,9 +8,10 @@ local functions = require("functions.init")
 
 -- automaticamente adicona -ore
 -- Define itens
-data:extend(functions.createOre("organic-crystal", 100, 1, "chemical", "1.80MJ"))
-data:extend(functions.createOre("titanium", 100, 1, "chemical", "1.80MJ"))
-data:extend(functions.createOre("silicon", 100, 1, nil, nil))
+data:extend(functions.createOre("organic-crystal", 100, "chemical", "1.80MJ"))
+data:extend(functions.createOre("titanium", 100, "chemical", "1.80MJ"))
+data:extend(functions.createOre("silicon", 100, nil, nil))
+data:extend(functions.createOre("kimberlite", 50, nil, nil))
 
 -- hydrogen
 data:extend(
@@ -117,6 +118,22 @@ data:extend(
             {type = "item", name = "energetic-graphite", amount = 2}
         }
     )
+)
+
+-- diamond kimberlite ore
+data:extend(
+    {functions.createRecipe(
+        "itens",
+        "diamond-kimberlite",
+        "smelting",
+        1.5,
+        {
+            {type = "item", name = "kimberlite-ore", amount = 1}
+        },
+        {
+            {type = "item", name = "diamond", amount = 2}
+        }
+    )}
 )
 
 -- Titanium Ingot

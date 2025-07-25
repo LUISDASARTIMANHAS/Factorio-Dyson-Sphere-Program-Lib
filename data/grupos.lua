@@ -61,7 +61,13 @@ data:extend(
       type = "item-subgroup",
       name = "dyson-sphere",
       group = "dyson-category",
-      order = "dyson-dyson-sphere"
+      order = "dyson-sphere"
+    },
+    {
+      type = "item-subgroup",
+      name = "power-generation",
+      group = "dyson-category",
+      order = "dyson-power-generation"
     },
   }
 )

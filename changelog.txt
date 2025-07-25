@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.3
 Date: 25/07/2025
+  Changes:
+    - add images and itens.
+    - add functions LIB/ tech util 
+    - add all technologies
+    - add all itens
   Bugs Fixed:
     - fixed names of itens, techs and recipes
 ---------------------------------------------------------------------------------------------------

@@ -2,6 +2,7 @@
 local CO = require("functions.generic-functions.create-ore")
 local CI = require("functions.generic-functions.create-item")
 local CBI = require("functions.generic-functions.create-block-item")
+local CBIR = require("functions.generic-functions.create-block-item-with-recipe")
 local CF = require("functions.generic-functions.create-fluid")
 local CG = require("functions.generic-functions.create-gas")
 local CR = require("functions.generic-functions.create-recipe")
@@ -17,12 +18,13 @@ local functions = {}
 
 functions.createOre = CO.createOre
 functions.createItem = CI.createItem
-functions.crateBlock = CBI.createBlock
+functions.createBlockItem = CBI.createBlockItem
 functions.createFluid = CF.createFluid
 functions.createGas = CG.createGas
 functions.createRecipe = CR.createRecipe
 functions.createItemWithRecipe = CIR.createItemWithRecipe
 functions.createFluidWithRecipe = CFR.createFluidWithRecipe
+functions.createBlockItemWithRecipe = CBIR.createBlockItemWithRecipe
 functions.createSmeltingItemWithRecipe = CSIR.createSmeltingItemWithRecipe
 functions.createItemWithRecipeMatrix = CIRM.createItemWithRecipeMatrix
 functions.createAssemblerItemWithRecipe = CAIR.createAssemblerItemWithRecipe

@@ -1,7 +1,7 @@
 local Module = {}
 local item_sounds = require("__base__.prototypes.item_sounds")
 
-function Module.createOre(name, stack_size, kg, fuel_category, fuel_value)
+function Module.createOre(name, stack_size, fuel_category, fuel_value)
     local path_main = "__Dyson-Sphere-Program-Lib__/"
     local icon_path = path_main .. "graficos/itens/" .. name .. "-ore" .. ".png"
     return {
@@ -16,9 +16,9 @@ function Module.createOre(name, stack_size, kg, fuel_category, fuel_value)
                 {size = 64, filename = "__base__/graphics/icons/iron-ore-2.png", scale = 0.5, mipmap_count = 4},
                 {size = 64, filename = "__base__/graphics/icons/iron-ore-3.png", scale = 0.5, mipmap_count = 4}
             },
-            fuel_category = fuel_category or "",
+            fuel_category = fuel_category or nil,
             -- "4MJ"
-            fuel_value = fuel_value or "",
+            fuel_value = fuel_value or nil,
             subgroup = "raw-resource",
             color_hint = {text = "I"},
             order = "e[" .. name .. "-ore" .. "]",
@@ -26,7 +26,7 @@ function Module.createOre(name, stack_size, kg, fuel_category, fuel_value)
             pick_sound = item_sounds.resource_inventory_pickup,
             drop_sound = item_sounds.resource_inventory_move,
             stack_size = stack_size or 100,
-            weight = 2 * kg
+            weight = stack_size/2,
         },
         {
             type = "autoplace-control",

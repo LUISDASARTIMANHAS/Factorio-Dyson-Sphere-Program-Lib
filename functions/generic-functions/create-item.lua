@@ -17,6 +17,7 @@ function Module.createItem(name, subgroup, stack_size)
         pick_sound = item_sounds.metal_small_inventory_pickup,
         drop_sound = item_sounds.metal_small_inventory_move,
         stack_size = stack_size or 100,
+        weight = stack_size/2,
         ingredient_to_weight_coefficient = 0.28,
         random_tint_color = item_tints.iron_rust
     }

@@ -3,6 +3,80 @@ local tech = require("functions.create-technology")
 -- tech-dyson-nameofTech
 
 -- TIER 4
+-- Environment Modification
+data:extend(
+    {
+        tech.createTechnology(
+            "environment-modification",
+            {
+                {"electromagnetic-matrix", 4}
+            },
+            {
+                "tech-dyson-steel-smelting"
+            },
+            nil,
+            100
+        )
+    }
+)
+
+-- Crystal Smelting
+data:extend(
+    {
+        tech.createTechnology(
+            "crystal-smelting",
+            -- ingredients
+            {
+                {"electromagnetic-matrix", 5},
+                {"energy-matrix", 5}
+            },
+            -- prerequisites
+            {
+                "tech-dyson-improved-logistics-system"
+            },
+            -- unlocks
+            {
+                {
+                    type = "unlock-recipe",
+                    recipe = "diamond"
+                },
+                {
+                    type = "unlock-recipe",
+                    recipe = "diamond-kimberlite"
+                },
+                {
+                    type = "unlock-recipe",
+                    recipe = "crystal-silicon"
+                }
+            },
+            100
+        )
+    }
+)
+
+-- Solar Collection
+data:extend(
+    {
+        tech.createTechnology(
+            "advanced-solar-collection",
+            {
+                {"electromagnetic-matrix", 2}
+            },
+            {
+                "tech-dyson-steel-smelting"
+            },
+            {
+                {
+                    type = "unlock-recipe",
+                    recipe = "advanced-solar-panel"
+                }
+            },
+            100
+        )
+    }
+)
+
+
 
 
 
@@ -138,37 +212,6 @@ data:extend(
                 "tech-dyson-sphere-program"
             },
             nil,
-            100
-        )
-    }
-)
-
--- Crystal Smelting
-data:extend(
-    {
-        tech.createTechnology(
-            "crystal-smelting",
-            -- ingredients
-            {
-                {"electromagnetic-matrix", 5},
-                {"energy-matrix", 5}
-            },
-            -- prerequisites
-            {
-                "steel-processing",
-                "tech-dyson-sphere-program"
-            },
-            -- unlocks
-            {
-                {
-                    type = "unlock-recipe",
-                    recipe = "diamond"
-                },
-                {
-                    type = "unlock-recipe",
-                    recipe = "crystal-silicon"
-                }
-            },
             100
         )
     }

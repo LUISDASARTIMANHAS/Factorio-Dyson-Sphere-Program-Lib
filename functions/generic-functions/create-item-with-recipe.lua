@@ -3,6 +3,13 @@ local createRecipe = require("functions.generic-functions.create-recipe")
 
 local Module = {}
 
+-- @param name string O nome do item e receita (ex: "solar-painel").
+-- @param subgroup grupo onde ele deve ser organizado na gui do jogador (ex: "intermediate-products").
+-- @param stack_size quantidade do item por stack nos inventarios (ex: 50).
+-- @param crafted_in categoria onde o item pode ser construido (ex: "advanced-crafting").
+-- @param time tempo que demora para ser construido em segundos (ex: 10) 10s.
+-- @param ingredients tabela de ingredientes que são necessarios para construir o item.
+-- @param results tabela de saidas depois de construido o item .
 function Module.createItemWithRecipe(name, subgroup, stack_size, crafted_in, time, ingredients, results)
     local item = createItem.createItem(name,subgroup, stack_size)
     local recipe = createRecipe.createRecipe("itens",name, crafted_in, time, ingredients, results)
