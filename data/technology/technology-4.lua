@@ -9,13 +9,15 @@ data:extend(
         tech.createTechnology(
             "environment-modification",
             {
-                {"electromagnetic-matrix", 4}
+                {"electromagnetic-matrix", 1}
             },
             {
                 "tech-dyson-steel-smelting"
             },
-            nil,
-            100
+            {
+                "foundation"
+            },
+            400
         )
     }
 )
@@ -27,8 +29,8 @@ data:extend(
             "crystal-smelting",
             -- ingredients
             {
-                {"electromagnetic-matrix", 5},
-                {"energy-matrix", 5}
+                {"electromagnetic-matrix", 1},
+                {"energy-matrix", 1}
             },
             -- prerequisites
             {
@@ -36,20 +38,11 @@ data:extend(
             },
             -- unlocks
             {
-                {
-                    type = "unlock-recipe",
-                    recipe = "diamond"
-                },
-                {
-                    type = "unlock-recipe",
-                    recipe = "diamond-kimberlite"
-                },
-                {
-                    type = "unlock-recipe",
-                    recipe = "crystal-silicon"
-                }
+                "diamond",
+                "diamond-kimberlite",
+                "crystal-silicon"
             },
-            100
+            500
         )
     }
 )
@@ -60,210 +53,152 @@ data:extend(
         tech.createTechnology(
             "advanced-solar-collection",
             {
-                {"electromagnetic-matrix", 2}
+                {"electromagnetic-matrix", 1}
             },
             {
-                "tech-dyson-steel-smelting"
+                "tech-dyson-electromagnetic",
+                "tech-dyson-basic-assembling-processes",
+                "tech-dyson-smelting-purification",
+                "electromagnetic-matrix"
             },
             {
-                {
-                    type = "unlock-recipe",
-                    recipe = "advanced-solar-panel"
-                }
+                "advanced-solar-panel"
             },
-            100
+            200
         )
     }
 )
 
-
-
-
-
-
--- Planetary Logistics System
+-- Semiconductor Material
 data:extend(
     {
         tech.createTechnology(
-            "planetary-logistics-system",
+            "semiconductor-material",
             {
-                {"electromagnetic-matrix", 8},
-                {"energy-matrix", 4}
+                {"electromagnetic-matrix", 1}
             },
             {
-                "turbo-transport-belt",
-                "tech-dyson-sphere-program"
+                "electromagnetic-matrix"
             },
-            nil,
-            100
+            {
+                "microcrystalline-component"
+            },
+            200
         )
     }
 )
 
--- Titanium_Smelting
+-- Deuterium Fractionation
 data:extend(
     {
         tech.createTechnology(
-            "titanium-smelting",
+            "deuterium-fractionation",
             {
                 {"electromagnetic-matrix", 2},
-                {"energy-matrix", 2}
+                {"energy-matrix", 3}
             },
             {
-                "steel-processing",
-                "tech-dyson-sphere-program"
-            },
-            nil,
-            100
-        )
-    }
-)
-
--- High-Strength Titanium Alloy
-data:extend(
-    {
-        tech.createTechnology(
-            "high-strength-titanium-alloy",
-            {
-                {"electromagnetic-matrix", 80},
-                {"energy-matrix", 80},
-                {"structure-matrix", 8}
+                "electromagnetic-matrix"
             },
             {
-                "tech-dyson-titanium-smelting",
-                "tech-dyson-sphere-program"
-            },
-            nil,
-            10
-        )
-    }
-)
-
--- reinforced thruster
-data:extend(
-    {
-        tech.createTechnology(
-            "reinforced-thruster",
-            {
-                {"energy-matrix", 16}
-            },
-            {
-                "tech-dyson-sphere-program"
-            },
-            nil,
-            100
-        )
-    }
-)
-
--- Interstellar Logistics System
-data:extend(
-    {
-        tech.createTechnology(
-            "interstellar-logistics-system",
-            {
-                {"electromagnetic-matrix", 120},
-                {"energy-matrix", 120},
-                {"structure-matrix", 12}
-            },
-            {
-                "tech-dyson-high-strength-titanium-alloy",
-                "tech-dyson-reinforced-thruster",
-                "tech-dyson-sphere-program"
-            },
-            nil,
-            10
-        )
-    }
-)
-
--- Interstellar Power Transmission
-data:extend(
-    {
-        tech.createTechnology(
-            "interstellar-power-transmission",
-            {
-                {"electromagnetic-matrix", 120},
-                {"energy-matrix", 120},
-                {"structure-matrix", 12}
-            },
-            {
-                "tech-dyson-sphere-program"
-            },
-            nil,
-            100
-        )
-    }
-)
-
--- Gas Giants Exploitation
-data:extend(
-    {
-        tech.createTechnology(
-            "gas-giants-exploitation",
-            {
-                {"electromagnetic-matrix", 12},
-                {"energy-matrix", 12},
-                {"structure-matrix", 12}
-            },
-            {
-                "tech-dyson-interstellar-logistics-system",
-                "tech-dyson-interstellar-power-transmission",
-                "tech-dyson-sphere-program"
-            },
-            nil,
-            100
-        )
-    }
-)
-
--- High-Strength Crystal
-data:extend(
-    {
-        tech.createTechnology(
-            "high-strength-crystal",
-            -- ingredients
-            {
-                {"electromagnetic-matrix", 6},
-                {"energy-matrix", 6}
-            },
-            -- prerequisites
-            {
-                "steel-processing"
-            },
-            -- unlocks
-            {
-                {
-                    type = "unlock-recipe",
-                    recipe = "titanium-crystal"
-                }
+                "fractionator",
+                "deuterium-fractionator"
             },
             100
         )
     }
 )
 
--- Processor
+-- Proliferator MkI
 data:extend(
     {
         tech.createTechnology(
-            "processor",
-            -- ingredients
+            "proliferator-mki",
             {
-                {"electromagnetic-matrix", 8}
+                {"electromagnetic-matrix", 1}
             },
-            -- prerequisites
+            nil,
             {
-                "tech-dyson-sphere-program"
+                "proliferator-mki",
+                "spray-coater"
             },
-            -- unlocks
+            200
+        )
+    }
+)
+
+-- Basic Chemical Engineering
+data:extend(
+    {
+        tech.createTechnology(
+            "basic-chemical-engineering",
             {
-                {
-                    type = "unlock-recipe",
-                    recipe = "processor"
-                }
+                {"electromagnetic-matrix", 1}
+            },
+            {
+                "deuterium-fractionation",
+                "fluid-storage-encapsulation"
+            },
+            {
+                "chemical-plant",
+                "plastic",
+                "sulfuric-acid"
+            },
+            200
+        )
+    }
+)
+
+-- Energy Matrix
+data:extend(
+    {
+        tech.createTechnology(
+            "energy-matrix",
+            {
+                {"electromagnetic-matrix", 1}
+            },
+            {
+                "deuterium-fractionation"
+            },
+            {
+                "energy-matrix"
+            },
+            200
+        )
+    }
+)
+
+-- Magnetic Levitation
+data:extend(
+    {
+        tech.createTechnology(
+            "energy-matrix",
+            {
+                {"electromagnetic-matrix", 4},
+                {"energy-matrix", 1}
+            },
+            {
+                "electromagnetic-drive"
+            },
+            {
+                "electromagnetic-turbine"
             },
             100
+        )
+    }
+)
+
+-- Missile Turret
+data:extend(
+    {
+        tech.createTechnology(
+            "missile-turret",
+            {
+                {"electromagnetic-matrix", 1}
+            },
+            nil,
+            nil,
+            150
         )
     }
 )

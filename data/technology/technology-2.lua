@@ -9,7 +9,9 @@ data:extend(
     {
         techTrigger.createTechnologyTrigger(
             "basic-logistics-system",
-            nil,
+            {
+                "transport-belt","underground-belt","splitter"
+            },
             nil,
             {
                 type = "craft-item",
@@ -25,7 +27,10 @@ data:extend(
     {
         techTrigger.createTechnologyTrigger(
             "automatic-metallurgy",
-            nil,
+            {
+                "arc-smelter",
+                "glass"
+            },
             nil,
             {
                 type = "craft-item",
@@ -41,7 +46,10 @@ data:extend(
     {
         techTrigger.createTechnologyTrigger(
             "electromagnetic-matrix",
-            nil,
+            {
+                "electromagnetic-matrix",
+                "matrix-lab"
+            },
             nil,
             {
                 type = "craft-item",
@@ -57,7 +65,9 @@ data:extend(
     {
         techTrigger.createTechnologyTrigger(
             "basic-assembling-processes",
-            nil,
+            {
+                "assembling-machine-1"
+            },
             nil,
             {
                 type = "craft-item",
@@ -77,7 +87,10 @@ data:extend(
                 {"electromagnetic-matrix", 1}
             },
             nil,
-            nil,
+            {
+                "storage-tank",
+                "offshore-pump"
+            },
             50
         )
     }
@@ -94,7 +107,11 @@ data:extend(
             {
                 "tech-dyson-fluid-storage-encapsulation"
             },
-            nil,
+            {
+                "prism",
+                "plasma-exciter",
+                "wireless-power-tower"
+            },
             50
         )
     }
@@ -109,7 +126,9 @@ data:extend(
                 {"electromagnetic-matrix", 1}
             },
             nil,
-            nil,
+            {
+                "electric-motor"
+            },
             50
         )
     }
@@ -124,7 +143,7 @@ data:extend(
                 {"electromagnetic-matrix", 1}
             },
             nil,
-            nil,
+            {"engine"},
             20
         )
     }

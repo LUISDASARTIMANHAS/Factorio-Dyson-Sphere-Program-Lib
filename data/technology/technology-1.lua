@@ -16,7 +16,10 @@ data:extend(
             {
                 "automation"
             },
-            nil,
+            -- unlocks
+            {
+                "magnet","magnetic-coil","circuit-board","gear","stone-brick"
+            },
             500
         )
     }

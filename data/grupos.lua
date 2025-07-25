@@ -87,6 +87,10 @@ data:extend(
     {
       type = "recipe-category",
       name = "ray-receiver"
+    },
+    {
+      type = "recipe-category",
+      name = "smelting-facility"
     }
   }
 )

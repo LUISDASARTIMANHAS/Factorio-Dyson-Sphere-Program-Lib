@@ -14,7 +14,7 @@ data:extend(
             {
                 "tech-dyson-basic-logistics-system"
             },
-            nil,
+            {"fast-splitter", "fast-transport-belt","fast-underground-belt"},
             100
         )
     }
@@ -26,13 +26,15 @@ data:extend(
         tech.createTechnology(
             "steel-smelting",
             {
-                {"electromagnetic-matrix", 12}
+                {"electromagnetic-matrix", 1}
             },
             {
                 "tech-dyson-automatic-metallurgy"
             },
-            nil,
-            10
+            {
+                "steel"
+            },
+            120
         )
     }
 )
@@ -43,11 +45,13 @@ data:extend(
         tech.createTechnology(
             "combustible-unit",
             {
-                {"electromagnetic-matrix", 12}
+                {"electromagnetic-matrix", 1}
             },
             nil,
-            nil,
-            10
+            {
+                "combustible-unit"
+            },
+            120
         )
     }
 )
@@ -63,7 +67,9 @@ data:extend(
             {
                 "tech-dyson-automatic-metallurgy"
             },
-            nil,
+            {
+                "silicon-ore","energetic-graphite","high-purity-silicon"
+            },
             100
         )
     }
@@ -80,7 +86,9 @@ data:extend(
             {
                 "tech-dyson-basic-assembling-processes"
             },
-            nil,
+            {
+                "thermal-power-plant"
+            },
             30
         )
     }
@@ -97,7 +105,9 @@ data:extend(
             {
                 "tech-dyson-basic-assembling-processes"
             },
-            nil,
+            {
+                "pumpjack","oil-refinery"
+            },
             100
         )
     }
