@@ -36,7 +36,7 @@ data:extend(
             nil,
             {
                 type = "craft-item",
-                item = "magnetic-coil",
+                item = "DSP-magnetic-coil",
                 count = 10
             }
         )

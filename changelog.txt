@@ -1,13 +1,17 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.3
-Date: 25/07/2025
+Date: 27/07/2025
   Changes:
     - add images and itens.
     - add functions LIB/ tech util 
     - add all technologies
     - add all itens
+    - add prefix name 'DSP-' for compatibility
+    - add arc-furnace
   Bugs Fixed:
     - fixed names of itens, techs and recipes
+    - fixed genal bugs
+    - fixed generic bugs
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.2
 Date: 21/07/2025

@@ -58,6 +58,19 @@ data:extend(
     )
 )
 
+
+-- Stone Brick
+data:extend(
+    functions.createSmeltingItemWithRecipe(
+        "stone-brick",
+        1,
+        1,
+        {
+            {type = "item", name = "stone", amount = 1}
+        }
+    )
+)
+
 -- silicon-ore (STONE)
 data:extend(
     functions.createAssemblerItemWithRecipe(

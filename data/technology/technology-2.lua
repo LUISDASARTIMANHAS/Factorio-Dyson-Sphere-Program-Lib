@@ -15,7 +15,7 @@ data:extend(
             nil,
             {
                 type = "craft-item",
-                item = "circuit-board",
+                item = "DSP-circuit-board",
                 count = 10
             }
         )
@@ -34,7 +34,7 @@ data:extend(
             nil,
             {
                 type = "craft-item",
-                item = "magnetic-coil",
+                item = "DSP-magnetic-coil",
                 count = 10
             }
         )
@@ -53,7 +53,7 @@ data:extend(
             nil,
             {
                 type = "craft-item",
-                item = "circuit-board",
+                item = "DSP-circuit-board",
                 count = 10
             }
         )
@@ -71,7 +71,7 @@ data:extend(
             nil,
             {
                 type = "craft-item",
-                item = "gear",
+                item = "DSP-gear",
                 count = 10
             }
         )
