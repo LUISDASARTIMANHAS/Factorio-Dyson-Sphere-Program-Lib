@@ -10,9 +10,9 @@ local Module = {}
 
 function Module.createSmeltingItemWithRecipe(name, time, qtde, ingredients)
     local results = {
-        {type = "item", name = name, amount = qtde}
+        {type = "item", name = "DSP-"..name, amount = qtde}
     }
-    local crafted_in = "particle-collider"
+    local crafted_in = "DSP-smelting-facility"
     local subgroup = "natural-resources"
     local size = 200
 

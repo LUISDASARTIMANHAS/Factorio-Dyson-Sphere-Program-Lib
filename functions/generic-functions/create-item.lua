@@ -7,7 +7,7 @@ function Module.createItem(name, subgroup, stack_size)
     local icon_path = path_main .. "graficos/itens/" .. name .. ".png"
     return {
         type = "item",
-        name = name,
+        name = "DSP-"..name,
         icon = icon_path,
         icon_size = 128,
         color_hint = {text = "1"},

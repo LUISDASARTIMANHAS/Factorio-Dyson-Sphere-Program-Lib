@@ -10,7 +10,7 @@ local Module = {}
 
 function Module.createAssemblerItemWithRecipe(name, time, qtde, ingredients, stack_size)
     local results = {
-        {type = "item", name = name, amount = qtde}
+        {type = "item", name = "DSP-"..name, amount = qtde}
     }
     local crafted_in = "advanced-crafting"
     local subgroup = "intermediate-products"

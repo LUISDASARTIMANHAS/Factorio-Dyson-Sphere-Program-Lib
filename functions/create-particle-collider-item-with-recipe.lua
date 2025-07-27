@@ -13,9 +13,9 @@ function Module.createParticleColiderItemWithRecipe(name, time, qtde, stack_size
     local results =
         resultsPersonal or
         {
-            {type = "item", name = name, amount = qtde}
+            {type = "item", name = "DSP-"..name, amount = qtde}
         }
-    local crafted_in = "particle-collider"
+    local crafted_in = "DSP-particle-collider"
     local subgroup = "dark-fog-components"
     local size = stack_size or 200
 

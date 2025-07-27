@@ -27,7 +27,7 @@ data:extend(
         -- results
         {
             {type = "fluid", name = "heavy-oil", amount = 2},
-            {type = "fluid", name = "hydrogen", amount = 2}
+            {type = "fluid", name = "DSP-hydrogen", amount = 2}
         }
     )
 )
@@ -42,13 +42,13 @@ data:extend(
         2.5,
         -- ingredients
         {
-            {type = "fluid", name = "hydrogen", amount = 1}
+            {type = "fluid", name = "DSP-hydrogen", amount = 1}
         },
         -- results
         {
             {
                 type = "fluid",
-                name = "deuterium",
+                name = "DSP-deuterium",
                 amount_min = 1,
                 amount_max = 1,
                 probability = 0.01,
@@ -61,7 +61,7 @@ data:extend(
 -- silicon-ore (STONE)
 data:extend(
     functions.createAssemblerItemWithRecipe(
-        "silicon-ore",
+        "DSP-silicon-ore",
         10,
         1,
         {
@@ -115,7 +115,7 @@ data:extend(
         2,
         1,
         {
-            {type = "item", name = "energetic-graphite", amount = 2}
+            {type = "item", name = "DSP-energetic-graphite", amount = 2}
         }
     )
 )
@@ -128,10 +128,10 @@ data:extend(
         "smelting",
         1.5,
         {
-            {type = "item", name = "kimberlite-ore", amount = 1}
+            {type = "item", name = "DSP-kimberlite-ore", amount = 1}
         },
         {
-            {type = "item", name = "diamond", amount = 2}
+            {type = "item", name = "DSP-diamond", amount = 2}
         }
     )}
 )
@@ -143,7 +143,7 @@ data:extend(
         2,
         1,
         {
-            {type = "item", name = "titanium-ore", amount = 2}
+            {type = "item", name = "DSP-titanium-ore", amount = 2}
         }
     )
 )
@@ -155,7 +155,7 @@ data:extend(
         2,
         1,
         {
-            {type = "item", name = "silicon-ore", amount = 2}
+            {type = "item", name = "DSP-silicon-ore", amount = 2}
         }
     )
 )
@@ -167,7 +167,7 @@ data:extend(
         2,
         1,
         {
-            {type = "item", name = "high-purity-silicon", amount = 1}
+            {type = "item", name = "DSP-high-purity-silicon", amount = 1}
         }
     )
 )

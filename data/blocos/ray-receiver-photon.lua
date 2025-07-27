@@ -3,7 +3,7 @@ local path_main = "__Dyson-Sphere-Program-Lib__/"
 data:extend(
     {
         type = "furnace",
-        name = "ray-receiver-photon",
+        name = "DSP-ray-receiver-photon",
         icon = path_main .. "graficos/blocos/ray-receiver.png",
         -- icon_size = 128,
         energy_source = {

@@ -1,5 +1,6 @@
 local path_main = "__Dyson-Sphere-Program-Lib__/"
 local icon_path = path_main .. "graficos/blocos/matrix-lab.png"
+local hit_effects = require("__base__.prototypes.entity.hit-effects")
 
 -- *** Definição do ITEM 'matrix-lab' ***
 -- Este é o item que o jogador terá no inventário e usará para construir o laboratório.
@@ -8,7 +9,7 @@ data:extend(
         {
             type = "item",
             -- Nome do item, deve ser o mesmo do laboratório
-            name = "matrix-lab",
+            name = "DSP-matrix-lab",
             -- Ícone do item (o mesmo do laboratório)
             icon = icon_path,
             icon_size = 128,
@@ -18,7 +19,7 @@ data:extend(
             order = "a[matrix-lab]",
             -- *** Stack Size de 50, conforme especificado ***
             stack_size = 50,
-            place_result = "matrix-lab"
+            place_result = "DSP-matrix-lab"
         }
     }
 )
@@ -29,7 +30,7 @@ data:extend(
         {
             type = "lab",
             -- Nome único para o seu laboratório (deve ser o mesmo do item)
-            name = "matrix-lab",
+            name = "DSP-matrix-lab",
             -- Caminho para o ícone do seu laboratório
             icon = icon_path,
             icon_size = 128,
@@ -45,6 +46,7 @@ data:extend(
             selection_box = {{-1.2, -1.2}, {1.2, 1.2}},
             -- Caixa de colisão
             collision_box = {{-1.0, -1.0}, {1.0, 1.0}},
+            damaged_trigger_effect = hit_effects.entity(),
             -- Permite substituição rápida por outros labs
             fast_replaceable_group = "lab",
             -- Categoria de fabricação (não diretamente relevante para labs, mas é um campo)
@@ -84,6 +86,29 @@ data:extend(
                         line_length = 8, -- Número de frames por linha na imagem
                         animation_speed = 0.5, -- Velocidade da animação
                         shift = {0, 0}
+                    }
+                }
+            },
+            picture = {
+                layers = {
+                    {
+                        filename = icon_path,
+                        priority = "high",
+                        -- width = 230,
+                        -- height = 224,
+                        size = 128,
+                        shift = util.by_pixel(-3, 3.5),
+                        scale = 2
+                    },
+                    {
+                        filename = icon_path,
+                        priority = "high",
+                        -- width = 220,
+                        -- height = 180,
+                        size = 128,
+                        shift = util.by_pixel(9.5, 6),
+                        draw_as_shadow = true,
+                        scale = 2
                     }
                 }
             },

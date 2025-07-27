@@ -6,7 +6,7 @@ local createRecipe = require("functions.generic-functions.create-recipe")
 local Module = {}
 
 function Module.createItemWithRecipeMatrix(name, time, qtde, ingredients)
-    local nameMatrix = name .. "-matrix"
+    local nameMatrix ="DSP-".. name .. "-matrix"
     local crafted_in = "science-matrices"
     local results = {
         {type = "item", name = nameMatrix, amount = qtde}

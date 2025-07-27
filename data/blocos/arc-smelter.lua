@@ -8,7 +8,7 @@ data:extend(
         {
             type = "item",
             -- Nome do item, deve ser o mesmo do laboratório
-            name = "arc-smelter",
+            name = "DSP-arc-smelter",
             -- Ícone do item (o mesmo do laboratório)
             icon = icon_path,
             icon_size = 128,
@@ -18,7 +18,7 @@ data:extend(
             order = "a[arc-smelter]",
             -- *** Stack Size de 50, conforme especificado ***
             stack_size = 50,
-            place_result = "arc-smelter"
+            place_result = "DSP-arc-smelter"
         }
     }
 )
@@ -28,7 +28,7 @@ data:extend(
     {
         {
             type = "lab",
-            name = "arc-smelter",
+            name = "DSP-arc-smelter",
             icon = icon_path,
             icon_size = 128,
             flags = {"placeable-neutral", "placeable-player", "player-creation"},
@@ -44,7 +44,7 @@ data:extend(
             -- 2x mais rapida
             crafting_speed = 2,
             -- Categoria de fabricação (não diretamente relevante para labs, mas é um campo)
-            crafting_categories = {"crafting", "smelting-facility"},
+            crafting_categories = {"crafting", "DSP-smelting-facility"},
             -- *** PACOTES DE CIÊNCIA QUE ELE ACEITA ***
             inputs = {
                 "electromagnetic-matrix",
@@ -71,7 +71,7 @@ data:extend(
             animation = {
                 layers = {
                     {
-                        -- Caminho para a animação do seu laboratório
+                        -- Caminho para a animação 
                         filename = icon_path,
                         size = 128,
                         frame_count = 32, -- Número de frames na animação
@@ -81,9 +81,32 @@ data:extend(
                     }
                 }
             },
+            picture = {
+                layers = {
+                    {
+                        filename = icon_path,
+                        priority = "high",
+                        -- width = 230,
+                        -- height = 224,
+                        size = 128,
+                        shift = util.by_pixel(-3, 3.5),
+                        scale = 2
+                    },
+                    {
+                        filename = icon_path,
+                        priority = "high",
+                        -- width = 220,
+                        -- height = 180,
+                        size = 128,
+                        shift = util.by_pixel(9.5, 6),
+                        draw_as_shadow = true,
+                        scale = 2
+                    }
+                }
+            },
             working_sound = {
                 sound = {
-                    filename = "__base__/sound/lab.ogg", -- Som de trabalho do laboratório
+                    filename = "__base__/sound/electric-furnace.ogg", -- Som de trabalho da fornalha
                     volume = 0.7
                 },
                 audible_distance_modifier = 0.5

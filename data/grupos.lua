@@ -78,19 +78,19 @@ data:extend(
   {
     {
       type = "recipe-category",
-      name = "science-matrices"
+      name = "DSP-science-matrices"
     },
     {
       type = "recipe-category",
-      name = "particle-collider"
+      name = "DSP-particle-collider"
     },
     {
       type = "recipe-category",
-      name = "ray-receiver"
+      name = "DSP-ray-receiver"
     },
     {
       type = "recipe-category",
-      name = "smelting-facility"
+      name = "DSP-smelting-facility"
     }
   }
 )

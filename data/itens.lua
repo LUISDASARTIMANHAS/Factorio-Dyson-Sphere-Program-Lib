@@ -7,7 +7,7 @@ local functions = require("functions.init")
 -- category = "centrifuging" feito na centrifuge
 -- category = "chemistry" feito na Chemical plant
 -- category = "oil-processing" feito na Oil refinery
--- category = "particle-collider" feito em Miniature Particle Collider
+-- category = "DSP-particle-collider" feito em Miniature Particle Collider
 
 -- Define itens
 -- circuit-board
@@ -31,7 +31,7 @@ data:extend(
         2,
         {
             {type = "item", name = "copper-plate", amount = 1},
-            {type = "item", name = "magnet", amount = 2}
+            {type = "item", name = "DSP-magnet", amount = 2}
         }
     )
 )
@@ -63,7 +63,7 @@ data:extend(
         3,
         2,
         {
-            {type = "item", name = "energetic-graphite", amount = 3},
+            {type = "item", name = "DSP-energetic-graphite", amount = 3},
             {type = "fluid", name = "sulfuric-acid", amount = 1}
         },
         100
@@ -81,11 +81,11 @@ data:extend(
         -- ingredients
         {
             {type = "fluid", name = "crude-oil", amount = 2},
-            {type = "item", name = "energetic-graphite", amount = 2}
+            {type = "item", name = "DSP-energetic-graphite", amount = 2}
         },
         -- results
         {
-            {type = "item", name = "plastic", amount = 1}
+            {type = "item", name = "DSP-plastic", amount = 1}
         }
     )
 )
@@ -98,8 +98,8 @@ data:extend(
         4,
         2,
         {
-            {type = "item", name = "titanium-ingot", amount = 1},
-            {type = "item", name = "graphene", amount = 1}
+            {type = "item", name = "DSP-titanium-ingot", amount = 1},
+            {type = "item", name = "DSP-graphene", amount = 1}
         },
         100
     )
@@ -128,8 +128,8 @@ data:extend(
         4,
         1,
         {
-            {type = "item", name = "organic-crystal-ore", amount = 1},
-            {type = "item", name = "titanium-ingot", amount = 3}
+            {type = "item", name = "DSP-organic-crystal-ore", amount = 1},
+            {type = "item", name = "DSP-titanium-ingot", amount = 3}
         },
         100
     )
@@ -142,9 +142,9 @@ data:extend(
         8,
         1,
         {
-            {type = "item", name = "carbon-nanotube", amount = 1},
-            {type = "item", name = "crystal-silicon", amount = 2},
-            {type = "item", name = "plastic", amount = 2}
+            {type = "item", name = "DSP-carbon-nanotube", amount = 1},
+            {type = "item", name = "DSP-crystal-silicon", amount = 2},
+            {type = "item", name = "DSP-plastic", amount = 2}
         },
         200
     )
@@ -158,7 +158,7 @@ data:extend(
         1,
         {
             {type = "item", name = "copper-plate", amount = 1},
-            {type = "item", name = "high-purity-silicon", amount = 2}
+            {type = "item", name = "DSP-high-purity-silicon", amount = 2}
         },
         200
     )
@@ -171,8 +171,8 @@ data:extend(
         3,
         1,
         {
-            {type = "item", name = "circuit-board", amount = 2},
-            {type = "item", name = "microcrystalline-component", amount = 2}
+            {type = "item", name = "DSP-circuit-board", amount = 2},
+            {type = "item", name = "DSP-microcrystalline-component", amount = 2}
         },
         200
     )
@@ -199,8 +199,8 @@ data:extend(
         1,
         {
             {type = "item", name = "iron-plate", amount = 2},
-            {type = "item", name = "gear", amount = 1},
-            {type = "item", name = "magnetic-coil", amount = 1}
+            {type = "item", name = "DSP-gear", amount = 1},
+            {type = "item", name = "DSP-magnetic-coil", amount = 1}
         },
         100
     )
@@ -213,8 +213,8 @@ data:extend(
         2,
         1,
         {
-            {type = "item", name = "electric-motor", amount = 2},
-            {type = "item", name = "magnetic-coil", amount = 2}
+            {type = "item", name = "DSP-electric-motor", amount = 2},
+            {type = "item", name = "DSP-magnetic-coil", amount = 2}
         },
         100
     )
@@ -227,9 +227,9 @@ data:extend(
         4,
         1,
         {
-            {type = "item", name = "electromagnetic-turbine", amount = 2},
+            {type = "item", name = "DSP-electromagnetic-turbine", amount = 2},
             {type = "item", name = "copper-plate", amount = 2},
-            {type = "item", name = "graphene", amount = 2}
+            {type = "item", name = "DSP-graphene", amount = 2}
         },
         100
     )
@@ -243,9 +243,9 @@ data:extend(
         1,
         100,
         {
-            {type = "item", name = "particle-container", amount = 2},
+            {type = "item", name = "DSP-particle-container", amount = 2},
             {type = "item", name = "iron-plate", amount = 2},
-            {type = "fluid", name = "deuterium", amount = 10}
+            {type = "fluid", name = "DSP-deuterium", amount = 10}
         }
     )
 )
@@ -257,8 +257,8 @@ data:extend(
         6,
         1,
         {
-            {type = "item", name = "diamond", amount = 4},
-            {type = "item", name = "strange-matter", amount = 1}
+            {type = "item", name = "DSP-diamond", amount = 4},
+            {type = "item", name = "DSP-strange-matter", amount = 1}
         },
         100
     )
@@ -271,8 +271,8 @@ data:extend(
         5,
         2,
         {
-            {type = "item", name = "glass", amount = 2},
-            {type = "item", name = "titanium-ingot", amount = 2},
+            {type = "item", name = "DSP-glass", amount = 2},
+            {type = "item", name = "DSP-titanium-ingot", amount = 2},
             {type = "fluid", name = "water", amount = 2}
         },
         100
@@ -286,9 +286,9 @@ data:extend(
         4,
         1,
         {
-            {type = "item", name = "titanium-crystal", amount = 1},
-            {type = "item", name = "graphene", amount = 2},
-            {type = "fluid", name = "hydrogen", amount = 12}
+            {type = "item", name = "DSP-titanium-crystal", amount = 1},
+            {type = "item", name = "DSP-graphene", amount = 2},
+            {type = "fluid", name = "DSP-hydrogen", amount = 12}
         },
         100
     )
@@ -301,8 +301,8 @@ data:extend(
         12,
         1,
         {
-            {type = "item", name = "casimir-crystal", amount = 1},
-            {type = "item", name = "titanium-glass", amount = 2}
+            {type = "item", name = "DSP-casimir-crystal", amount = 1},
+            {type = "item", name = "DSP-titanium-glass", amount = 2}
         },
         200
     )
@@ -315,8 +315,8 @@ data:extend(
         6,
         1,
         {
-            {type = "item", name = "processor", amount = 2},
-            {type = "item", name = "plane-filter", amount = 2}
+            {type = "item", name = "DSP-processor", amount = 2},
+            {type = "item", name = "DSP-plane-filter", amount = 2}
         },
         200
     )
@@ -332,7 +332,7 @@ data:extend(
         10,
         {},
         {
-            {type = "item", name = "critical-photon", amount = 6}
+            {type = "item", name = "DSP-critical-photon", amount = 6}
         }
     )
 )
@@ -345,11 +345,11 @@ data:extend({
         "ray-receiver",
         10,
         {
-            {type = "item", name = "graviton-lens", amount = 1}
+            {type = "item", name = "DSP-graviton-lens", amount = 1}
         },
         {
-            {type = "item", name = "critical-photon", amount = 12},
-            {type = "item", name = "graviton-lens", amount = 1, catalyst_amount = 1}
+            {type = "item", name = "DSP-critical-photon", amount = 12},
+            {type = "item", name = "DSP-graviton-lens", amount = 1, catalyst_amount = 1}
         }
     )
 })
@@ -362,11 +362,11 @@ data:extend(
         nil,
         20,
         {
-            {type = "item", name = "critical-photon", amount = 2}
+            {type = "item", name = "DSP-critical-photon", amount = 2}
         },
         {
-            {type = "item", name = "antimatter", amount = 2},
-            {type = "fluid", name = "hydrogen", amount = 2}
+            {type = "item", name = "DSP-antimatter", amount = 2},
+            {type = "fluid", name = "DSP-hydrogen", amount = 2}
         }
     )
 )

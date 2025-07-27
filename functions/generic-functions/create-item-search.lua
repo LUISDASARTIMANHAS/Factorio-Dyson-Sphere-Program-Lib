@@ -8,7 +8,7 @@ function Module.createItemSearch(name, stack_size)
     return {
         type = "tool",
         durability = 1,
-        name = name,
+        name = "DSP-" .. name,
         icon = icon_path,
         icon_size = 128,
         color_hint = {text = "1"},

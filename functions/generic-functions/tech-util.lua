@@ -58,7 +58,7 @@ function Module.processUnlocks(unlocks)
             for _, recipe_name in ipairs(unlocks) do
                 table.insert(processed_unlocks, {
                     type = "unlock-recipe",
-                    recipe = recipe_name
+                    recipe = "DSP-".. recipe_name
                 })
             end
         else

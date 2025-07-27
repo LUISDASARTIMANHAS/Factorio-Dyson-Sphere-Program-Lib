@@ -8,8 +8,8 @@ data:extend(
         3,
         1,
         {
-            {type = "item", name = "magnetic-coil", amount = 1},
-            {type = "item", name = "circuit-board", amount = 1},
+            {type = "item", name = "DSP-magnetic-coil", amount = 1},
+            {type = "item", name = "DSP-circuit-board", amount = 1},
         }
     )
 )
@@ -21,8 +21,8 @@ data:extend(
         6,
         1,
         {
-            {type = "item", name = "energetic-graphite", amount = 2},
-            {type = "fluid", name = "hydrogen", amount = 2},
+            {type = "item", name = "DSP-energetic-graphite", amount = 2},
+            {type = "fluid", name = "DSP-hydrogen", amount = 2},
         }
     )
 )
@@ -34,8 +34,8 @@ data:extend(
         8,
         1,
         {
-            {type = "item", name = "diamond", amount = 1},
-            {type = "item", name = "titanium-crystal", amount = 1},
+            {type = "item", name = "DSP-diamond", amount = 1},
+            {type = "item", name = "DSP-titanium-crystal", amount = 1},
         }
     )
 )
@@ -47,8 +47,8 @@ data:extend(
         10,
         1,
         {
-            {type = "item", name = "processor", amount = 2},
-            {type = "item", name = "particle-broadband", amount = 1},
+            {type = "item", name = "DSP-processor", amount = 2},
+            {type = "item", name = "DSP-particle-broadband", amount = 1},
         }
     )
 )
@@ -60,8 +60,8 @@ data:extend(
         24,
         2,
         {
-            {type = "item", name = "graviton-lens", amount = 1},
-            {type = "item", name = "quantum-chip", amount = 1},
+            {type = "item", name = "DSP-graviton-lens", amount = 1},
+            {type = "item", name = "DSP-quantum-chip", amount = 1},
         }
     )
 )
@@ -74,12 +74,12 @@ data:extend(
         15,
         1,
         {
-            {type = "item", name = "electromagnetic-matrix", amount = 1},
-            {type = "item", name = "energy-matrix", amount = 1},
-            {type = "item", name = "structure-matrix", amount = 1},
-            {type = "item", name = "information-matrix", amount = 1},
-            {type = "item", name = "gravity-matrix", amount = 1},
-            {type = "item", name = "antimatter", amount = 1}
+            {type = "item", name = "DSP-electromagnetic-matrix", amount = 1},
+            {type = "item", name = "DSP-energy-matrix", amount = 1},
+            {type = "item", name = "DSP-structure-matrix", amount = 1},
+            {type = "item", name = "DSP-information-matrix", amount = 1},
+            {type = "item", name = "DSP-gravity-matrix", amount = 1},
+            {type = "item", name = "DSP-antimatter", amount = 1}
         }
     )
 )

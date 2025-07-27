@@ -2,6 +2,8 @@ local tech = require("functions.create-technology")
 local techTrigger = require("functions.create-technology-trigger")
 -- default create name
 -- tech-dyson-nameofTech
+-- default result name
+-- "DSP-nameofRecipe"
 
 -- TIER 1
 -- tech-dyson-sphere-program
