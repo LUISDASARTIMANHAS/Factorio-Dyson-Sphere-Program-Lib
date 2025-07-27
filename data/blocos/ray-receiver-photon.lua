@@ -14,7 +14,7 @@ data:extend(
         },
         energy_usage = "120MW",
         crafting_speed = 1,
-        crafting_categories = {"ray-receiver"},
+        crafting_categories = {"DSP-ray-receiver"},
         module_specification = {
             module_slots = 1,
             allowed_effects = {"consumption", "speed"}

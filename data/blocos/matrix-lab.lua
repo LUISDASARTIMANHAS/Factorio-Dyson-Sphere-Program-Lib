@@ -35,7 +35,7 @@ data:extend(
             icon = icon_path,
             icon_size = 128,
             flags = {"placeable-neutral", "placeable-player", "player-creation"},
-            minable = {hardness = 0.2, mining_time = 0.5, result = "matrix-lab"}, -- Item que o laboratório dropa ao ser minerado (referencia o item acima)
+            minable = {hardness = 0.2, mining_time = 0.5, result = "DSP-matrix-lab"}, -- Item que o laboratório dropa ao ser minerado (referencia o item acima)
             -- Vida do laboratório
             max_health = 200,
             -- Corpos que aparecem quando destruído
@@ -53,12 +53,12 @@ data:extend(
             crafting_categories = {"crafting"},
             -- *** PACOTES DE CIÊNCIA QUE ELE ACEITA ***
             inputs = {
-                "electromagnetic-matrix",
-                "energy-matrix",
-                "structure-matrix",
-                "information-matrix",
-                "gravity-matrix",
-                "universe-matrix"
+                "DSP-electromagnetic-matrix",
+                "DSP-energy-matrix",
+                "DSP-structure-matrix",
+                "DSP-information-matrix",
+                "DSP-gravity-matrix",
+                "DSP-universe-matrix"
                 -- Adicione aqui TODOS os nomes das matrizes de ciência que este laboratório deve consumir.
                 -- Se você ainda usa science-pack-1, science-pack-2, etc. em tecnologias mais básicas,
                 -- você pode adicioná-los aqui também para que este lab possa pesquisar essas tecnologias.

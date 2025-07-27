@@ -328,7 +328,7 @@ data:extend(
         "critical-photon",
         "intermediate-products",
         100,
-        "ray-receiver",
+        "DSP-ray-receiver",
         10,
         {},
         {
@@ -342,7 +342,7 @@ data:extend({
     functions.createRecipe(
         "itens",
         "critical-photon-lens",
-        "ray-receiver",
+        "DSP-ray-receiver",
         10,
         {
             {type = "item", name = "DSP-graviton-lens", amount = 1}

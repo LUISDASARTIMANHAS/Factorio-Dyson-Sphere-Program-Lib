@@ -1,6 +1,7 @@
 require("util")
 local functions = require("functions.init")
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
+local sounds = require("__base__.prototypes.entity.sounds")
 local path_main = "__Dyson-Sphere-Program-Lib__/"
 local icon_path = path_main .. "graficos/blocos/advanced-solar-panel.png"
 -- definindo receita e item
@@ -13,11 +14,11 @@ data:extend(
             6,
             {
                 {type = "item", name = "copper-plate", amount = 10},
-                {type = "item", name = "high-purity-silicon", amount = 10},
-                {type = "item", name = "circuit-board", amount = 5}
+                {type = "item", name = "DSP-high-purity-silicon", amount = 10},
+                {type = "item", name = "DSP-circuit-board", amount = 5}
             },
             {
-                {type = "item", name = "advanced-solar-panel", amount = 1}
+                {type = "item", name = "DSP-advanced-solar-panel", amount = 1}
             }
         )
 )
@@ -26,11 +27,11 @@ data:extend(
     {
         {
             type = "solar-panel",
-            name = "advanced-solar-panel",
+            name = "DSP-advanced-solar-panel",
             icon = icon_path,
             icon_size = 128,
             flags = {"placeable-neutral", "player-creation"},
-            minable = {mining_time = 3, result = "advanced-solar-panel"},
+            minable = {mining_time = 3, result = "DSP-advanced-solar-panel"},
             fast_replaceable_group = "solar-panel",
             max_health = 200,
             corpse = "solar-panel-remnants",
@@ -68,32 +69,5 @@ data:extend(
             impact_category = "glass",
             production = "360kW"
         }
-        -- {
-        --     type = "electric-energy-interface",
-        --     name = "hidden-electric-energy-interface",
-        --     icon = icon_path,
-        --     localised_name = {"item-name.advanced-solar-panel"},
-        --     hidden = true,
-        --     max_health = 150,
-        --     collision_box = {{0, 0}, {0, 0}},
-        --     selection_box = {{-0, -0}, {0, 0}},
-        --     selectable_in_game = false,
-        --     energy_source = {
-        --         type = "electric",
-        --         buffer_capacity = "10GJ",
-        --         usage_priority = "tertiary",
-        --         input_flow_limit = "0kW",
-        --         output_flow_limit = "500GW"
-        --     },
-        --     energy_production = "500GW",
-        --     energy_usage = "0kW",
-        --     picture = {
-        --         filename = "__core__/graphics/empty.png",
-        --         priority = "extra-high",
-        --         width = 1,
-        --         height = 1
-        --     },
-        --     order = "h-e-e-i"
-        -- }
     }
 )

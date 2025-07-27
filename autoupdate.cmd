@@ -82,6 +82,7 @@ Xcopy /Y "%ZIP_FILE%" "%STEAM_FILE%"
 
 :: abre o jogo para testes
 start steam://rungameid/427520
+exit /b 0
 
 :: Remover espaços em branco ao redor de AUTO_SEND
 set "AUTO_SEND=%AUTO_SEND: =%"

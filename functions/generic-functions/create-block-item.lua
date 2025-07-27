@@ -16,7 +16,7 @@ function Module.createBlockItem(name, subgroup, stack_size)
         inventory_move_sound = item_sounds.mechanical_inventory_move,
         pick_sound = item_sounds.mechanical_inventory_pickup,
         drop_sound = item_sounds.mechanical_inventory_move,
-        place_result = name,
+        place_result = "DSP-"..name,
         stack_size = stack_size or 1,
         -- ex: 50/2 = 25
         weight = stack_size/2,
