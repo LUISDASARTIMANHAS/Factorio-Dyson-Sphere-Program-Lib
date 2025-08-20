@@ -12,6 +12,9 @@ local base_game_recipes = {
     ["offshore-pump"] = true,
     ["boiler"] = true,
     ["steam-engine"] = true,
+    ["assembling-machine-1"] = true,
+    ["assembling-machine-2"] = true,
+    ["assembling-machine-3"] = true,
     ["basic-circuit-board"] = true, -- Exemplo de receita do jogo base
     -- Adicione mais receitas do jogo base aqui, se necessário.
 }

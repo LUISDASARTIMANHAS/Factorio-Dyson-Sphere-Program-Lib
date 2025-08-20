@@ -1,27 +1,27 @@
 local path_main = "__Dyson-Sphere-Program-Lib__/"
 local icon_path = path_main .. "graficos/blocos/matrix-lab.png"
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
+local functions = require("functions.init")
 
 -- *** Definição do ITEM 'matrix-lab' ***
--- Este é o item que o jogador terá no inventário e usará para construir o laboratório.
+-- definindo receita e item
 data:extend(
-    {
-        {
-            type = "item",
-            -- Nome do item, deve ser o mesmo do laboratório
-            name = "DSP-matrix-lab",
-            -- Ícone do item (o mesmo do laboratório)
-            icon = icon_path,
-            icon_size = 128,
-            -- Subgrupo onde o item aparecerá (ex: "production-machine", "science-building")
-            subgroup = "science",
-            -- Ordem de exibição no subgrupo
-            order = "a[matrix-lab]",
-            -- *** Stack Size de 50, conforme especificado ***
-            stack_size = 50,
-            place_result = "DSP-matrix-lab"
-        }
-    }
+        functions.createBlockItemWithRecipe(
+            "matrix-lab",
+            "science",
+            50,
+            "advanced-crafting",
+            3,
+            {
+                {type = "item", name = "iron-plate", amount = 8},
+                {type = "item", name = "DSP-glass", amount = 4},
+                {type = "item", name = "DSP-circuit-board", amount = 4},
+                {type = "item", name = "DSP-magnetic-coil", amount = 4}
+            },
+            {
+                {type = "item", name = "DSP-matrix-lab", amount = 1}
+            }
+        )
 )
 
 -- *** Definição do LABORATÓRIO (ENTIDADE) 'matrix-lab' ***

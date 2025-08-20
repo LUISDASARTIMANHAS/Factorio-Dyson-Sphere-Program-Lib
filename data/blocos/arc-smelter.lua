@@ -2,27 +2,27 @@ local path_main = "__Dyson-Sphere-Program-Lib__/"
 local icon_path = path_main .. "graficos/blocos/arc-smelter.png"
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
+local functions = require("functions.init")
 
 -- *** Definição do ITEM 'arc-smelter' ***
--- Este é o item que o jogador terá no inventário e usará para construir o laboratório.
+-- definindo receita e item
 data:extend(
-    {
-        {
-            type = "item",
-            -- Nome do item, deve ser o mesmo do laboratório
-            name = "DSP-arc-smelter",
-            -- Ícone do item (o mesmo do laboratório)
-            icon = icon_path,
-            icon_size = 128,
-            -- Subgrupo onde o item aparecerá (ex: "production-machine", "science-building")
-            subgroup = "science",
-            -- Ordem de exibição no subgrupo
-            order = "a[arc-smelter]",
-            -- *** Stack Size de 50, conforme especificado ***
-            stack_size = 50,
-            place_result = "DSP-arc-smelter"
-        }
-    }
+        functions.createBlockItemWithRecipe(
+            "arc-smelter",
+            "production-machine",
+            50,
+            "advanced-crafting",
+            3,
+            {
+                {type = "item", name = "iron-plate", amount = 4},
+                {type = "item", name = "DSP-stone-brick", amount = 2},
+                {type = "item", name = "DSP-circuit-board", amount = 4},
+                {type = "item", name = "DSP-magnetic-coil", amount = 2}
+            },
+            {
+                {type = "item", name = "DSP-arc-smelter", amount = 1}
+            }
+        )
 )
 
 -- *** Definição da fronalha (ENTIDADE) 'arc-smelter' ***

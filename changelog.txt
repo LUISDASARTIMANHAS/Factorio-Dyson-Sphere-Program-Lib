@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.3
-Date: 27/07/2025
+Date: 22/08/2025
   Changes:
     - add images and itens.
     - add functions LIB/ tech util 
@@ -8,10 +8,12 @@ Date: 27/07/2025
     - add all itens
     - add prefix name 'DSP-' for compatibility
     - add arc-furnace
+    - add black list base itens in auto generate recipes
   Bugs Fixed:
     - fixed names of itens, techs and recipes
     - fixed genal bugs
     - fixed generic bugs
+    - fixed blacklist base recipes conflict in auto generation DYSON SPHERE PROGRAM FUNCTIONS
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.2
 Date: 21/07/2025

@@ -1,0 +1,4 @@
+corrigir o bug
+Falha ao carregar mods: Error in assignID: item with name 'electromagnetic-matrix' does not exist.
+
+Source: tech-dyson-fluid-storage-encapsulation (technology).

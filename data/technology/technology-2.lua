@@ -46,6 +46,7 @@ data:extend(
     {
         techTrigger.createTechnologyTrigger(
             "electromagnetic-matrix",
+            -- recipe auto add DSP-recipe-name
             {
                 "electromagnetic-matrix",
                 "matrix-lab"
@@ -102,7 +103,7 @@ data:extend(
         tech.createTechnology(
             "high-efficiency-plasma-control",
             {
-                {"electromagnetic-matrix", 1}
+                {"DSP-electromagnetic-matrix", 1}
             },
             {
                 "tech-dyson-fluid-storage-encapsulation"

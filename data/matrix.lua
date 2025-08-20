@@ -1,6 +1,6 @@
 local functions = require("functions.init")
 
--- Define itens
+-- Define itens auto add DSP-name-matrix
 data:extend(
     -- Electromagnetic_Matrix
     functions.createItemWithRecipeMatrix(
