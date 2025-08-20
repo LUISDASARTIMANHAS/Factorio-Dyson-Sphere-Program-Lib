@@ -1,6 +1,21 @@
 local Module = {}
 
 
+-- Lista de receitas do jogo base que não devem receber o prefixo "DSP-".
+-- Esta lista pode ser expandida conforme a necessidade.
+local base_game_recipes = {
+    ["transport-belt"] = true,
+    ["underground-belt"] = true,
+    ["splitter"] = true,
+    ["pipe"] = true,
+    ["pipe-to-ground"] = true,
+    ["offshore-pump"] = true,
+    ["boiler"] = true,
+    ["steam-engine"] = true,
+    ["basic-circuit-board"] = true, -- Exemplo de receita do jogo base
+    -- Adicione mais receitas do jogo base aqui, se necessário.
+}
+
 --- Copia os pré-requisitos fornecidos para uma nova tabela.
 -- @param prerequisites table (opcional) A tabela de pré-requisitos a ser copiada.
 -- @return table Uma nova tabela contendo os pré-requisitos copiados.
@@ -46,8 +61,6 @@ function Module.removeDuplicates(prerequisites_list)
     return unique_prerequisites
 end
 
---- Processa a entrada 'unlocks' para o formato de efeitos esperado pelo Factorio.
--- Pode aceitar uma lista de nomes de receitas (strings) ou o formato de efeitos completo.
 -- @param unlocks table (opcional) Uma lista de nomes de receitas (strings) OU uma tabela de efeitos no formato Factorio.
 -- @return table A tabela de efeitos no formato Factorio.
 function Module.processUnlocks(unlocks)
@@ -56,9 +69,15 @@ function Module.processUnlocks(unlocks)
         -- Verificar se 'unlocks' é uma lista simples de nomes de receitas (strings)
         if type(unlocks) == "table" and #unlocks > 0 and type(unlocks[1]) == "string" then
             for _, recipe_name in ipairs(unlocks) do
+                local final_recipe_name = recipe_name
+                -- Verifica se a receita está na lista de exceções do jogo base
+                if not base_game_recipes[recipe_name] then
+                    final_recipe_name = "DSP-" .. recipe_name
+                end
+                
                 table.insert(processed_unlocks, {
                     type = "unlock-recipe",
-                    recipe = "DSP-".. recipe_name
+                    recipe = final_recipe_name
                 })
             end
         else
@@ -79,3 +98,7 @@ end
 
 
 return Module
+
+--  a função processUnlocks está automaticamente adicionando o prefixo "DSP-" a todas as receitas, mesmo aquelas que já existem no jogo base, como transport-belt. Isso faz com que o jogo procure por uma receita que não existe (DSP-transport-belt) e cause um erro.
+
+-- A solução é exatamente o que você sugeriu: criar uma "lista negra" ou, mais precisamente, uma lista de receitas do jogo base que não devem receber o prefixo. A função processUnlocks precisa verificar se o nome da receita está nessa lista antes de adicionar "DSP-".

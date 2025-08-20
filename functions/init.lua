@@ -1,4 +1,5 @@
 -- init.lua
+-- usado para exportar funções como uma blibioteca ou modelo control
 local CO = require("functions.generic-functions.create-ore")
 local CI = require("functions.generic-functions.create-item")
 local CBI = require("functions.generic-functions.create-block-item")
