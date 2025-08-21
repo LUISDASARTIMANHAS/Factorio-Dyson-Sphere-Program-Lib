@@ -9,6 +9,7 @@ Date: 22/08/2025
     - add prefix name 'DSP-' for compatibility
     - add arc-furnace
     - add black list base itens in auto generate recipes
+    - add personal errors logs in stack trace DYSON TECH-UTIL ERR: err
   Bugs Fixed:
     - fixed names of itens, techs and recipes
     - fixed genal bugs

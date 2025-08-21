@@ -1,9 +1,8 @@
 local Module = {}
 
-
 -- Lista de receitas do jogo base que não devem receber o prefixo "DSP-".
 -- Esta lista pode ser expandida conforme a necessidade.
-local base_game_recipes = {
+local base_game_recipes_and_items = {
     ["transport-belt"] = true,
     ["underground-belt"] = true,
     ["splitter"] = true,
@@ -15,7 +14,15 @@ local base_game_recipes = {
     ["assembling-machine-1"] = true,
     ["assembling-machine-2"] = true,
     ["assembling-machine-3"] = true,
+    ["storage-tank"] = true,
     ["basic-circuit-board"] = true, -- Exemplo de receita do jogo base
+    -- Pacotes científicos
+    ["automation-science-pack"] = true,
+    ["logistic-science-pack"] = true,
+    ["chemical-science-pack"] = true,
+    ["production-science-pack"] = true,
+    ["utility-science-pack"] = true,
+    ["space-science-pack"] = true
     -- Adicione mais receitas do jogo base aqui, se necessário.
 }
 
@@ -74,14 +81,17 @@ function Module.processUnlocks(unlocks)
             for _, recipe_name in ipairs(unlocks) do
                 local final_recipe_name = recipe_name
                 -- Verifica se a receita está na lista de exceções do jogo base
-                if not base_game_recipes[recipe_name] then
+                if not base_game_recipes_and_items[recipe_name] then
                     final_recipe_name = "DSP-" .. recipe_name
                 end
-                
-                table.insert(processed_unlocks, {
-                    type = "unlock-recipe",
-                    recipe = final_recipe_name
-                })
+
+                table.insert(
+                    processed_unlocks,
+                    {
+                        type = "unlock-recipe",
+                        recipe = final_recipe_name
+                    }
+                )
             end
         else
             -- Se não for uma lista de strings, assumir que já está no formato correto de efeitos
@@ -92,13 +102,56 @@ function Module.processUnlocks(unlocks)
         processed_unlocks = {
             {
                 type = "unlock-recipe",
-                recipe = "transport-belt",
+                recipe = "transport-belt"
             }
         }
     end
     return processed_unlocks
 end
 
+--- Processa a entrada 'ingredients' para garantir a nomenclatura "DSP-" correta.
+-- Aceita a lista de ingredientes e adiciona o prefixo "DSP-" para itens do mod,
+-- enquanto mantém os nomes originais para itens do jogo base.
+-- @param ingredients table A lista de ingredientes no formato {{"item-name", amount}, ...}.
+-- @return table A lista de ingredientes formatada corretamente.
+function Module.processIngredients(ingredients)
+    local processed_ingredients = {}
+    if ingredients then
+        for i, ingredient in ipairs(ingredients) do
+            -- Validar se o ingrediente é uma tabela e tem pelo menos 2 elementos
+            if not (type(ingredient) == "table" and #ingredient >= 2) then
+                error("DYSON TECH-UTIL ERR: O ingrediente no índice " .. i .. " não está formatado corretamente. Ele deve ser uma tabela com pelo menos um nome e uma quantidade, por exemplo, {'nome-do-item', 1}.")
+            end
+
+            local item_name = ingredient[1]
+            local item_amount = ingredient[2]
+            local final_item_name = item_name
+
+            -- Validar se o nome e a quantidade existem e estão nos tipos corretos
+            if not (type(item_name) == "string" and type(item_amount) == "number") then
+                error("DYSON TECH-UTIL ERR: O ingrediente no índice " .. i .. " tem tipos incorretos. O nome deve ser uma string e a quantidade deve ser um número.")
+            end
+
+            -- Se o item não está na lista de exceções, adicione o prefixo
+            if not base_game_recipes_and_items[item_name] then
+                final_item_name = "DSP-" .. item_name
+            end
+            table.insert(
+                processed_ingredients,
+                {
+                    final_item_name,
+                    item_amount
+                }
+            )
+        end
+    else
+        -- pacote de ciencia padrão padrão se 'unlocks' for nil
+        processed_ingredients = {
+            {"automation-science-pack", 1}
+        }
+    end
+    return processed_ingredients
+end
 
 return Module
 

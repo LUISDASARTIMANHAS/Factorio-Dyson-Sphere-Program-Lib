@@ -56,10 +56,10 @@ data:extend(
                 {"electromagnetic-matrix", 1}
             },
             {
-                "tech-dyson-electromagnetic",
+                "tech-dyson-electromagnetism",
                 "tech-dyson-basic-assembling-processes",
                 "tech-dyson-smelting-purification",
-                "electromagnetic-matrix"
+                "tech-dyson-electromagnetic-matrix"
             },
             {
                 "advanced-solar-panel"
@@ -78,7 +78,7 @@ data:extend(
                 {"electromagnetic-matrix", 1}
             },
             {
-                "electromagnetic-matrix"
+                "tech-dyson-electromagnetic-matrix"
             },
             {
                 "microcrystalline-component"
@@ -98,7 +98,7 @@ data:extend(
                 {"energy-matrix", 3}
             },
             {
-                "electromagnetic-matrix"
+                "tech-dyson-electromagnetic-matrix"
             },
             {
                 "fractionator",
@@ -136,8 +136,8 @@ data:extend(
                 {"electromagnetic-matrix", 1}
             },
             {
-                "deuterium-fractionation",
-                "fluid-storage-encapsulation"
+                "tech-dyson-deuterium-fractionation",
+                "tech-dyson-fluid-storage-encapsulation"
             },
             {
                 "chemical-plant",
@@ -158,7 +158,7 @@ data:extend(
                 {"electromagnetic-matrix", 1}
             },
             {
-                "deuterium-fractionation"
+                "tech-dyson-deuterium-fractionation"
             },
             {
                 "energy-matrix"
@@ -178,7 +178,7 @@ data:extend(
                 {"energy-matrix", 1}
             },
             {
-                "electromagnetic-drive"
+                "tech-dyson-electromagnetic-drive"
             },
             {
                 "electromagnetic-turbine"

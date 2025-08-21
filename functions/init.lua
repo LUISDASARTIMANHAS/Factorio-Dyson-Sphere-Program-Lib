@@ -14,6 +14,7 @@ local CIRM = require("functions.create-item-with-recipe-matrix")
 local CAIR = require("functions.create-assembler-item-with-recipe")
 local CPCIR = require("functions.create-particle-collider-item-with-recipe")
 local tech = require("functions.create-technology")
+local CGR = require("functions.generic-functions.create-generic-recipe")
 
 local functions = {}
 
@@ -31,5 +32,6 @@ functions.createItemWithRecipeMatrix = CIRM.createItemWithRecipeMatrix
 functions.createAssemblerItemWithRecipe = CAIR.createAssemblerItemWithRecipe
 functions.createParticleColiderItemWithRecipe = CPCIR.createParticleColiderItemWithRecipe
 functions.createTechnology = tech.createTechnology
+functions.createGenericRecipe = CGR.createGenericRecipe
 
 return functions

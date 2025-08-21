@@ -19,6 +19,9 @@ function Module.createTechnology(name, ingredients, prerequisites, unlocks, pack
     -- Processar os desbloqueios (unlocks) usando a sub-função
     local final_unlocks = techUtil.processUnlocks(unlocks)
 
+    -- Processar os desbloqueios (unlocks) usando a sub-função
+    local final_ingredients = techUtil.processIngredients(ingredients)
+
     return {
         type = "technology",
         name = "tech-dyson-" .. name,
@@ -30,10 +33,7 @@ function Module.createTechnology(name, ingredients, prerequisites, unlocks, pack
         unit = {
             count = pack_count or 100,
             time = 30,
-            ingredients = ingredients or
-                {
-                    {"automation-science-pack", 1}
-                }
+            ingredients = final_ingredients
         },
         order = "Dyson-Sphere-Program-Lib"
     }

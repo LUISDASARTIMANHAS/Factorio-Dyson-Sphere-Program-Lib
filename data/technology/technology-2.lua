@@ -103,7 +103,7 @@ data:extend(
         tech.createTechnology(
             "high-efficiency-plasma-control",
             {
-                {"DSP-electromagnetic-matrix", 1}
+                {"electromagnetic-matrix", 1}
             },
             {
                 "tech-dyson-fluid-storage-encapsulation"

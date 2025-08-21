@@ -74,7 +74,7 @@ data:extend(
 -- silicon-ore (STONE)
 data:extend(
     functions.createAssemblerItemWithRecipe(
-        "DSP-silicon-ore",
+        "silicon-ore",
         10,
         1,
         {
