@@ -12,16 +12,19 @@ for name, technology in pairs(data.raw.technology) do
         for i, effect in ipairs(technology.effects) do
             -- Verifica se o efeito é um 'unlock-recipe' e se a receita não existe
             if effect.type == "unlock-recipe" and not data.raw.recipe[effect.recipe] then
-                log("AVISO: A receita '" .. effect.recipe .. "' referenciada pela tecnologia '" .. name .. "' não foi encontrada. Criando uma receita genérica para ela.")
-                
-                -- Remove o prefixo "DSP-" se ele já existir na string
-                local recipe_name_without_prefix = string.gsub(effect.recipe, "^DSP%-", "", 1)
-
-                -- Chama a função para criar uma receita e um item genéricos
-                local placeholders = functions.createGenericRecipe(recipe_name_without_prefix)
-                
-                -- Adiciona os novos protótipos ao jogo
-                data:extend(placeholders)
+                -- Adiciona o filtro: só processa se o nome da receita começar com "DSP-"
+                if string.sub(effect.recipe, 1, 4) == "DSP-" then
+                    log("AVISO: A receita '" .. effect.recipe .. "' referenciada pela tecnologia '" .. name .. "' não foi encontrada. Criando uma receita genérica para ela.")
+                    
+                    -- Remove o prefixo "DSP-" se ele já existir na string
+                    local recipe_name_without_prefix = string.gsub(effect.recipe, "^DSP%-", "", 1)
+                    
+                    -- Chama a função para criar uma receita e um item genéricos
+                    local placeholders = functions.createGenericRecipe(recipe_name_without_prefix)
+                    
+                    -- Adiciona os novos protótipos ao jogo
+                    data:extend(placeholders)
+                end
             end
         end
     end

@@ -68,7 +68,7 @@ data:extend(
       name = "power-generation",
       group = "dyson-category",
       order = "dyson-power-generation"
-    },
+    }
   }
 )
 -- ======= dyson-category ==========
@@ -91,6 +91,10 @@ data:extend(
     {
       type = "recipe-category",
       name = "DSP-smelting-facility"
+    },
+    {
+      type = "recipe-category",
+      name = "DSP-fractionation-facility"
     }
   }
 )
