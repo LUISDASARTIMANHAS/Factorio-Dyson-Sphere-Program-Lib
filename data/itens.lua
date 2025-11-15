@@ -13,7 +13,7 @@ local createParticleColiderItemWithRecipe = require("data.create-particle-collid
 -- circuit-board
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "circuit-board",
+        "DSP-circuit-board",
         1,
         2,
         {
@@ -26,7 +26,7 @@ data:extend(
 -- Magnetic Coil
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "magnetic-coil",
+        "DSP-magnetic-coil",
         1,
         2,
         {
@@ -59,7 +59,7 @@ data:extend(
 -- Made In		Chemical Facility fix in future
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "graphene",
+        "DSP-graphene",
         3,
         2,
         {
@@ -73,7 +73,7 @@ data:extend(
 -- plastic
 data:extend(
     LDAFunctions.createItemWithRecipe(
-        "plastic",
+        "DSP-plastic",
         "intermediate-products",
         100,
         "chemistry",
@@ -94,7 +94,7 @@ data:extend(
 -- Made In		Chemical Facility fix in future
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "carbon-nanotube",
+        "DSP-carbon-nanotube",
         4,
         2,
         {
@@ -124,7 +124,7 @@ data:extend(
 -- Titanium Crystal
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "titanium-crystal",
+        "DSP-titanium-crystal",
         4,
         1,
         {
@@ -138,7 +138,7 @@ data:extend(
 -- particle-broadband
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "particle-broadband",
+        "DSP-particle-broadband",
         8,
         1,
         {
@@ -153,7 +153,7 @@ data:extend(
 -- microcrystalline-component
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "microcrystalline-component",
+        "DSP-microcrystalline-component",
         2,
         1,
         {
@@ -167,7 +167,7 @@ data:extend(
 -- Processor
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "processor",
+        "DSP-processor",
         3,
         1,
         {
@@ -181,7 +181,7 @@ data:extend(
 -- gear
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "gear",
+        "DSP-gear",
         1,
         1,
         {
@@ -194,7 +194,7 @@ data:extend(
 -- electric-motor
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "electric-motor",
+        "DSP-electric-motor",
         2,
         1,
         {
@@ -209,7 +209,7 @@ data:extend(
 -- electromagnetic-turbine
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "electromagnetic-turbine",
+        "DSP-electromagnetic-turbine",
         2,
         1,
         {
@@ -223,7 +223,7 @@ data:extend(
 -- particle-container
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "particle-container",
+        "DSP-particle-container",
         4,
         1,
         {
@@ -253,7 +253,7 @@ data:extend(
 -- graviton-lens
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "graviton-lens",
+        "DSP-graviton-lens",
         6,
         1,
         {
@@ -267,7 +267,7 @@ data:extend(
 -- titanium-glass
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "titanium-glass",
+        "DSP-titanium-glass",
         5,
         2,
         {
@@ -282,7 +282,7 @@ data:extend(
 -- casimir-crystal
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "casimir-crystal",
+        "DSP-casimir-crystal",
         4,
         1,
         {
@@ -297,7 +297,7 @@ data:extend(
 -- plane-filter
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "plane-filter",
+        "DSP-plane-filter",
         12,
         1,
         {
@@ -311,7 +311,7 @@ data:extend(
 -- quantum-chip
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "quantum-chip",
+        "DSP-quantum-chip",
         6,
         1,
         {
@@ -325,7 +325,7 @@ data:extend(
 -- Critical Photon Receita básica (sem lens)
 data:extend(
     LDAFunctions.createItemWithRecipe(
-        "critical-photon",
+        "DSP-critical-photon",
         "intermediate-products",
         100,
         "DSP-ray-receiver",
@@ -341,7 +341,7 @@ data:extend(
 data:extend({
     LDAFunctions.createRecipe(
         "itens",
-        "critical-photon-lens",
+        "DSP-critical-photon-lens",
         "DSP-ray-receiver",
         10,
         {
@@ -357,7 +357,7 @@ data:extend({
 -- antimatter
 data:extend(
     createParticleColiderItemWithRecipe(
-        "antimatter",
+        "DSP-antimatter",
         2,
         nil,
         20,

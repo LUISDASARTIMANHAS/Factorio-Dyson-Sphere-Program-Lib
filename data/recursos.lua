@@ -8,15 +8,15 @@ local LDAFunctions = require("__LDA-LIB__/init")
 
 -- automaticamente adicona -ore
 -- Define itens
-data:extend(LDAFunctions.createOre("organic-crystal", 100, "chemical", "1.80MJ"))
-data:extend(LDAFunctions.createOre("titanium", 100, "chemical", "1.80MJ"))
-data:extend(LDAFunctions.createOre("silicon", 100, nil, nil))
-data:extend(LDAFunctions.createOre("kimberlite", 50, nil, nil))
+data:extend(LDAFunctions.createOre("DSP-organic-crystal", 100, "chemical", "1.80MJ"))
+data:extend(LDAFunctions.createOre("DSP-titanium", 100, "chemical", "1.80MJ"))
+data:extend(LDAFunctions.createOre("DSP-silicon", 100, nil, nil))
+data:extend(LDAFunctions.createOre("DSP-kimberlite", 50, nil, nil))
 
 -- hydrogen
 data:extend(
     LDAFunctions.createFluidWithRecipe(
-        "hydrogen",
+        "DSP-hydrogen",
         "9MJ",
         "oil-processing",
         4,
@@ -36,7 +36,7 @@ data:extend(
 -- make in Fractionator fix in future
 data:extend(
     LDAFunctions.createFluidWithRecipe(
-        "deuterium",
+        "DSP-deuterium",
         "9MJ",
         "oil-processing",
         2.5,
@@ -74,7 +74,7 @@ data:extend(
 -- silicon-ore (STONE)
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "silicon-ore",
+        "DSP-silicon-ore",
         10,
         1,
         {
@@ -87,7 +87,7 @@ data:extend(
 -- Magnet
 data:extend(
     LDAFunctions.createSmeltingItemWithRecipe(
-        "magnet",
+        "DSP-magnet",
         1.5,
         1,
         {
@@ -99,7 +99,7 @@ data:extend(
 -- glass
 data:extend(
     LDAFunctions.createSmeltingItemWithRecipe(
-        "glass",
+        "DSP-glass",
         2,
         1,
         {
@@ -112,7 +112,7 @@ data:extend(
 -- energetic-graphite
 data:extend(
     LDAFunctions.createSmeltingItemWithRecipe(
-        "energetic-graphite",
+        "DSP-energetic-graphite",
         2,
         1,
         {
@@ -124,7 +124,7 @@ data:extend(
 -- diamond
 data:extend(
     LDAFunctions.createSmeltingItemWithRecipe(
-        "diamond",
+        "DSP-diamond",
         2,
         1,
         {
@@ -137,7 +137,7 @@ data:extend(
 data:extend(
     {LDAFunctions.createRecipe(
         "itens",
-        "diamond-kimberlite",
+        "DSP-diamond-kimberlite",
         "smelting",
         1.5,
         {
@@ -152,7 +152,7 @@ data:extend(
 -- Titanium Ingot
 data:extend(
     LDAFunctions.createSmeltingItemWithRecipe(
-        "titanium-ingot",
+        "DSP-titanium-ingot",
         2,
         1,
         {
@@ -164,7 +164,7 @@ data:extend(
 -- high-purity-silicon
 data:extend(
     LDAFunctions.createSmeltingItemWithRecipe(
-        "high-purity-silicon",
+        "DSP-high-purity-silicon",
         2,
         1,
         {
@@ -176,7 +176,7 @@ data:extend(
 -- crystal-silicon
 data:extend(
     LDAFunctions.createSmeltingItemWithRecipe(
-        "crystal-silicon",
+        "DSP-crystal-silicon",
         2,
         1,
         {

@@ -141,7 +141,7 @@ data:extend(
             },
             {
                 "chemical-plant",
-                "plastic",
+                "DSP-plastic",
                 "sulfuric-acid"
             },
             200

@@ -11,17 +11,18 @@ local LDAFunctions = require("__LDA-LIB__/init")
 local Module = {}
 
 local function createParticleColiderItemWithRecipe(name, time, qtde, stack_size, ingredients, resultsPersonal)
+    local personalName = "DSP-" .. name
     local results =
         resultsPersonal or
         {
-            {type = "item", name = "DSP-"..name, amount = qtde}
+            {type = "item", name = personalName, amount = qtde}
         }
     local crafted_in = "DSP-particle-collider"
     local subgroup = "dark-fog-components"
     local size = stack_size or 200
 
     local itemAndRecipe =
-        LDAFunctions.createItemWithRecipe(name, subgroup, size, crafted_in, time, ingredients, results)
+        LDAFunctions.createItemWithRecipe(personalName, subgroup, size, crafted_in, time, ingredients, results)
 
     return itemAndRecipe
 end
