@@ -1,5 +1,4 @@
-local tech = require("functions.create-technology")
-local techTrigger = require("functions.create-technology-trigger")
+local LDAFunctions = require("__LDA-LIB__/init")
 -- default create name
 -- tech-dyson-nameofTech
 -- default result name
@@ -9,7 +8,7 @@ local techTrigger = require("functions.create-technology-trigger")
 -- tech-dyson-sphere-program
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "sphere-program",
             {
                 {"automation-science-pack", 3},
@@ -30,7 +29,7 @@ data:extend(
 -- Electromagnetism For Trigger
 data:extend(
     {
-        techTrigger.createTechnologyTrigger(
+        LDAFunctions.createTechnologyTrigger(
             "electromagnetism",
             nil,
             nil,

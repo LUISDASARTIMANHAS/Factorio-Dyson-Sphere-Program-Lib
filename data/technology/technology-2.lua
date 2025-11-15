@@ -1,5 +1,4 @@
-local tech = require("functions.create-technology")
-local techTrigger = require("functions.create-technology-trigger")
+local LDAFunctions = require("__LDA-LIB__/init")
 -- default create name
 -- tech-dyson-nameofTech
 
@@ -7,7 +6,7 @@ local techTrigger = require("functions.create-technology-trigger")
 -- Basic Logistics System
 data:extend(
     {
-        techTrigger.createTechnologyTrigger(
+        LDAFunctions.createTechnologyTrigger(
             "basic-logistics-system",
             {
                 "transport-belt","underground-belt","splitter"
@@ -25,7 +24,7 @@ data:extend(
 -- Automatic Metallurgy
 data:extend(
     {
-        techTrigger.createTechnologyTrigger(
+        LDAFunctions.createTechnologyTrigger(
             "automatic-metallurgy",
             {
                 "arc-smelter",
@@ -44,7 +43,7 @@ data:extend(
 -- Electromagnetic Matrix
 data:extend(
     {
-        techTrigger.createTechnologyTrigger(
+        LDAFunctions.createTechnologyTrigger(
             "electromagnetic-matrix",
             -- recipe auto add DSP-recipe-name
             {
@@ -64,7 +63,7 @@ data:extend(
 -- Basic Assembling Processes
 data:extend(
     {
-        techTrigger.createTechnologyTrigger(
+        LDAFunctions.createTechnologyTrigger(
             "basic-assembling-processes",
             {
                 "assembling-machine-1"
@@ -82,7 +81,7 @@ data:extend(
 -- Fluid Storage Encapsulation
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "fluid-storage-encapsulation",
             {
                 {"electromagnetic-matrix", 1}
@@ -100,7 +99,7 @@ data:extend(
 -- High-Efficiency Plasma Control
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "high-efficiency-plasma-control",
             {
                 {"electromagnetic-matrix", 1}
@@ -121,7 +120,7 @@ data:extend(
 -- Electromagnetic Drive
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "electromagnetic-drive",
             {
                 {"electromagnetic-matrix", 1}
@@ -138,7 +137,7 @@ data:extend(
 -- Engine
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "engine",
             {
                 {"electromagnetic-matrix", 1}
@@ -153,7 +152,7 @@ data:extend(
 -- Weapon System
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "weapon-system",
             {
                 {"electromagnetic-matrix", 1}

@@ -1,4 +1,4 @@
-local tech = require("functions.create-technology")
+local LDAFunctions = require("__LDA-LIB__/init")
 -- default create name
 -- tech-dyson-nameofTech
 
@@ -6,7 +6,7 @@ local tech = require("functions.create-technology")
 -- Environment Modification
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "environment-modification",
             {
                 {"electromagnetic-matrix", 1}
@@ -25,7 +25,7 @@ data:extend(
 -- Crystal Smelting
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "crystal-smelting",
             -- ingredients
             {
@@ -50,7 +50,7 @@ data:extend(
 -- Solar Collection
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "advanced-solar-collection",
             {
                 {"electromagnetic-matrix", 1}
@@ -72,7 +72,7 @@ data:extend(
 -- Semiconductor Material
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "semiconductor-material",
             {
                 {"electromagnetic-matrix", 1}
@@ -91,7 +91,7 @@ data:extend(
 -- Deuterium Fractionation
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "deuterium-fractionation",
             {
                 {"electromagnetic-matrix", 2},
@@ -112,7 +112,7 @@ data:extend(
 -- Proliferator MkI
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "proliferator-mki",
             {
                 {"electromagnetic-matrix", 1}
@@ -130,7 +130,7 @@ data:extend(
 -- Basic Chemical Engineering
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "basic-chemical-engineering",
             {
                 {"electromagnetic-matrix", 1}
@@ -152,7 +152,7 @@ data:extend(
 -- Energy Matrix
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "energy-matrix",
             {
                 {"electromagnetic-matrix", 1}
@@ -171,7 +171,7 @@ data:extend(
 -- Magnetic Levitation
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "energy-matrix",
             {
                 {"electromagnetic-matrix", 4},
@@ -191,7 +191,7 @@ data:extend(
 -- Missile Turret
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "missile-turret",
             {
                 {"electromagnetic-matrix", 1}

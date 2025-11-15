@@ -11,6 +11,7 @@ Date: 22/08/2025
     - add black list base itens in auto generate recipes
     - add personal errors logs in stack trace DYSON TECH-UTIL ERR: err
   Bugs Fixed:
+    - Falha ao carregar mods: ...re-Program-Lib__/data/create-item-with-recipe-matrix.lua:14: attempt to call field 'createItemSearch' (a nil value) stack traceback:	...re-Program-Lib__/data/create-item-with-recipe-matrix.lua:14: in function 'createItemWithRecipeMatrix'	__Dyson-Sphere-Program-Lib__/data/matrix.lua:6: in main chunk	[C]: in function 'require'	__Dyson-Sphere-Program-Lib__/data.lua:7: in main chunk
     - fixed names of itens, techs and recipes
     - fixed genal bugs
     - fixed generic bugs

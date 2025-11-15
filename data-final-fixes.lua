@@ -3,7 +3,7 @@
 -- permitindo a verificação e criação de protótipos dinamicamente.
 
 -- Requer o módulo que criará as receitas e itens genéricos
-local functions = require("functions.init")
+local LDAFunctions = require("__LDA-LIB__/init")
 
 -- Itera sobre todas as tecnologias no jogo
 for name, technology in pairs(data.raw.technology) do
@@ -20,7 +20,7 @@ for name, technology in pairs(data.raw.technology) do
                     local recipe_name_without_prefix = string.gsub(effect.recipe, "^DSP%-", "", 1)
                     
                     -- Chama a função para criar uma receita e um item genéricos
-                    local placeholders = functions.createGenericRecipe(recipe_name_without_prefix)
+                    local placeholders = LDAFunctions.createGenericRecipe(recipe_name_without_prefix)
                     
                     -- Adiciona os novos protótipos ao jogo
                     data:extend(placeholders)

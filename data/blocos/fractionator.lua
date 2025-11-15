@@ -1,16 +1,16 @@
 local path_main = "__Dyson-Sphere-Program-Lib__/"
-local icon_path = path_main .. "graficos/blocos/arc-smelter.png"
+local icon_path = path_main .. "graficos/blocos/fractionator.png"
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
 require ("__base__.prototypes.entity.pipecovers")
 require ("__base__.prototypes.entity.assemblerpipes")
 require ("__base__.prototypes.entity.entity-util")
-local functions = require("functions.init")
+local LDAFunctions = require("__LDA-LIB__/init")
 
 -- *** Definição do ITEM 'arc-smelter' ***
 -- definindo receita e item
 data:extend(
-    functions.createBlockItemWithRecipe(
+    LDAFunctions.createBlockItemWithRecipe(
         "fractionator",
         "intermediate-products",
         30,
@@ -28,7 +28,7 @@ data:extend(
     )
 )
 
--- *** Definição da fronalha (ENTIDADE) 'arc-smelter' ***
+-- *** Definição da fronalha (ENTIDADE) 'DSP-fractionator' ***
 data:extend(
     {
         {

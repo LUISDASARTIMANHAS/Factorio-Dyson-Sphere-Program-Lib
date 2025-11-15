@@ -1,12 +1,2 @@
-corrigir o bug
-Falha ao carregar mods: Error in assignID: item with name 'electromagnetic-matrix' does not exist.
-
-Source: tech-dyson-fluid-storage-encapsulation (technology).
-
-Falha ao carregar mods: Error in assignID: technology with name 'tech-dyson-electromagnetic' does not exist.
-
-Source: tech-dyson-advanced-solar-collection (technology).
-
-Falha ao carregar mods: Error in assignID: technology with name 'electromagnetic-matrix' does not exist.
-
-Source: tech-dyson-advanced-solar-collection (technology).
+corrigir os bugs na lista
+https://mods.factorio.com/mod/Dyson-Sphere-Program-Lib/discussion

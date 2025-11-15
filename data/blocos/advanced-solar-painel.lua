@@ -1,12 +1,12 @@
 require("util")
-local functions = require("functions.init")
+local LDAFunctions = require("__LDA-LIB__/init")
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
 local path_main = "__Dyson-Sphere-Program-Lib__/"
 local icon_path = path_main .. "graficos/blocos/advanced-solar-panel.png"
 -- definindo receita e item
 data:extend(
-        functions.createBlockItemWithRecipe(
+        LDAFunctions.createBlockItemWithRecipe(
             "advanced-solar-panel",
             "power-generation",
             50,

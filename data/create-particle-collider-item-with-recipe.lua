@@ -1,23 +1,27 @@
-local createItemWithRecipe = require("functions.generic-functions.create-item-with-recipe")
+local LDAFunctions = require("__LDA-LIB__/init")
+
 -- category = "science-matrices" feito em Matrix Lab
 -- category = "advanced-crafting" maquinas de montagem tier 2 e 3
 -- category = "basic-crafting" maquinas de montagem tier 1
 -- category = "crafting" feito a mão
 -- category = "smelting" feito em fornalhas
 -- category = "centrifuging" feito na centrifuge
+-- category = "particle-collider" feito em Miniature Particle Collider
 
 local Module = {}
 
-function Module.createSmeltingItemWithRecipe(name, time, qtde, ingredients)
-    local results = {
-        {type = "item", name = "DSP-"..name, amount = qtde}
-    }
-    local crafted_in = "DSP-smelting-facility"
-    local subgroup = "natural-resources"
-    local size = 200
+local function createParticleColiderItemWithRecipe(name, time, qtde, stack_size, ingredients, resultsPersonal)
+    local results =
+        resultsPersonal or
+        {
+            {type = "item", name = "DSP-"..name, amount = qtde}
+        }
+    local crafted_in = "DSP-particle-collider"
+    local subgroup = "dark-fog-components"
+    local size = stack_size or 200
 
     local itemAndRecipe =
-        createItemWithRecipe.createItemWithRecipe(name,subgroup, size, crafted_in, time, ingredients, results)
+        LDAFunctions.createItemWithRecipe(name, subgroup, size, crafted_in, time, ingredients, results)
 
     return itemAndRecipe
 end
@@ -38,7 +42,7 @@ end
 --         {
 --             type = "recipe",
 --             name = "iron-ore",
---             category = "smelting",
+--             category = "particle-collider",
 --             enabled = false,
 --             energy_required = 120,
 --             ingredients = {
@@ -54,4 +58,4 @@ end
 --         }
 --     }
 
-return Module
+return createParticleColiderItemWithRecipe

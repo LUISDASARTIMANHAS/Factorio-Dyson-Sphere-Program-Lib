@@ -1,4 +1,4 @@
-local functions = require("functions.init")
+local LDAFunctions = require("__LDA-LIB__/init")
 
 -- category = "advanced-crafting" maquinas de montagem tier 2 e 3
 -- category = "basic-crafting" maquinas de montagem tier 1
@@ -8,14 +8,14 @@ local functions = require("functions.init")
 
 -- automaticamente adicona -ore
 -- Define itens
-data:extend(functions.createOre("organic-crystal", 100, "chemical", "1.80MJ"))
-data:extend(functions.createOre("titanium", 100, "chemical", "1.80MJ"))
-data:extend(functions.createOre("silicon", 100, nil, nil))
-data:extend(functions.createOre("kimberlite", 50, nil, nil))
+data:extend(LDAFunctions.createOre("organic-crystal", 100, "chemical", "1.80MJ"))
+data:extend(LDAFunctions.createOre("titanium", 100, "chemical", "1.80MJ"))
+data:extend(LDAFunctions.createOre("silicon", 100, nil, nil))
+data:extend(LDAFunctions.createOre("kimberlite", 50, nil, nil))
 
 -- hydrogen
 data:extend(
-    functions.createFluidWithRecipe(
+    LDAFunctions.createFluidWithRecipe(
         "hydrogen",
         "9MJ",
         "oil-processing",
@@ -35,7 +35,7 @@ data:extend(
 -- deuterium
 -- make in Fractionator fix in future
 data:extend(
-    functions.createFluidWithRecipe(
+    LDAFunctions.createFluidWithRecipe(
         "deuterium",
         "9MJ",
         "oil-processing",
@@ -61,7 +61,7 @@ data:extend(
 
 -- Stone Brick
 data:extend(
-    functions.createSmeltingItemWithRecipe(
+    LDAFunctions.createSmeltingItemWithRecipe(
         "stone-brick",
         1,
         1,
@@ -73,7 +73,7 @@ data:extend(
 
 -- silicon-ore (STONE)
 data:extend(
-    functions.createAssemblerItemWithRecipe(
+    LDAFunctions.createAssemblerItemWithRecipe(
         "silicon-ore",
         10,
         1,
@@ -86,7 +86,7 @@ data:extend(
 -- SMELTING RESOURCES
 -- Magnet
 data:extend(
-    functions.createSmeltingItemWithRecipe(
+    LDAFunctions.createSmeltingItemWithRecipe(
         "magnet",
         1.5,
         1,
@@ -98,7 +98,7 @@ data:extend(
 
 -- glass
 data:extend(
-    functions.createSmeltingItemWithRecipe(
+    LDAFunctions.createSmeltingItemWithRecipe(
         "glass",
         2,
         1,
@@ -111,7 +111,7 @@ data:extend(
 
 -- energetic-graphite
 data:extend(
-    functions.createSmeltingItemWithRecipe(
+    LDAFunctions.createSmeltingItemWithRecipe(
         "energetic-graphite",
         2,
         1,
@@ -123,7 +123,7 @@ data:extend(
 
 -- diamond
 data:extend(
-    functions.createSmeltingItemWithRecipe(
+    LDAFunctions.createSmeltingItemWithRecipe(
         "diamond",
         2,
         1,
@@ -135,7 +135,7 @@ data:extend(
 
 -- diamond kimberlite ore
 data:extend(
-    {functions.createRecipe(
+    {LDAFunctions.createRecipe(
         "itens",
         "diamond-kimberlite",
         "smelting",
@@ -151,7 +151,7 @@ data:extend(
 
 -- Titanium Ingot
 data:extend(
-    functions.createSmeltingItemWithRecipe(
+    LDAFunctions.createSmeltingItemWithRecipe(
         "titanium-ingot",
         2,
         1,
@@ -163,7 +163,7 @@ data:extend(
 
 -- high-purity-silicon
 data:extend(
-    functions.createSmeltingItemWithRecipe(
+    LDAFunctions.createSmeltingItemWithRecipe(
         "high-purity-silicon",
         2,
         1,
@@ -175,7 +175,7 @@ data:extend(
 
 -- crystal-silicon
 data:extend(
-    functions.createSmeltingItemWithRecipe(
+    LDAFunctions.createSmeltingItemWithRecipe(
         "crystal-silicon",
         2,
         1,

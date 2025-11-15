@@ -1,4 +1,4 @@
-local tech = require("functions.create-technology")
+local LDAFunctions = require("__LDA-LIB__/init")
 -- default create name
 -- tech-dyson-nameofTech
 
@@ -8,7 +8,7 @@ local tech = require("functions.create-technology")
 -- Planetary Logistics System
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "planetary-logistics-system",
             {
                 {"electromagnetic-matrix", 4},
@@ -27,7 +27,7 @@ data:extend(
 -- Titanium_Smelting
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "titanium-smelting",
             {
                 {"electromagnetic-matrix", 2},
@@ -46,7 +46,7 @@ data:extend(
 -- High-Strength Titanium Alloy
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "high-strength-titanium-alloy",
             {
                 {"electromagnetic-matrix", 80},
@@ -66,7 +66,7 @@ data:extend(
 -- reinforced thruster
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "reinforced-thruster",
             {
                 {"energy-matrix", 16}
@@ -83,7 +83,7 @@ data:extend(
 -- Interstellar Logistics System
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "interstellar-logistics-system",
             {
                 {"electromagnetic-matrix", 120},
@@ -104,7 +104,7 @@ data:extend(
 -- Interstellar Power Transmission
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "interstellar-power-transmission",
             {
                 {"electromagnetic-matrix", 120},
@@ -123,7 +123,7 @@ data:extend(
 -- Gas Giants Exploitation
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "gas-giants-exploitation",
             {
                 {"electromagnetic-matrix", 12},
@@ -144,7 +144,7 @@ data:extend(
 -- High-Strength Crystal
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "high-strength-crystal",
             -- ingredients
             {
@@ -170,7 +170,7 @@ data:extend(
 -- Processor
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "processor",
             -- ingredients
             {

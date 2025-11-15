@@ -1,4 +1,4 @@
-local tech = require("functions.create-technology")
+local LDAFunctions = require("__LDA-LIB__/init")
 -- default create name
 -- tech-dyson-nameofTech
 
@@ -6,7 +6,7 @@ local tech = require("functions.create-technology")
 -- Improved Logistics System
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "improved-logistics-system",
             {
                 {"electromagnetic-matrix", 1}
@@ -23,7 +23,7 @@ data:extend(
 -- Steel Smelting
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "steel-smelting",
             {
                 {"electromagnetic-matrix", 1}
@@ -42,7 +42,7 @@ data:extend(
 -- Combustible Unit
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "combustible-unit",
             {
                 {"electromagnetic-matrix", 1}
@@ -59,7 +59,7 @@ data:extend(
 -- Smelting Purification
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "smelting-purification",
             {
                 {"electromagnetic-matrix", 1}
@@ -78,7 +78,7 @@ data:extend(
 -- Thermal Power
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "thermal-power",
             {
                 {"electromagnetic-matrix", 1}
@@ -97,7 +97,7 @@ data:extend(
 -- Plasma Extract Refining
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "plasma-extract-refining",
             {
                 {"electromagnetic-matrix", 1}
@@ -116,7 +116,7 @@ data:extend(
 -- Battlefield Analysis Base
 data:extend(
     {
-        tech.createTechnology(
+        LDAFunctions.createTechnology(
             "battlefield-analysis-base",
             {
                 {"electromagnetic-matrix", 1}

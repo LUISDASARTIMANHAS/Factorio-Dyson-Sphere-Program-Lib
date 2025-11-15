@@ -1,28 +1,21 @@
--- create-generic-recipe.lua
--- Esta função cria um protótipo genérico de item e receita.
+local LDAFunctions = require("__LDA-LIB__/init")
 
-local Module = {}
+-- category = "science-matrices" feito em Matrix Lab
 
-local createItem = require("functions.generic-functions.create-item")
-local createRecipe = require("functions.generic-functions.create-recipe")
-
-
--- @param name string O nome do item e receita (ex: "solar-painel").
-function Module.createGenericRecipe(name)
+local function createItemWithRecipeMatrix(name, time, qtde, ingredients)
+    local nameMatrix =name .. "-matrix"
+    local crafted_in = "DSP-science-matrices"
     local results = {
-        {type = "item", name = "DSP-"..name, amount = 1}
+        {type = "item", name = "DSP-"..nameMatrix, amount = qtde}
     }
-    local ingredients = {
-        {type = "item", name = "iron-plate", amount = 1}
-    }
-    local item = createItem.createItem(name,"other-consumables", 50)
-    local recipe = createRecipe.createRecipe("itens",name, "advanced-crafting", 10, ingredients, results)
+
+    local item = LDAFunctions.createItemSearch(nameMatrix,200)
+    local recipe = LDAFunctions.createRecipe("itens", nameMatrix, crafted_in, time, ingredients, results)
 
     return {item, recipe}
 end
 
-
--- example 
+-- example
 -- {
 --             type = "item",
 --             name = "quantum-teleporter-equipment",
@@ -36,7 +29,7 @@ end
 --         },
 --         {
 --             type = "recipe",
---             name = "quantum-teleporter-equipment",
+--             name = "quantum-teleporter-equipment-recipe",
 --             category = "advanced-crafting",
 --             enabled = false,
 --             energy_required = 120,
@@ -52,5 +45,4 @@ end
 --             alternative_unlock_methods = {"Quantum-Teleporter"}
 --         }
 --     }
-
-return Module
+return createItemWithRecipeMatrix
