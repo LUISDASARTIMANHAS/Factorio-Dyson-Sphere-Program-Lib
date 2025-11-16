@@ -357,7 +357,7 @@ data:extend({
 -- antimatter
 data:extend(
     createParticleColiderItemWithRecipe(
-        "DSP-antimatter",
+        "antimatter",
         2,
         nil,
         20,

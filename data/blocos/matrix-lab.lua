@@ -7,7 +7,7 @@ local LDAFunctions = require("__LDA-LIB__/init")
 -- definindo receita e item
 data:extend(
         LDAFunctions.createBlockItemWithRecipe(
-            "matrix-lab",
+            "DSP-matrix-lab",
             "science",
             50,
             "advanced-crafting",
