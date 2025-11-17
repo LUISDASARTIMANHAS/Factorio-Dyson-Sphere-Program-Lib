@@ -7,7 +7,7 @@ local icon_path = path_main .. "graficos/blocos/advanced-solar-panel.png"
 -- definindo receita e item
 data:extend(
         LDAFunctions.createBlockItemWithRecipe(
-            "advanced-solar-panel",
+            "DSP-advanced-solar-panel",
             "power-generation",
             50,
             "advanced-crafting",

@@ -4,11 +4,11 @@ local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
 local LDAFunctions = require("__LDA-LIB__/init")
 
--- *** Definição do ITEM 'arc-smelter' ***
+-- *** Definição do ITEM 'DSP-arc-smelter' ***
 -- definindo receita e item
 data:extend(
         LDAFunctions.createBlockItemWithRecipe(
-            "arc-smelter",
+            "DSP-arc-smelter",
             "production-machine",
             50,
             "advanced-crafting",

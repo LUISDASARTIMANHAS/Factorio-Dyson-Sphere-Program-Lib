@@ -9,7 +9,7 @@ local LDAFunctions = require("__LDA-LIB__/init")
 data:extend(
     {
         LDAFunctions.createTechnology(
-            "sphere-program",
+            "tech-dyson-sphere-program",
             {
                 {"automation-science-pack", 3},
                 {"logistic-science-pack", 3}

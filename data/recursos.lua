@@ -62,7 +62,7 @@ data:extend(
 -- Stone Brick
 data:extend(
     LDAFunctions.createSmeltingItemWithRecipe(
-        "stone-brick",
+        "DSP-stone-brick",
         1,
         1,
         {

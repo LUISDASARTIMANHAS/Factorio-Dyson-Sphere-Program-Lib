@@ -11,7 +11,7 @@ local LDAFunctions = require("__LDA-LIB__/init")
 -- definindo receita e item
 data:extend(
     LDAFunctions.createBlockItemWithRecipe(
-        "fractionator",
+        "DSP-fractionator",
         "intermediate-products",
         30,
         "advanced-crafting",
