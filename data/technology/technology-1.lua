@@ -26,7 +26,7 @@ data:extend(
             },
             -- unlocks
             {
-                "magnet","magnetic-coil","circuit-board","gear","stone-brick"
+                "DSP-magnet","DSP-magnetic-coil","DSP-circuit-board","DSP-gear","DSP-stone-brick"
             },
             500
         )

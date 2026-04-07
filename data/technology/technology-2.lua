@@ -105,9 +105,9 @@ data:extend(
                 "tech-dyson-fluid-storage-encapsulation"
             },
             {
-                "prism",
-                "plasma-exciter",
-                "wireless-power-tower"
+                "DSP-prism",
+                "DSP-plasma-exciter",
+                "DSP-wireless-power-tower"
             },
             50
         )
@@ -140,7 +140,7 @@ data:extend(
                 {"DSP-electromagnetic-matrix", 1}
             },
             nil,
-            {"engine"},
+            {"DSP-engine"},
             20
         )
     }

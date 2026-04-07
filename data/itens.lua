@@ -9,9 +9,20 @@ local createParticleColiderItemWithRecipe = require("data.create-particle-collid
 -- category = "oil-processing" feito na Oil refinery
 -- category = "DSP-particle-collider" feito em Miniature Particle Collider
 
+-- LDA.createRecipe(typeIcon, name, crafted_in, time, ingredients, results, alt_unlocks, enabled)
+-- LDA.createItemWithRecipe(name, subgroup, stack_size, crafted_in, time, ingredients, results, alt_unlocks, isEnabled, pictures)
+-- LDA.createThrowInWaterItemWithRecipe(name, time, qtde, ingredients, stack_size, requiredWaterValue, alt_unlocks, isEnabled)
+-- LDA.createFluidWithRecipe(name, heatEnergy, crafted_in, time, ingredients, results, alt_unlocks)
+-- LDA.createBlockItemWithRecipe(name, subgroup, stack_size, crafted_in, time, ingredients, results, alt_unlocks, isEnabled, icon_size, pick_sound, drop_sound)
+-- LDA.createEquipmentItemWithRecipe(name, subgroup, weight, crafted_in, time, ingredients, results, alt_unlocks, isEnabled)
+-- LDA.createSmeltingItemWithRecipe(name, time, qtde, ingredients, crafted_in, alt_unlocks, isEnabled)
+-- LDA.createAssemblerItemWithRecipe(name, time, qtde, ingredients, stack_size, alt_unlocks, isEnabled)
+-- LDA.createGenericRecipe(name)
+
 -- Define itens
 -- circuit-board
 data:extend(
+    -- createAssemblerItemWithRecipe(name, time, qtde, ingredients, stack_size, alt_unlocks, isEnabled)
     LDAFunctions.createAssemblerItemWithRecipe(
         "DSP-circuit-board",
         1,
@@ -33,6 +44,21 @@ data:extend(
             {type = "item", name = "copper-plate", amount = 1},
             {type = "item", name = "DSP-magnet", amount = 2}
         }
+    )
+)
+
+-- Engine
+data:extend(
+    -- createAssemblerItemWithRecipe(name, time, qtde, ingredients, stack_size, alt_unlocks, isEnabled)
+    LDAFunctions.createAssemblerItemWithRecipe(
+        "DSP-engine",
+        3,
+        1,
+        {
+            {type = "item", name = "DSP-magnetic-coil", amount = 1},
+            {type = "item", name = "copper-plate", amount = 2}
+        },
+        200
     )
 )
 
