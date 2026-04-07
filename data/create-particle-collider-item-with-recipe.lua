@@ -32,7 +32,7 @@ end
 --         {
 --             type = "item",
 --             name = "iron-ore",
---             icon = path_main .. "graficos/itens/iron-ore.png",
+--             icon = path_main .. "graphics/itens/iron-ore.png",
 --             icon_size = 128,
 --             subgroup = "itens",
 --             -- diz pro jogo que o equipamento deve ser colocado com o item especificado

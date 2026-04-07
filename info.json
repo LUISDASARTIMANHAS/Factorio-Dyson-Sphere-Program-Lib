@@ -1,6 +1,6 @@
 {
     "name": "Dyson-Sphere-Program-Lib",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "title": "Dyson Sphere Program Lib",
     "author": "LUIS DAS ARTIMANAHS",
     "contact": "luisaugustodesouza785@gmail.com",
@@ -10,7 +10,7 @@
     "dependencies": [
         "base >= 2.0.0",
         "space-age",
-        "LDA-LIB >= 0.0.2"
+        "LDA-LIB >= 0.0.11"
     ],
     "license": "GNU General Public License v3.0",
     "thumbnail": "thumbnail.png",

@@ -8,7 +8,7 @@ data:extend(
       -- nome da categoria
       name = "dyson-category",
       order = "d",
-      icon = path_main .. "graficos/technology/dyson.png",
+      icon = path_main .. "graphics/technology/dyson.png",
       icon_size = 128,
       icon_mipmaps = 2
     },

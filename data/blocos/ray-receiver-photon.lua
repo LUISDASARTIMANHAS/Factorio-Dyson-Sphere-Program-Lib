@@ -4,7 +4,7 @@ data:extend(
     {
         type = "furnace",
         name = "DSP-ray-receiver-photon",
-        icon = path_main .. "graficos/blocos/ray-receiver.png",
+        icon = path_main .. "graphics/blocos/ray-receiver.png",
         -- icon_size = 128,
         energy_source = {
             type = "electric",

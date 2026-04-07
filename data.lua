@@ -1,7 +1,7 @@
 require("data.grupos")
 
 -- presets Basicos do mods
-require("graficos/style.lua")
+require("graphics.style")
 require("data.recursos")
 require("data.itens")
 require("data.matrix")

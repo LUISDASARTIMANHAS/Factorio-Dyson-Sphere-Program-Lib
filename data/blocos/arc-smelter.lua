@@ -1,5 +1,5 @@
 local path_main = "__Dyson-Sphere-Program-Lib__/"
-local icon_path = path_main .. "graficos/blocos/arc-smelter.png"
+local icon_path = path_main .. "graphics/blocos/arc-smelter.png"
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
 local LDAFunctions = require("__LDA-LIB__/init")

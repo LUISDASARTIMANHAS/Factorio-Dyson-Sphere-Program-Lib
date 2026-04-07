@@ -1,8 +1,0 @@
-corrigir os bugs na lista
-https://mods.factorio.com/mod/Dyson-Sphere-Program-Lib/discussion
-
-erro atual e:
-
-Falha ao carregar mods: Error in assignID: technology with name 'tech-dyson-electromagnetism' does not exist.
-
-Source: engine (technology).

@@ -1,5 +1,5 @@
 local path_main = "__Dyson-Sphere-Program-Lib__/"
-local icon_path = path_main .. "graficos/blocos/matrix-lab.png"
+local icon_path = path_main .. "graphics/blocos/matrix-lab.png"
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local LDAFunctions = require("__LDA-LIB__/init")
 
