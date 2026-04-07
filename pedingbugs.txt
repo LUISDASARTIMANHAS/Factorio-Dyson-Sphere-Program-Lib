@@ -1,0 +1,6 @@
+Falha ao carregar mods: Error in assignID: recipe with name 'engine' does not exist.
+
+Source: engine (technology).
+
+Mods para serem desativados:
+• Dyson-Sphere-Program-Lib (0.0.4)

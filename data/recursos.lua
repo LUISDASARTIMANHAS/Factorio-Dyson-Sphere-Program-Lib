@@ -1,10 +1,13 @@
 local LDAFunctions = require("__LDA-LIB__/init")
+local PATH = LDAFunctions.setBasePath('Dyson-Sphere-Program-Lib')
 
 -- category = "advanced-crafting" maquinas de montagem tier 2 e 3
 -- category = "basic-crafting" maquinas de montagem tier 1
 -- category = "crafting" feito a mão
 -- category = "smelting" feito em fornalhas
 -- category = "centrifuging" feito na centrifuge
+-- createOre(name, stack_size, fuel_category, fuel_value)
+-- createResource(name, order, particleName, resource_parameters, autoplace_parameters)
 
 -- automaticamente adicona -ore
 -- Define itens

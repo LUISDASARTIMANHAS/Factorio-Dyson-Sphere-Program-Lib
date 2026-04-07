@@ -81,31 +81,5 @@ Xcopy /Y "%ZIP_FILE%" "%STEAM_FILE%"
 :: start /realtime /min autogit.cmd 
 
 :: abre o jogo para testes
-start steam://rungameid/427520
-exit /b 0
-
-:: Remover espaços em branco ao redor de AUTO_SEND
-set "AUTO_SEND=%AUTO_SEND: =%"
-
-if /i "%AUTO_SEND%"=="False" (
-    echo Compactacao terminada. Auto publicar desativado. Saindo...
-    pause
-    exit /b 0
-)
-:: Publica o mod no Factorio
-echo Publicando o mod no Factorio...
-curl -X POST ^
-     -F "file=@%ZIP_FILE%" ^
-     -F "name=%MOD_NAME%" ^
-     -F "version=%MOD_VERSION%" ^
-     -H "Authorization: Token %API_KEY%" ^
-     https://mods.factorio.com/api/v2/mods/init_publish
-
-:: Verifica o código de retorno do cURL
-if errorlevel 1 (
-    echo Erro: Falha ao publicar o mod.
-    exit /b 1
-)
-
-echo Mod publicado com sucesso!
+start steam://rungameid/427520 >> game.log
 exit /b 0

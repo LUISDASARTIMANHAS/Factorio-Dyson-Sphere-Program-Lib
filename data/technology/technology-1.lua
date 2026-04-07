@@ -1,4 +1,11 @@
 local LDAFunctions = require("__LDA-LIB__/init")
+-- Tecnologia
+-- LDA.createTechnology(name, ingredients, prerequisites, unlocks, time, count, isUpgrade)
+-- LDA.createTechnologyTrigger(name, unlocks, prerequisites, research_trigger)
+-- LDA.createTechnologyCraftEntityTrigger(name, unlocks, prerequisites, item, count)
+-- LDA.createTechnologyMineEntityTrigger(name, unlocks, prerequisites, mine_entity)
+-- LDA.techUtils.createEffectsUnlocksRecipes(recipesList)
+
 -- default create name
 -- tech-dyson-nameofTech
 -- default result name
@@ -29,15 +36,14 @@ data:extend(
 -- Electromagnetism For Trigger
 data:extend(
     {
-        LDAFunctions.createTechnologyTrigger(
+        LDAFunctions.createTechnologyCraftEntityTrigger(
             "electromagnetism",
-            nil,
-            nil,
             {
-                type = "craft-item",
-                item = "DSP-magnetic-coil",
-                count = 10
-            }
+                "electric-mining-drill"
+            },
+            {"tech-dyson-sphere-program"},
+            "DSP-magnetic-coil",
+            10
         )
     }
 )

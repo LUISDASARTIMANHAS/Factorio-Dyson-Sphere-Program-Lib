@@ -1,4 +1,11 @@
 local LDAFunctions = require("__LDA-LIB__/init")
+-- Tecnologia
+-- LDA.createTechnology(name, ingredients, prerequisites, unlocks, time, count, isUpgrade)
+-- LDA.createTechnologyCraftEntityTrigger(name, unlocks, prerequisites, research_trigger)
+-- LDA.createTechnologyCraftEntityTrigger(name, unlocks, prerequisites, item, count)
+-- LDA.createTechnologyMineEntityTrigger(name, unlocks, prerequisites, mine_entity)
+-- LDA.techUtils.createEffectsUnlocksRecipes(recipesList)
+
 -- default create name
 -- tech-dyson-nameofTech
 
@@ -6,17 +13,16 @@ local LDAFunctions = require("__LDA-LIB__/init")
 -- Basic Logistics System
 data:extend(
     {
-        LDAFunctions.createTechnologyTrigger(
+        LDAFunctions.createTechnologyCraftEntityTrigger(
             "basic-logistics-system",
             {
-                "transport-belt","underground-belt","splitter"
+                "transport-belt",
+                "underground-belt",
+                "splitter"
             },
-            nil,
-            {
-                type = "craft-item",
-                item = "DSP-circuit-board",
-                count = 10
-            }
+            {"electromagnetism"},
+            "DSP-circuit-board",
+            10
         )
     }
 )
@@ -24,18 +30,15 @@ data:extend(
 -- Automatic Metallurgy
 data:extend(
     {
-        LDAFunctions.createTechnologyTrigger(
+        LDAFunctions.createTechnologyCraftEntityTrigger(
             "automatic-metallurgy",
             {
                 "arc-smelter",
                 "glass"
             },
-            nil,
-            {
-                type = "craft-item",
-                item = "DSP-magnetic-coil",
-                count = 10
-            }
+            {"electromagnetism"},
+            "DSP-magnetic-coil",
+            10
         )
     }
 )
@@ -43,19 +46,16 @@ data:extend(
 -- Electromagnetic Matrix
 data:extend(
     {
-        LDAFunctions.createTechnologyTrigger(
-            "electromagnetic-matrix",
+        LDAFunctions.createTechnologyCraftEntityTrigger(
+            "DSP-electromagnetic-matrix",
             -- recipe auto add DSP-recipe-name
             {
-                "electromagnetic-matrix",
+                "DSP-electromagnetic-matrix",
                 "matrix-lab"
             },
-            nil,
-            {
-                type = "craft-item",
-                item = "DSP-circuit-board",
-                count = 10
-            }
+            {"electromagnetism"},
+            "DSP-circuit-board",
+            10
         )
     }
 )
@@ -63,17 +63,14 @@ data:extend(
 -- Basic Assembling Processes
 data:extend(
     {
-        LDAFunctions.createTechnologyTrigger(
+        LDAFunctions.createTechnologyCraftEntityTrigger(
             "basic-assembling-processes",
             {
                 "assembling-machine-1"
             },
-            nil,
-            {
-                type = "craft-item",
-                item = "DSP-gear",
-                count = 10
-            }
+            {"electromagnetism"},
+            "DSP-gear",
+            10
         )
     }
 )
@@ -84,7 +81,7 @@ data:extend(
         LDAFunctions.createTechnology(
             "fluid-storage-encapsulation",
             {
-                {"electromagnetic-matrix", 1}
+                {"DSP-electromagnetic-matrix", 1}
             },
             nil,
             {
@@ -102,7 +99,7 @@ data:extend(
         LDAFunctions.createTechnology(
             "high-efficiency-plasma-control",
             {
-                {"electromagnetic-matrix", 1}
+                {"DSP-electromagnetic-matrix", 1}
             },
             {
                 "tech-dyson-fluid-storage-encapsulation"
@@ -123,7 +120,7 @@ data:extend(
         LDAFunctions.createTechnology(
             "electromagnetic-drive",
             {
-                {"electromagnetic-matrix", 1}
+                {"DSP-electromagnetic-matrix", 1}
             },
             nil,
             {
@@ -140,7 +137,7 @@ data:extend(
         LDAFunctions.createTechnology(
             "engine",
             {
-                {"electromagnetic-matrix", 1}
+                {"DSP-electromagnetic-matrix", 1}
             },
             nil,
             {"engine"},
@@ -155,10 +152,10 @@ data:extend(
         LDAFunctions.createTechnology(
             "weapon-system",
             {
-                {"electromagnetic-matrix", 1}
+                {"DSP-electromagnetic-matrix", 1}
             },
             nil,
-            nil,
+            {"gun-turret"},
             20
         )
     }

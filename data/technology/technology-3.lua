@@ -1,4 +1,11 @@
 local LDAFunctions = require("__LDA-LIB__/init")
+-- Tecnologia
+-- LDA.createTechnology(name, ingredients, prerequisites, unlocks, time, count, isUpgrade)
+-- LDA.createTechnologyTrigger(name, unlocks, prerequisites, research_trigger)
+-- LDA.createTechnologyCraftEntityTrigger(name, unlocks, prerequisites, item, count)
+-- LDA.createTechnologyMineEntityTrigger(name, unlocks, prerequisites, mine_entity)
+-- LDA.techUtils.createEffectsUnlocksRecipes(recipesList)
+
 -- default create name
 -- tech-dyson-nameofTech
 
@@ -9,7 +16,7 @@ data:extend(
         LDAFunctions.createTechnology(
             "improved-logistics-system",
             {
-                {"electromagnetic-matrix", 1}
+                {"DSP-electromagnetic-matrix", 1}
             },
             {
                 "tech-dyson-basic-logistics-system"
@@ -26,7 +33,7 @@ data:extend(
         LDAFunctions.createTechnology(
             "steel-smelting",
             {
-                {"electromagnetic-matrix", 1}
+                {"DSP-electromagnetic-matrix", 1}
             },
             {
                 "tech-dyson-automatic-metallurgy"
@@ -45,7 +52,7 @@ data:extend(
         LDAFunctions.createTechnology(
             "combustible-unit",
             {
-                {"electromagnetic-matrix", 1}
+                {"DSP-electromagnetic-matrix", 1}
             },
             nil,
             {
@@ -62,7 +69,7 @@ data:extend(
         LDAFunctions.createTechnology(
             "smelting-purification",
             {
-                {"electromagnetic-matrix", 1}
+                {"DSP-electromagnetic-matrix", 1}
             },
             {
                 "tech-dyson-automatic-metallurgy"
@@ -81,7 +88,7 @@ data:extend(
         LDAFunctions.createTechnology(
             "thermal-power",
             {
-                {"electromagnetic-matrix", 1}
+                {"DSP-electromagnetic-matrix", 1}
             },
             {
                 "tech-dyson-basic-assembling-processes"
@@ -100,7 +107,7 @@ data:extend(
         LDAFunctions.createTechnology(
             "plasma-extract-refining",
             {
-                {"electromagnetic-matrix", 1}
+                {"DSP-electromagnetic-matrix", 1}
             },
             {
                 "tech-dyson-basic-assembling-processes"
@@ -119,10 +126,10 @@ data:extend(
         LDAFunctions.createTechnology(
             "battlefield-analysis-base",
             {
-                {"electromagnetic-matrix", 1}
+                {"DSP-electromagnetic-matrix", 1}
             },
             nil,
-            nil,
+            {"battlefield-analysis-base"},
             100
         )
     }
