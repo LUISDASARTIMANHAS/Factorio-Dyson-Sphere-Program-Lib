@@ -1,5 +1,5 @@
 local path_main = "__Dyson-Sphere-Program-Lib__/"
-local icon_path = path_main .. "graphics/entity/fractionator.png"
+local icon_path = path_main .. "graphics/entities/fractionator.png"
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
 require ("__base__.prototypes.entity.pipecovers")

@@ -366,7 +366,7 @@ data:extend(
 -- Critical Photon Receita com lens
 data:extend({
     LDAFunctions.createRecipe(
-        "itens",
+        "icons",
         "critical-photon-lens",
         "ray-receiver",
         10,

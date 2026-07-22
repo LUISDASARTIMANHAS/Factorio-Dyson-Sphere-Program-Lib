@@ -140,7 +140,7 @@ data:extend(
 -- diamond kimberlite ore
 data:extend(
     {LDAFunctions.createRecipe(
-        "itens",
+        "icons",
         "diamond-kimberlite",
         "smelting",
         1.5,
