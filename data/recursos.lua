@@ -36,6 +36,7 @@ data:extend(
 )
 
 -- deuterium
+-- deuterium-fractionator
 -- make in Fractionator fix in future
 data:extend(
     LDAFunctions.createFluidWithRecipe(

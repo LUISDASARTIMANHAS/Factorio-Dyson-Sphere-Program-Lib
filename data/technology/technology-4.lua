@@ -109,7 +109,7 @@ data:extend(
             },
             {
                 "fractionator",
-                "deuterium-fractionator"
+                "deuterium"
             },
             100
         )

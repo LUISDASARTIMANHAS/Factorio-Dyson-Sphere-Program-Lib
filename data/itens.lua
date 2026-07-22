@@ -509,7 +509,7 @@ data:extend(
         {
             {type = "item", name = "steel-plate", amount = 4},
             {type = "item", name = "plasma-exciter", amount = 2},
-            {type = "item", name = "ciruit-board", amount = 2},
+            {type = "item", name = "circuit-board", amount = 2},
             {type = "item", name = "microcrystalline-component", amount = 2},
         },
         50
