@@ -1,4 +1,4 @@
-Falha ao carregar mods: File __Dyson-Sphere-Program-Lib__/graphics/blocos/advanced-solar-panel.png not found
+Falha ao carregar mods: File __Dyson-Sphere-Program-Lib__/graphics/technology/tech-dyson-automatic-metallurgy-256x256.png not found
 
 Mods para serem desativados:
 • Dyson-Sphere-Program-Lib (0.0.4)

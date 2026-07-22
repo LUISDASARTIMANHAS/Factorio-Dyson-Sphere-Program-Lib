@@ -1,22 +1,16 @@
-local LDAFunctions = require("__LDA-LIB__/init")
--- Tecnologia
--- LDA.createTechnology(name, ingredients, prerequisites, unlocks, time, count, isUpgrade)
--- LDA.createTechnologyTrigger(name, unlocks, prerequisites, research_trigger)
--- LDA.createTechnologyCraftEntityTrigger(name, unlocks, prerequisites, item, count)
--- LDA.createTechnologyMineEntityTrigger(name, unlocks, prerequisites, mine_entity)
--- LDA.techUtils.createEffectsUnlocksRecipes(recipesList)
+local utils = require("data.utils")
 
 -- default create name
 -- tech-dyson-nameofTech
 -- default result name
--- "nameofRecipe"
+-- "tech-dyson-nameofRecipe"
 
 -- TIER 1
 -- tech-dyson-sphere-program
 data:extend(
     {
-        LDAFunctions.createTechnology(
-            "tech-dyson-sphere-program",
+        utils.createDSPTechnology(
+            "sphere-program",
             {
                 {"automation-science-pack", 3},
                 {"logistic-science-pack", 3}
@@ -36,14 +30,13 @@ data:extend(
 -- Electromagnetism For Trigger
 data:extend(
     {
-        LDAFunctions.createTechnologyCraftEntityTrigger(
+        utils.createDSPTechnologyCraftEntityTrigger(
             "electromagnetism",
             {
                 "electric-mining-drill"
             },
             {"tech-dyson-sphere-program"},
-            "magnetic-coil",
-            10
+            "magnetic-coil"
         )
     }
 )

@@ -18,6 +18,7 @@ Date: 22/07/2026
     - Error in assignID: item with name 'DSP-high-purity-silicon' does not exist.
     - Error in assignID: recipe with name 'prism' does not exist.
     - Error in assignID: recipe with name 'thermal-power-plant' does not exist.
+    - changed technologies images to 256x256 pngs.
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.3
 Date: 22/08/2025

@@ -1,9 +1,9 @@
-local LDAFunctions = require("__LDA-LIB__/init")
+local utils = require("data.utils")
 -- Tecnologia
 -- LDA.createTechnology(name, ingredients, prerequisites, unlocks, time, count, isUpgrade)
 -- LDA.createTechnologyTrigger(name, unlocks, prerequisites, research_trigger)
 -- LDA.createTechnologyCraftEntityTrigger(name, unlocks, prerequisites, item, count)
--- LDA.createTechnologyMineEntityTrigger(name, unlocks, prerequisites, mine_entity)
+-- LDA.createDSPTechnologyMineEntityTrigger(name, unlocks, prerequisites, mine_entity)
 -- LDA.techUtils.createEffectsUnlocksRecipes(recipesList)
 
 -- default create name
@@ -13,13 +13,13 @@ local LDAFunctions = require("__LDA-LIB__/init")
 -- Improved Logistics System
 data:extend(
     {
-        LDAFunctions.createTechnology(
+        utils.createDSPTechnology(
             "improved-logistics-system",
             {
                 {"electromagnetic-matrix", 1}
             },
             {
-                "basic-logistics-system"
+                "tech-dyson-basic-logistics-system"
             },
             {"fast-splitter", "fast-transport-belt","fast-underground-belt"},
             100
@@ -30,13 +30,13 @@ data:extend(
 -- Steel Smelting
 data:extend(
     {
-        LDAFunctions.createTechnology(
+        utils.createDSPTechnology(
             "steel-smelting",
             {
                 {"electromagnetic-matrix", 1}
             },
             {
-                "automatic-metallurgy"
+                "tech-dyson-automatic-metallurgy"
             },
             {
                 "steel-plate"
@@ -49,7 +49,7 @@ data:extend(
 -- Combustible Unit
 data:extend(
     {
-        LDAFunctions.createTechnology(
+        utils.createDSPTechnology(
             "combustible-unit",
             {
                 {"electromagnetic-matrix", 1}
@@ -66,13 +66,13 @@ data:extend(
 -- Smelting Purification
 data:extend(
     {
-        LDAFunctions.createTechnology(
+        utils.createDSPTechnology(
             "smelting-purification",
             {
                 {"electromagnetic-matrix", 1}
             },
             {
-                "automatic-metallurgy"
+                "tech-dyson-automatic-metallurgy"
             },
             {
                 "silicon-ore","energetic-graphite","high-purity-silicon"
@@ -85,13 +85,13 @@ data:extend(
 -- Thermal Power
 data:extend(
     {
-        LDAFunctions.createTechnology(
+        utils.createDSPTechnology(
             "thermal-power",
             {
                 {"electromagnetic-matrix", 1}
             },
             {
-                "basic-assembling-processes"
+                "tech-dyson-basic-assembling-processes"
             },
             {
                 "thermal-power-plant"
@@ -104,13 +104,13 @@ data:extend(
 -- Plasma Extract Refining
 data:extend(
     {
-        LDAFunctions.createTechnology(
+        utils.createDSPTechnology(
             "plasma-extract-refining",
             {
                 {"electromagnetic-matrix", 1}
             },
             {
-                "basic-assembling-processes"
+                "tech-dyson-basic-assembling-processes"
             },
             {
                 "pumpjack","oil-refinery"
@@ -123,7 +123,7 @@ data:extend(
 -- Battlefield Analysis Base
 data:extend(
     {
-        LDAFunctions.createTechnology(
+        utils.createDSPTechnology(
             "battlefield-analysis-base",
             {
                 {"electromagnetic-matrix", 1}

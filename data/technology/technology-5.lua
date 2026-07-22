@@ -1,10 +1,4 @@
-local LDAFunctions = require("__LDA-LIB__/init")
--- Tecnologia
--- LDA.createTechnology(name, ingredients, prerequisites, unlocks, time, count, isUpgrade)
--- LDA.createTechnologyTrigger(name, unlocks, prerequisites, research_trigger)
--- LDA.createTechnologyCraftEntityTrigger(name, unlocks, prerequisites, item, count)
--- LDA.createTechnologyMineEntityTrigger(name, unlocks, prerequisites, mine_entity)
--- LDA.techUtils.createEffectsUnlocksRecipes(recipesList)
+local utils = require("data.utils")
 
 -- default create name
 -- nameofTech
@@ -15,15 +9,15 @@ local LDAFunctions = require("__LDA-LIB__/init")
 -- Planetary Logistics System
 data:extend(
     {
-        LDAFunctions.createTechnology(
+        utils.createDSPTechnology(
             "planetary-logistics-system",
             {
                 {"electromagnetic-matrix", 4},
                 {"energy-matrix", 1}
             },
             {
-                "turbo-transport-belt",
-                "sphere-program"
+                "tech-dyson-turbo-transport-belt",
+                "tech-dyson-sphere-program"
             },
             {"fast-transport-belt","fast-underground-belt","fast-splitter"},
             400
@@ -34,15 +28,15 @@ data:extend(
 -- Titanium_Smelting
 data:extend(
     {
-        LDAFunctions.createTechnology(
+        utils.createDSPTechnology(
             "titanium-smelting",
             {
                 {"electromagnetic-matrix", 2},
                 {"energy-matrix", 2}
             },
             {
-                "steel-processing",
-                "sphere-program"
+                "tech-dyson-steel-processing",
+                "tech-dyson-sphere-program"
             },
             {"titanium-ingot"},
             100
@@ -53,7 +47,7 @@ data:extend(
 -- High-Strength Titanium Alloy
 data:extend(
     {
-        LDAFunctions.createTechnology(
+        utils.createDSPTechnology(
             "high-strength-titanium-alloy",
             {
                 {"electromagnetic-matrix", 80},
@@ -61,8 +55,8 @@ data:extend(
                 {"structure-matrix", 8}
             },
             {
-                "titanium-smelting",
-                "sphere-program"
+                "tech-dyson-titanium-smelting",
+                "tech-dyson-sphere-program"
             },
             {"titanium-alloy"},
             10
@@ -73,13 +67,13 @@ data:extend(
 -- reinforced thruster
 data:extend(
     {
-        LDAFunctions.createTechnology(
+        utils.createDSPTechnology(
             "reinforced-thruster",
             {
                 {"energy-matrix", 16}
             },
             {
-                "sphere-program"
+                "tech-dyson-sphere-program"
             },
             {"reinforced-thruster"},
             100
@@ -90,7 +84,7 @@ data:extend(
 -- Interstellar Logistics System
 data:extend(
     {
-        LDAFunctions.createTechnology(
+        utils.createDSPTechnology(
             "interstellar-logistics-system",
             {
                 {"electromagnetic-matrix", 120},
@@ -98,9 +92,9 @@ data:extend(
                 {"structure-matrix", 12}
             },
             {
-                "high-strength-titanium-alloy",
-                "reinforced-thruster",
-                "sphere-program"
+                "tech-dyson-high-strength-titanium-alloy",
+                "tech-dyson-reinforced-thruster",
+                "tech-dyson-sphere-program"
             },
             {"roboport","logistic-robot"},
             10
@@ -112,7 +106,7 @@ data:extend(
 data:extend(
     {
         -- unlock energy-exchanger
-        LDAFunctions.createTechnology(
+        utils.createDSPTechnology(
             "interstellar-power-transmission",
             {
                 {"electromagnetic-matrix", 120},
@@ -132,7 +126,7 @@ data:extend(
 data:extend(
     {
         -- unlock Orbital Collector
-        LDAFunctions.createTechnology(
+        utils.createDSPTechnology(
             "gas-giants-exploitation",
             {
                 {"electromagnetic-matrix", 12},
@@ -140,9 +134,9 @@ data:extend(
                 {"structure-matrix", 12}
             },
             {
-                "interstellar-logistics-system",
-                "interstellar-power-transmission",
-                "sphere-program"
+                "tech-dyson-interstellar-logistics-system",
+                "tech-dyson-interstellar-power-transmission",
+                "tech-dyson-sphere-program"
             },
             {"fluorine","fluoroketone-hot"},
             100
@@ -153,7 +147,7 @@ data:extend(
 -- High-Strength Crystal
 data:extend(
     {
-        LDAFunctions.createTechnology(
+        utils.createDSPTechnology(
             "high-strength-crystal",
             -- ingredients
             {
@@ -162,7 +156,7 @@ data:extend(
             },
             -- prerequisites
             {
-                "steel-processing"
+                "tech-dyson-steel-processing"
             },
             -- unlocks
             {
@@ -176,7 +170,7 @@ data:extend(
 -- Processor
 data:extend(
     {
-        LDAFunctions.createTechnology(
+        utils.createDSPTechnology(
             "processor",
             -- ingredients
             {
@@ -184,7 +178,7 @@ data:extend(
             },
             -- prerequisites
             {
-                "sphere-program"
+                "tech-dyson-sphere-program"
             },
             -- unlocks
             {
