@@ -1,4 +1,1 @@
-Falha ao carregar mods: File __Dyson-Sphere-Program-Lib__/graphics/technology/tech-dyson-automatic-metallurgy-256x256.png not found
-
-Mods para serem desativados:
-• Dyson-Sphere-Program-Lib (0.0.4)
+Falha ao carregar mods: File __Dyson-Sphere-Program-Lib__/graphics/itens/electromagnetic-matrix.png not found

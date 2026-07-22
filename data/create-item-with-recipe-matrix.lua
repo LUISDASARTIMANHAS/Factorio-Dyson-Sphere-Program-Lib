@@ -10,7 +10,7 @@ local function createItemWithRecipeMatrix(name, time, qtde, ingredients)
     }
 
     local item = LDAFunctions.createItemSearch(nameMatrix,200)
-    local recipe = LDAFunctions.createRecipe("itens", nameMatrix, crafted_in, time, ingredients, results)
+    local recipe = LDAFunctions.createRecipe("icons", nameMatrix, crafted_in, time, ingredients, results)
 
     return {item, recipe}
 end

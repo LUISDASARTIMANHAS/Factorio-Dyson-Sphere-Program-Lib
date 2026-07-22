@@ -1,4 +1,4 @@
-Get-ChildItem -Recurse -File | ForEach-Object {
+Get-ChildItem -Recurse -File -Filter *.png | ForEach-Object {
     $name = $_.Name
     # Verifica se contém underscore ou letras maiúsculas
     if ($name -match "_" -or $name -cmatch "[A-Z]") {
