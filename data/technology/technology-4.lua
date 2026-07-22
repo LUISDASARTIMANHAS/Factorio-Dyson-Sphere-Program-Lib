@@ -7,7 +7,7 @@ local LDAFunctions = require("__LDA-LIB__/init")
 -- LDA.techUtils.createEffectsUnlocksRecipes(recipesList)
 
 -- default create name
--- tech-dyson-nameofTech
+-- nameofTech
 
 -- TIER 4
 -- Environment Modification
@@ -16,10 +16,10 @@ data:extend(
         LDAFunctions.createTechnology(
             "environment-modification",
             {
-                {"DSP-electromagnetic-matrix", 1}
+                {"electromagnetic-matrix", 1}
             },
             {
-                "tech-dyson-steel-smelting"
+                "steel-smelting"
             },
             {
                 "foundation"
@@ -36,12 +36,12 @@ data:extend(
             "crystal-smelting",
             -- ingredients
             {
-                {"DSP-electromagnetic-matrix", 1},
+                {"electromagnetic-matrix", 1},
                 {"energy-matrix", 1}
             },
             -- prerequisites
             {
-                "tech-dyson-improved-logistics-system"
+                "improved-logistics-system"
             },
             -- unlocks
             {
@@ -60,13 +60,13 @@ data:extend(
         LDAFunctions.createTechnology(
             "advanced-solar-collection",
             {
-                {"DSP-electromagnetic-matrix", 1}
+                {"electromagnetic-matrix", 1}
             },
             {
-                "tech-dyson-electromagnetism",
-                "tech-dyson-basic-assembling-processes",
-                "tech-dyson-smelting-purification",
-                "tech-dyson-DSP-electromagnetic-matrix"
+                "electromagnetism",
+                "basic-assembling-processes",
+                "smelting-purification",
+                "electromagnetic-matrix"
             },
             {
                 "advanced-solar-panel"
@@ -82,10 +82,10 @@ data:extend(
         LDAFunctions.createTechnology(
             "semiconductor-material",
             {
-                {"DSP-electromagnetic-matrix", 1}
+                {"electromagnetic-matrix", 1}
             },
             {
-                "tech-dyson-DSP-electromagnetic-matrix"
+                "electromagnetic-matrix"
             },
             {
                 "microcrystalline-component"
@@ -101,11 +101,11 @@ data:extend(
         LDAFunctions.createTechnology(
             "deuterium-fractionation",
             {
-                {"DSP-electromagnetic-matrix", 2},
+                {"electromagnetic-matrix", 2},
                 {"energy-matrix", 3}
             },
             {
-                "tech-dyson-DSP-electromagnetic-matrix"
+                "electromagnetic-matrix"
             },
             {
                 "fractionator",
@@ -122,7 +122,7 @@ data:extend(
         LDAFunctions.createTechnology(
             "proliferator-mki",
             {
-                {"DSP-electromagnetic-matrix", 1}
+                {"electromagnetic-matrix", 1}
             },
             nil,
             {
@@ -140,15 +140,15 @@ data:extend(
         LDAFunctions.createTechnology(
             "basic-chemical-engineering",
             {
-                {"DSP-electromagnetic-matrix", 1}
+                {"electromagnetic-matrix", 1}
             },
             {
-                "tech-dyson-deuterium-fractionation",
-                "tech-dyson-fluid-storage-encapsulation"
+                "deuterium-fractionation",
+                "fluid-storage-encapsulation"
             },
             {
                 "chemical-plant",
-                "DSP-plastic",
+                "plastic",
                 "sulfuric-acid"
             },
             200
@@ -162,10 +162,10 @@ data:extend(
         LDAFunctions.createTechnology(
             "energy-matrix",
             {
-                {"DSP-electromagnetic-matrix", 1}
+                {"electromagnetic-matrix", 1}
             },
             {
-                "tech-dyson-deuterium-fractionation"
+                "deuterium-fractionation"
             },
             {
                 "energy-matrix"
@@ -181,11 +181,11 @@ data:extend(
         LDAFunctions.createTechnology(
             "energy-matrix",
             {
-                {"DSP-electromagnetic-matrix", 4},
+                {"electromagnetic-matrix", 4},
                 {"energy-matrix", 1}
             },
             {
-                "tech-dyson-electromagnetic-drive"
+                "electromagnetic-drive"
             },
             {
                 "electromagnetic-turbine"
@@ -201,7 +201,7 @@ data:extend(
         LDAFunctions.createTechnology(
             "missile-turret",
             {
-                {"DSP-electromagnetic-matrix", 1}
+                {"electromagnetic-matrix", 1}
             },
             nil,
             {"rocket-turret"},

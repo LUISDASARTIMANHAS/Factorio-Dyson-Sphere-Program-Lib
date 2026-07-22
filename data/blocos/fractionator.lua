@@ -11,33 +11,33 @@ local LDAFunctions = require("__LDA-LIB__/init")
 -- definindo receita e item
 data:extend(
     LDAFunctions.createBlockItemWithRecipe(
-        "DSP-fractionator",
+        "fractionator",
         "intermediate-products",
         30,
         "advanced-crafting",
         3,
         {
             {type = "item", name = "steel-plate", amount = 8},
-            {type = "item", name = "DSP-stone-brick", amount = 4},
-            {type = "item", name = "DSP-glass", amount = 4},
-            {type = "item", name = "DSP-processor", amount = 1}
+            {type = "item", name = "stone-brick", amount = 4},
+            {type = "item", name = "glass", amount = 4},
+            {type = "item", name = "processor", amount = 1}
         },
         {
-            {type = "item", name = "DSP-fractionator", amount = 1}
+            {type = "item", name = "fractionator", amount = 1}
         }
     )
 )
 
--- *** Definição da fronalha (ENTIDADE) 'DSP-fractionator' ***
+-- *** Definição da fronalha (ENTIDADE) 'fractionator' ***
 data:extend(
     {
         {
             type = "assembling-machine",
-            name = "DSP-fractionator",
+            name = "fractionator",
             icon = icon_path,
             icon_size = 128,
             flags = {"placeable-neutral", "placeable-player", "player-creation"},
-            minable = {hardness = 0.5, mining_time = 1, result = "DSP-fractionator"},
+            minable = {hardness = 0.5, mining_time = 1, result = "fractionator"},
             fast_replaceable_group = "chemical-plant",
             max_health = 300,
             corpse = "chemical-plant-remnants",
@@ -54,7 +54,7 @@ data:extend(
             -- 2x mais rapida
             crafting_speed = 4,
             -- Categoria de fabricação (não diretamente relevante para labs, mas é um campo)
-            crafting_categories = {"chemistry", "DSP-fractionation-facility"},
+            crafting_categories = {"chemistry", "fractionation-facility"},
             -- *** PACOTES DE CIÊNCIA QUE ELE ACEITA ***
             -- inputs = {
             --     "electromagnetic-matrix",

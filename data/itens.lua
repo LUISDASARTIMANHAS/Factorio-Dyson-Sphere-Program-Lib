@@ -7,7 +7,7 @@ local createParticleColiderItemWithRecipe = require("data.create-particle-collid
 -- category = "centrifuging" feito na centrifuge
 -- category = "chemistry" feito na Chemical plant
 -- category = "oil-processing" feito na Oil refinery
--- category = "DSP-particle-collider" feito em Miniature Particle Collider
+-- category = "particle-collider" feito em Miniature Particle Collider
 
 -- LDA.createRecipe(typeIcon, name, crafted_in, time, ingredients, results, alt_unlocks, enabled)
 -- LDA.createItemWithRecipe(name, subgroup, stack_size, crafted_in, time, ingredients, results, alt_unlocks, isEnabled, pictures)
@@ -24,7 +24,7 @@ local createParticleColiderItemWithRecipe = require("data.create-particle-collid
 data:extend(
     -- createAssemblerItemWithRecipe(name, time, qtde, ingredients, stack_size, alt_unlocks, isEnabled)
     LDAFunctions.createAssemblerItemWithRecipe(
-        "DSP-circuit-board",
+        "circuit-board",
         1,
         2,
         {
@@ -37,12 +37,12 @@ data:extend(
 -- Magnetic Coil
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "DSP-magnetic-coil",
+        "magnetic-coil",
         1,
         2,
         {
             {type = "item", name = "copper-plate", amount = 1},
-            {type = "item", name = "DSP-magnet", amount = 2}
+            {type = "item", name = "magnet", amount = 2}
         }
     )
 )
@@ -51,11 +51,11 @@ data:extend(
 data:extend(
     -- createAssemblerItemWithRecipe(name, time, qtde, ingredients, stack_size, alt_unlocks, isEnabled)
     LDAFunctions.createAssemblerItemWithRecipe(
-        "DSP-engine",
+        "engine",
         3,
         1,
         {
-            {type = "item", name = "DSP-magnetic-coil", amount = 1},
+            {type = "item", name = "magnetic-coil", amount = 1},
             {type = "item", name = "copper-plate", amount = 2}
         },
         200
@@ -63,33 +63,33 @@ data:extend(
 )
 
 -- hydrogen X-ray-craking
--- data:extend(
---     LDAFunctions.createFluidWithRecipe(
---         "hydrogen",
---         "9MJ",
---         "oil-processing",
---         4,
---         -- ingredients
---         {
---             {type = "fluid", name = "crude-oil", amount = 2}
---         },
---         -- results
---         {
---             {type = "fluid", name = "heavy-oil", amount = 2},
---             {type = "fluid", name = "hydrogen", amount = 2}
---         }
---     )
--- )
+data:extend(
+    LDAFunctions.createFluidWithRecipe(
+        "hydrogen",
+        "9MJ",
+        "oil-processing",
+        4,
+        -- ingredients
+        {
+            {type = "fluid", name = "crude-oil", amount = 2}
+        },
+        -- results
+        {
+            {type = "fluid", name = "heavy-oil", amount = 2},
+            {type = "fluid", name = "hydrogen", amount = 2}
+        }
+    )
+)
 
 -- Graphene
 -- Made In		Chemical Facility fix in future
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "DSP-graphene",
+        "graphene",
         3,
         2,
         {
-            {type = "item", name = "DSP-energetic-graphite", amount = 3},
+            {type = "item", name = "energetic-graphite", amount = 3},
             {type = "fluid", name = "sulfuric-acid", amount = 1}
         },
         100
@@ -99,7 +99,7 @@ data:extend(
 -- plastic
 data:extend(
     LDAFunctions.createItemWithRecipe(
-        "DSP-plastic",
+        "plastic",
         "intermediate-products",
         100,
         "chemistry",
@@ -107,11 +107,11 @@ data:extend(
         -- ingredients
         {
             {type = "fluid", name = "crude-oil", amount = 2},
-            {type = "item", name = "DSP-energetic-graphite", amount = 2}
+            {type = "item", name = "energetic-graphite", amount = 2}
         },
         -- results
         {
-            {type = "item", name = "DSP-plastic", amount = 1}
+            {type = "item", name = "plastic", amount = 1}
         }
     )
 )
@@ -120,12 +120,12 @@ data:extend(
 -- Made In		Chemical Facility fix in future
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "DSP-carbon-nanotube",
+        "carbon-nanotube",
         4,
         2,
         {
-            {type = "item", name = "DSP-titanium-ingot", amount = 1},
-            {type = "item", name = "DSP-graphene", amount = 1}
+            {type = "item", name = "titanium-ingot", amount = 1},
+            {type = "item", name = "graphene", amount = 1}
         },
         100
     )
@@ -150,12 +150,12 @@ data:extend(
 -- Titanium Crystal
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "DSP-titanium-crystal",
+        "titanium-crystal",
         4,
         1,
         {
-            {type = "item", name = "DSP-organic-crystal-ore", amount = 1},
-            {type = "item", name = "DSP-titanium-ingot", amount = 3}
+            {type = "item", name = "organic-crystal-ore", amount = 1},
+            {type = "item", name = "titanium-ingot", amount = 3}
         },
         100
     )
@@ -164,13 +164,13 @@ data:extend(
 -- particle-broadband
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "DSP-particle-broadband",
+        "particle-broadband",
         8,
         1,
         {
-            {type = "item", name = "DSP-carbon-nanotube", amount = 1},
-            {type = "item", name = "DSP-crystal-silicon", amount = 2},
-            {type = "item", name = "DSP-plastic", amount = 2}
+            {type = "item", name = "carbon-nanotube", amount = 1},
+            {type = "item", name = "crystal-silicon", amount = 2},
+            {type = "item", name = "plastic", amount = 2}
         },
         200
     )
@@ -179,12 +179,12 @@ data:extend(
 -- microcrystalline-component
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "DSP-microcrystalline-component",
+        "microcrystalline-component",
         2,
         1,
         {
             {type = "item", name = "copper-plate", amount = 1},
-            {type = "item", name = "DSP-high-purity-silicon", amount = 2}
+            {type = "item", name = "high-purity-silicon", amount = 2}
         },
         200
     )
@@ -193,12 +193,12 @@ data:extend(
 -- Processor
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "DSP-processor",
+        "processor",
         3,
         1,
         {
-            {type = "item", name = "DSP-circuit-board", amount = 2},
-            {type = "item", name = "DSP-microcrystalline-component", amount = 2}
+            {type = "item", name = "circuit-board", amount = 2},
+            {type = "item", name = "microcrystalline-component", amount = 2}
         },
         200
     )
@@ -207,7 +207,7 @@ data:extend(
 -- gear
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "DSP-gear",
+        "gear",
         1,
         1,
         {
@@ -220,13 +220,13 @@ data:extend(
 -- electric-motor
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "DSP-electric-motor",
+        "electric-motor",
         2,
         1,
         {
             {type = "item", name = "iron-plate", amount = 2},
-            {type = "item", name = "DSP-gear", amount = 1},
-            {type = "item", name = "DSP-magnetic-coil", amount = 1}
+            {type = "item", name = "gear", amount = 1},
+            {type = "item", name = "magnetic-coil", amount = 1}
         },
         100
     )
@@ -235,12 +235,12 @@ data:extend(
 -- electromagnetic-turbine
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "DSP-electromagnetic-turbine",
+        "electromagnetic-turbine",
         2,
         1,
         {
-            {type = "item", name = "DSP-electric-motor", amount = 2},
-            {type = "item", name = "DSP-magnetic-coil", amount = 2}
+            {type = "item", name = "electric-motor", amount = 2},
+            {type = "item", name = "magnetic-coil", amount = 2}
         },
         100
     )
@@ -249,13 +249,13 @@ data:extend(
 -- particle-container
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "DSP-particle-container",
+        "particle-container",
         4,
         1,
         {
-            {type = "item", name = "DSP-electromagnetic-turbine", amount = 2},
+            {type = "item", name = "electromagnetic-turbine", amount = 2},
             {type = "item", name = "copper-plate", amount = 2},
-            {type = "item", name = "DSP-graphene", amount = 2}
+            {type = "item", name = "graphene", amount = 2}
         },
         100
     )
@@ -269,9 +269,9 @@ data:extend(
         1,
         100,
         {
-            {type = "item", name = "DSP-particle-container", amount = 2},
+            {type = "item", name = "particle-container", amount = 2},
             {type = "item", name = "iron-plate", amount = 2},
-            {type = "fluid", name = "DSP-deuterium", amount = 10}
+            {type = "fluid", name = "deuterium", amount = 10}
         }
     )
 )
@@ -279,12 +279,12 @@ data:extend(
 -- graviton-lens
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "DSP-graviton-lens",
+        "graviton-lens",
         6,
         1,
         {
-            {type = "item", name = "DSP-diamond", amount = 4},
-            {type = "item", name = "DSP-strange-matter", amount = 1}
+            {type = "item", name = "diamond", amount = 4},
+            {type = "item", name = "strange-matter", amount = 1}
         },
         100
     )
@@ -293,12 +293,12 @@ data:extend(
 -- titanium-glass
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "DSP-titanium-glass",
+        "titanium-glass",
         5,
         2,
         {
-            {type = "item", name = "DSP-glass", amount = 2},
-            {type = "item", name = "DSP-titanium-ingot", amount = 2},
+            {type = "item", name = "glass", amount = 2},
+            {type = "item", name = "titanium-ingot", amount = 2},
             {type = "fluid", name = "water", amount = 2}
         },
         100
@@ -308,13 +308,13 @@ data:extend(
 -- casimir-crystal
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "DSP-casimir-crystal",
+        "casimir-crystal",
         4,
         1,
         {
-            {type = "item", name = "DSP-titanium-crystal", amount = 1},
-            {type = "item", name = "DSP-graphene", amount = 2},
-            {type = "fluid", name = "DSP-hydrogen", amount = 12}
+            {type = "item", name = "titanium-crystal", amount = 1},
+            {type = "item", name = "graphene", amount = 2},
+            {type = "fluid", name = "hydrogen", amount = 12}
         },
         100
     )
@@ -323,12 +323,12 @@ data:extend(
 -- plane-filter
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "DSP-plane-filter",
+        "plane-filter",
         12,
         1,
         {
-            {type = "item", name = "DSP-casimir-crystal", amount = 1},
-            {type = "item", name = "DSP-titanium-glass", amount = 2}
+            {type = "item", name = "casimir-crystal", amount = 1},
+            {type = "item", name = "titanium-glass", amount = 2}
         },
         200
     )
@@ -337,12 +337,12 @@ data:extend(
 -- quantum-chip
 data:extend(
     LDAFunctions.createAssemblerItemWithRecipe(
-        "DSP-quantum-chip",
+        "quantum-chip",
         6,
         1,
         {
-            {type = "item", name = "DSP-processor", amount = 2},
-            {type = "item", name = "DSP-plane-filter", amount = 2}
+            {type = "item", name = "processor", amount = 2},
+            {type = "item", name = "plane-filter", amount = 2}
         },
         200
     )
@@ -351,14 +351,14 @@ data:extend(
 -- Critical Photon Receita básica (sem lens)
 data:extend(
     LDAFunctions.createItemWithRecipe(
-        "DSP-critical-photon",
+        "critical-photon",
         "intermediate-products",
         100,
-        "DSP-ray-receiver",
+        "ray-receiver",
         10,
         {},
         {
-            {type = "item", name = "DSP-critical-photon", amount = 6}
+            {type = "item", name = "critical-photon", amount = 6}
         }
     )
 )
@@ -367,15 +367,15 @@ data:extend(
 data:extend({
     LDAFunctions.createRecipe(
         "itens",
-        "DSP-critical-photon-lens",
-        "DSP-ray-receiver",
+        "critical-photon-lens",
+        "ray-receiver",
         10,
         {
-            {type = "item", name = "DSP-graviton-lens", amount = 1}
+            {type = "item", name = "graviton-lens", amount = 1}
         },
         {
-            {type = "item", name = "DSP-critical-photon", amount = 12},
-            {type = "item", name = "DSP-graviton-lens", amount = 1, catalyst_amount = 1}
+            {type = "item", name = "critical-photon", amount = 12},
+            {type = "item", name = "graviton-lens", amount = 1, catalyst_amount = 1}
         }
     )
 })
@@ -388,11 +388,11 @@ data:extend(
         nil,
         20,
         {
-            {type = "item", name = "DSP-critical-photon", amount = 2}
+            {type = "item", name = "critical-photon", amount = 2}
         },
         {
-            {type = "item", name = "DSP-antimatter", amount = 2},
-            {type = "fluid", name = "DSP-hydrogen", amount = 2}
+            {type = "item", name = "antimatter", amount = 2},
+            {type = "fluid", name = "hydrogen", amount = 2}
         }
     )
 )

@@ -10,7 +10,7 @@
     "dependencies": [
         "base >= 2.0.0",
         "space-age",
-        "LDA-LIB >= 0.0.11"
+        "LDA-LIB >= 0.0.13"
     ],
     "license": "GNU General Public License v3.0",
     "thumbnail": "thumbnail.png",

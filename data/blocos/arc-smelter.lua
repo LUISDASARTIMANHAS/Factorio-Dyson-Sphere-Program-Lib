@@ -4,23 +4,23 @@ local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
 local LDAFunctions = require("__LDA-LIB__/init")
 
--- *** Definição do ITEM 'DSP-arc-smelter' ***
+-- *** Definição do ITEM 'arc-smelter' ***
 -- definindo receita e item
 data:extend(
         LDAFunctions.createBlockItemWithRecipe(
-            "DSP-arc-smelter",
+            "arc-smelter",
             "production-machine",
             50,
             "advanced-crafting",
             3,
             {
                 {type = "item", name = "iron-plate", amount = 4},
-                {type = "item", name = "DSP-stone-brick", amount = 2},
-                {type = "item", name = "DSP-circuit-board", amount = 4},
-                {type = "item", name = "DSP-magnetic-coil", amount = 2}
+                {type = "item", name = "stone-brick", amount = 2},
+                {type = "item", name = "circuit-board", amount = 4},
+                {type = "item", name = "magnetic-coil", amount = 2}
             },
             {
-                {type = "item", name = "DSP-arc-smelter", amount = 1}
+                {type = "item", name = "arc-smelter", amount = 1}
             }
         )
 )
@@ -30,11 +30,11 @@ data:extend(
     {
         {
             type = "furnace",
-            name = "DSP-arc-smelter",
+            name = "arc-smelter",
             icon = icon_path,
             icon_size = 128,
             flags = {"placeable-neutral", "placeable-player", "player-creation"},
-            minable = {hardness = 0.5, mining_time = 1, result = "DSP-arc-smelter"},
+            minable = {hardness = 0.5, mining_time = 1, result = "arc-smelter"},
             fast_replaceable_group = "furnace",
             max_health = 300,
             corpse = "big-remnants",
@@ -54,7 +54,7 @@ data:extend(
             -- 2x mais rapida
             crafting_speed = 4,
             -- Categoria de fabricação (não diretamente relevante para labs, mas é um campo)
-            crafting_categories = {"crafting", "DSP-smelting-facility"},
+            crafting_categories = {"crafting", "smelting-facility"},
             -- *** PACOTES DE CIÊNCIA QUE ELE ACEITA ***
             -- inputs = {
             --     "electromagnetic-matrix",

@@ -3,8 +3,8 @@ local LDAFunctions = require("__LDA-LIB__/init")
 -- category = "science-matrices" feito em Matrix Lab
 
 local function createItemWithRecipeMatrix(name, time, qtde, ingredients)
-    local nameMatrix ="DSP-"..name .. "-matrix"
-    local crafted_in = "DSP-science-matrices"
+    local nameMatrix = name .. "-matrix"
+    local crafted_in = "science-matrices"
     local results = {
         {type = "item", name = nameMatrix, amount = qtde}
     }

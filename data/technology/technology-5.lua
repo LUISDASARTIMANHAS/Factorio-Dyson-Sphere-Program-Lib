@@ -7,7 +7,7 @@ local LDAFunctions = require("__LDA-LIB__/init")
 -- LDA.techUtils.createEffectsUnlocksRecipes(recipesList)
 
 -- default create name
--- tech-dyson-nameofTech
+-- nameofTech
 
 -- TIER 5
 
@@ -18,12 +18,12 @@ data:extend(
         LDAFunctions.createTechnology(
             "planetary-logistics-system",
             {
-                {"DSP-electromagnetic-matrix", 4},
+                {"electromagnetic-matrix", 4},
                 {"energy-matrix", 1}
             },
             {
                 "turbo-transport-belt",
-                "tech-dyson-sphere-program"
+                "sphere-program"
             },
             {"fast-transport-belt","fast-underground-belt","fast-splitter"},
             400
@@ -37,12 +37,12 @@ data:extend(
         LDAFunctions.createTechnology(
             "titanium-smelting",
             {
-                {"DSP-electromagnetic-matrix", 2},
+                {"electromagnetic-matrix", 2},
                 {"energy-matrix", 2}
             },
             {
                 "steel-processing",
-                "tech-dyson-sphere-program"
+                "sphere-program"
             },
             {"titanium-ingot"},
             100
@@ -56,13 +56,13 @@ data:extend(
         LDAFunctions.createTechnology(
             "high-strength-titanium-alloy",
             {
-                {"DSP-electromagnetic-matrix", 80},
+                {"electromagnetic-matrix", 80},
                 {"energy-matrix", 80},
                 {"structure-matrix", 8}
             },
             {
-                "tech-dyson-titanium-smelting",
-                "tech-dyson-sphere-program"
+                "titanium-smelting",
+                "sphere-program"
             },
             {"titanium-alloy"},
             10
@@ -79,7 +79,7 @@ data:extend(
                 {"energy-matrix", 16}
             },
             {
-                "tech-dyson-sphere-program"
+                "sphere-program"
             },
             {"reinforced-thruster"},
             100
@@ -93,14 +93,14 @@ data:extend(
         LDAFunctions.createTechnology(
             "interstellar-logistics-system",
             {
-                {"DSP-electromagnetic-matrix", 120},
+                {"electromagnetic-matrix", 120},
                 {"energy-matrix", 120},
                 {"structure-matrix", 12}
             },
             {
-                "tech-dyson-high-strength-titanium-alloy",
-                "tech-dyson-reinforced-thruster",
-                "tech-dyson-sphere-program"
+                "high-strength-titanium-alloy",
+                "reinforced-thruster",
+                "sphere-program"
             },
             {"roboport","logistic-robot"},
             10
@@ -115,12 +115,12 @@ data:extend(
         LDAFunctions.createTechnology(
             "interstellar-power-transmission",
             {
-                {"DSP-electromagnetic-matrix", 120},
+                {"electromagnetic-matrix", 120},
                 {"energy-matrix", 120},
                 {"structure-matrix", 12}
             },
             {
-                "tech-dyson-sphere-program"
+                "sphere-program"
             },
             {"substation"},
             100
@@ -135,14 +135,14 @@ data:extend(
         LDAFunctions.createTechnology(
             "gas-giants-exploitation",
             {
-                {"DSP-electromagnetic-matrix", 12},
+                {"electromagnetic-matrix", 12},
                 {"energy-matrix", 12},
                 {"structure-matrix", 12}
             },
             {
-                "tech-dyson-interstellar-logistics-system",
-                "tech-dyson-interstellar-power-transmission",
-                "tech-dyson-sphere-program"
+                "interstellar-logistics-system",
+                "interstellar-power-transmission",
+                "sphere-program"
             },
             {"fluorine","fluoroketone-hot"},
             100
@@ -157,7 +157,7 @@ data:extend(
             "high-strength-crystal",
             -- ingredients
             {
-                {"DSP-electromagnetic-matrix", 6},
+                {"electromagnetic-matrix", 6},
                 {"energy-matrix", 6}
             },
             -- prerequisites
@@ -180,11 +180,11 @@ data:extend(
             "processor",
             -- ingredients
             {
-                {"DSP-electromagnetic-matrix", 8}
+                {"electromagnetic-matrix", 8}
             },
             -- prerequisites
             {
-                "tech-dyson-sphere-program"
+                "sphere-program"
             },
             -- unlocks
             {

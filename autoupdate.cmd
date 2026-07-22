@@ -81,5 +81,5 @@ Xcopy /Y "%ZIP_FILE%" "%STEAM_FILE%"
 :: start /realtime /min autogit.cmd 
 
 :: abre o jogo para testes
-start steam://rungameid/427520 >> game.log
+start steam://rungameid/427520
 exit /b 0

@@ -7,7 +7,7 @@ local LDAFunctions = require("__LDA-LIB__/init")
 -- LDA.techUtils.createEffectsUnlocksRecipes(recipesList)
 
 -- default create name
--- tech-dyson-nameofTech
+-- nameofTech
 
 -- TIER 2
 -- Basic Logistics System
@@ -21,7 +21,7 @@ data:extend(
                 "splitter"
             },
             {"electromagnetism"},
-            "DSP-circuit-board",
+            "circuit-board",
             10
         )
     }
@@ -37,7 +37,7 @@ data:extend(
                 "glass"
             },
             {"electromagnetism"},
-            "DSP-magnetic-coil",
+            "magnetic-coil",
             10
         )
     }
@@ -47,14 +47,14 @@ data:extend(
 data:extend(
     {
         LDAFunctions.createTechnologyCraftEntityTrigger(
-            "DSP-electromagnetic-matrix",
-            -- recipe auto add DSP-recipe-name
+            "electromagnetic-matrix",
+            -- recipe auto add recipe-name
             {
-                "DSP-electromagnetic-matrix",
+                "electromagnetic-matrix",
                 "matrix-lab"
             },
             {"electromagnetism"},
-            "DSP-circuit-board",
+            "circuit-board",
             10
         )
     }
@@ -69,7 +69,7 @@ data:extend(
                 "assembling-machine-1"
             },
             {"electromagnetism"},
-            "DSP-gear",
+            "gear",
             10
         )
     }
@@ -81,7 +81,7 @@ data:extend(
         LDAFunctions.createTechnology(
             "fluid-storage-encapsulation",
             {
-                {"DSP-electromagnetic-matrix", 1}
+                {"electromagnetic-matrix", 1}
             },
             nil,
             {
@@ -99,15 +99,15 @@ data:extend(
         LDAFunctions.createTechnology(
             "high-efficiency-plasma-control",
             {
-                {"DSP-electromagnetic-matrix", 1}
+                {"electromagnetic-matrix", 1}
             },
             {
-                "tech-dyson-fluid-storage-encapsulation"
+                "fluid-storage-encapsulation"
             },
             {
-                "DSP-prism",
-                "DSP-plasma-exciter",
-                "DSP-wireless-power-tower"
+                "prism",
+                "plasma-exciter",
+                "wireless-power-tower"
             },
             50
         )
@@ -120,7 +120,7 @@ data:extend(
         LDAFunctions.createTechnology(
             "electromagnetic-drive",
             {
-                {"DSP-electromagnetic-matrix", 1}
+                {"electromagnetic-matrix", 1}
             },
             nil,
             {
@@ -137,10 +137,10 @@ data:extend(
         LDAFunctions.createTechnology(
             "engine",
             {
-                {"DSP-electromagnetic-matrix", 1}
+                {"electromagnetic-matrix", 1}
             },
             nil,
-            {"DSP-engine"},
+            {"engine"},
             20
         )
     }
@@ -152,7 +152,7 @@ data:extend(
         LDAFunctions.createTechnology(
             "weapon-system",
             {
-                {"DSP-electromagnetic-matrix", 1}
+                {"electromagnetic-matrix", 1}
             },
             nil,
             {"gun-turret"},

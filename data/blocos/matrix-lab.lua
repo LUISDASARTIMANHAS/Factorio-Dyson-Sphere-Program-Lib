@@ -7,19 +7,19 @@ local LDAFunctions = require("__LDA-LIB__/init")
 -- definindo receita e item
 data:extend(
         LDAFunctions.createBlockItemWithRecipe(
-            "DSP-matrix-lab",
+            "matrix-lab",
             "science",
             50,
             "advanced-crafting",
             3,
             {
                 {type = "item", name = "iron-plate", amount = 8},
-                {type = "item", name = "DSP-glass", amount = 4},
-                {type = "item", name = "DSP-circuit-board", amount = 4},
-                {type = "item", name = "DSP-magnetic-coil", amount = 4}
+                {type = "item", name = "glass", amount = 4},
+                {type = "item", name = "circuit-board", amount = 4},
+                {type = "item", name = "magnetic-coil", amount = 4}
             },
             {
-                {type = "item", name = "DSP-matrix-lab", amount = 1}
+                {type = "item", name = "matrix-lab", amount = 1}
             }
         )
 )
@@ -30,12 +30,12 @@ data:extend(
         {
             type = "lab",
             -- Nome único para o seu laboratório (deve ser o mesmo do item)
-            name = "DSP-matrix-lab",
+            name = "matrix-lab",
             -- Caminho para o ícone do seu laboratório
             icon = icon_path,
             icon_size = 128,
             flags = {"placeable-neutral", "placeable-player", "player-creation"},
-            minable = {hardness = 0.2, mining_time = 0.5, result = "DSP-matrix-lab"}, -- Item que o laboratório dropa ao ser minerado (referencia o item acima)
+            minable = {hardness = 0.2, mining_time = 0.5, result = "matrix-lab"}, -- Item que o laboratório dropa ao ser minerado (referencia o item acima)
             -- Vida do laboratório
             max_health = 200,
             -- Corpos que aparecem quando destruído
@@ -53,12 +53,12 @@ data:extend(
             crafting_categories = {"crafting"},
             -- *** PACOTES DE CIÊNCIA QUE ELE ACEITA ***
             inputs = {
-                "DSP-electromagnetic-matrix",
-                "DSP-energy-matrix",
-                "DSP-structure-matrix",
-                "DSP-information-matrix",
-                "DSP-gravity-matrix",
-                "DSP-universe-matrix"
+                "electromagnetic-matrix",
+                "energy-matrix",
+                "structure-matrix",
+                "information-matrix",
+                "gravity-matrix",
+                "universe-matrix"
                 -- Adicione aqui TODOS os nomes das matrizes de ciência que este laboratório deve consumir.
                 -- Se você ainda usa science-pack-1, science-pack-2, etc. em tecnologias mais básicas,
                 -- você pode adicioná-los aqui também para que este lab possa pesquisar essas tecnologias.

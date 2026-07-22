@@ -1,6 +1,16 @@
-Falha ao carregar mods: Error in assignID: recipe with name 'arc-smelter' does not exist.
+Falha ao carregar mods: Error in assignID: item with name 'electromagnetic-matrix' does not exist.
 
-Source: automatic-metallurgy (technology).
+Source: engine (technology).
 
 Mods para serem desativados:
 • Dyson-Sphere-Program-Lib (0.0.4)
+
+Falha ao carregar mods: __quality__/prototypes/recycling.lua:125: Recipe energy-matrix has malformed ingredients: ingredient fluid 'hydrogen' does not exist
+stack traceback:
+	[C]: in function 'error'
+	__quality__/prototypes/recycling.lua:125: in function 'add_recipe_values'
+	__quality__/prototypes/recycling.lua:213: in function 'generate_recycling_recipe'
+	__quality__/data-updates.lua:5: in main chunk
+
+Mods para serem desativados:
+• quality (2.0.77)
