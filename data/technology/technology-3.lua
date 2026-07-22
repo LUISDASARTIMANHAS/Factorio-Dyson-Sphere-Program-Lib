@@ -39,7 +39,7 @@ data:extend(
                 "automatic-metallurgy"
             },
             {
-                "steel"
+                "steel-plate"
             },
             120
         )
@@ -56,7 +56,7 @@ data:extend(
             },
             nil,
             {
-                "combustible-unit"
+                "rocket-fuel"
             },
             120
         )

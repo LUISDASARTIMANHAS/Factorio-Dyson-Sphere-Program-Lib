@@ -9,7 +9,7 @@ local LDAFunctions = require("__LDA-LIB__/init")
 -- default create name
 -- tech-dyson-nameofTech
 -- default result name
--- "DSP-nameofRecipe"
+-- "nameofRecipe"
 
 -- TIER 1
 -- tech-dyson-sphere-program
@@ -26,7 +26,7 @@ data:extend(
             },
             -- unlocks
             {
-                "DSP-magnet","DSP-magnetic-coil","DSP-circuit-board","DSP-gear","DSP-stone-brick"
+                "magnet","magnetic-coil","circuit-board","gear","stone-brick"
             },
             500
         )
@@ -42,7 +42,7 @@ data:extend(
                 "electric-mining-drill"
             },
             {"tech-dyson-sphere-program"},
-            "DSP-magnetic-coil",
+            "magnetic-coil",
             10
         )
     }

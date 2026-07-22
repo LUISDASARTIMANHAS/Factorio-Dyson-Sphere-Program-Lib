@@ -1,76 +1,107 @@
-local path_main = "__Dyson-Sphere-Program-Lib__/"
+-- createItemGroup(group_name, group_order, icon_size, subgroups, icon_mipmaps)
+local LDAFunctions = require("__LDA-LIB__/init")
+local PATH = LDAFunctions.setBasePath("Dyson-Sphere-Program-Lib")
+local DSP_subgroups = {
+    "intermediate-products",
+    "natural-resources",
+    "dark-fog-components",
+    "energy-sources",
+    "other-consumables",
+    "science",
+    "logistic-ships",
+    "sphere",
+    "power-generation"
+}
 
-data:extend(
-  {
-    -- ======= dyson-category ==========
-    {
-      type = "item-group",
-      -- nome da categoria
-      name = "dyson-category",
-      order = "d",
-      icon = path_main .. "graphics/technology/dyson.png",
-      icon_size = 128,
-      icon_mipmaps = 2
-    },
-    {
-      type = "item-subgroup",
-      -- nome usado para definir o grupo dos itens
-      name = "intermediate-products",
-      -- indexando o grupo a categoria
-      group = "dyson-category",
-      -- ordem de A a Z e de cima para baixo para organização dos grupos "modname-name"
-      order = "dyson-intermediate-products"
-    },
-    {
-      type = "item-subgroup",
-      name = "natural-resources",
-      group = "dyson-category",
-      order = "dyson-natural-resources"
-    },
-    {
-      type = "item-subgroup",
-      name = "dark-fog-components",
-      group = "dyson-category",
-      order = "dyson-dark-fog-components"
-    },
-    {
-      type = "item-subgroup",
-      name = "energy-sources",
-      group = "dyson-category",
-      order = "dyson-energy-sources"
-    },
-    {
-      type = "item-subgroup",
-      name = "other-consumables",
-      group = "dyson-category",
-      order = "dyson-other-consumables"
-    },
-    {
-      type = "item-subgroup",
-      name = "science",
-      group = "dyson-category",
-      order = "dyson-science"
-    },
-    {
-      type = "item-subgroup",
-      name = "logistic-ships",
-      group = "dyson-category",
-      order = "dyson-logistic-ships"
-    },
-    {
-      type = "item-subgroup",
-      name = "dyson-sphere",
-      group = "dyson-category",
-      order = "dyson-sphere"
-    },
-    {
-      type = "item-subgroup",
-      name = "power-generation",
-      group = "dyson-category",
-      order = "dyson-power-generation"
-    }
-  }
+local dysonCategory =
+    LDAFunctions.createItemGroup(
+    -- name
+    "dyson-category",
+    -- order
+    "d",
+    -- icon
+    -- "__Dyson-Sphere-Program-Lib__/graphics/technology/dyson.png",
+    -- icon_size
+    512,
+    -- item-subgroup
+    DSP_subgroups,
+    -- icon_mipmaps
+    2
 )
+data:extend(dysonCategory)
+
+
+-- data:extend(
+--   {
+--     -- ======= dyson-category ==========
+--     {
+--       type = "item-group",
+--       -- nome da categoria
+--       name = "dyson-category",
+--       order = "d",
+--       icon = path_main .. "graphics/technology/dyson.png",
+--       icon_size = 128,
+--       icon_mipmaps = 2
+--     },
+--     {
+--       type = "item-subgroup",
+--       -- nome usado para definir o grupo dos itens
+--       name = "intermediate-products",
+--       -- indexando o grupo a categoria
+--       group = "dyson-category",
+--       -- ordem de A a Z e de cima para baixo para organização dos grupos "modname-name"
+--       order = "dyson-intermediate-products"
+--     },
+--     {
+--       type = "item-subgroup",
+--       name = "natural-resources",
+--       group = "dyson-category",
+--       order = "dyson-natural-resources"
+--     },
+--     {
+--       type = "item-subgroup",
+--       name = "dark-fog-components",
+--       group = "dyson-category",
+--       order = "dyson-dark-fog-components"
+--     },
+--     {
+--       type = "item-subgroup",
+--       name = "energy-sources",
+--       group = "dyson-category",
+--       order = "dyson-energy-sources"
+--     },
+--     {
+--       type = "item-subgroup",
+--       name = "other-consumables",
+--       group = "dyson-category",
+--       order = "dyson-other-consumables"
+--     },
+--     {
+--       type = "item-subgroup",
+--       name = "science",
+--       group = "dyson-category",
+--       order = "dyson-science"
+--     },
+--     {
+--       type = "item-subgroup",
+--       name = "logistic-ships",
+--       group = "dyson-category",
+--       order = "dyson-logistic-ships"
+--     },
+--     {
+--       type = "item-subgroup",
+--       name = "dyson-sphere",
+--       group = "dyson-category",
+--       order = "dyson-sphere"
+--     },
+--     {
+--       type = "item-subgroup",
+--       name = "power-generation",
+--       group = "dyson-category",
+--       order = "dyson-power-generation"
+--     }
+--   }
+-- )
 -- ======= dyson-category ==========
 
 -- categorias de receitas
@@ -78,23 +109,23 @@ data:extend(
   {
     {
       type = "recipe-category",
-      name = "DSP-science-matrices"
+      name = "science-matrices"
     },
     {
       type = "recipe-category",
-      name = "DSP-particle-collider"
+      name = "particle-collider"
     },
     {
       type = "recipe-category",
-      name = "DSP-ray-receiver"
+      name = "ray-receiver"
     },
     {
       type = "recipe-category",
-      name = "DSP-smelting-facility"
+      name = "smelting-facility"
     },
     {
       type = "recipe-category",
-      name = "DSP-fractionation-facility"
+      name = "fractionation-facility"
     }
   }
 )

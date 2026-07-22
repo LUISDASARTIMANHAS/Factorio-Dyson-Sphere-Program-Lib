@@ -3,7 +3,7 @@ local path_main = "__Dyson-Sphere-Program-Lib__/"
 data:extend(
     {
         type = "electric-energy-interface",
-        name = "DSP-ray-receiver-power",
+        name = "ray-receiver-power",
         icon = path_main .. "graficos/blocos/ray-receiver.png",
         -- icon_size = 128,
         flags = {"placeable-neutral", "player-creation"},

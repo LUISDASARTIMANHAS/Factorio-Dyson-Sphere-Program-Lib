@@ -3,7 +3,7 @@ local path_main = "__Dyson-Sphere-Program-Lib__/"
 data:extend(
     {
         type = "furnace",
-        name = "DSP-ray-receiver-photon",
+        name = "ray-receiver-photon",
         icon = path_main .. "graphics/blocos/ray-receiver.png",
         -- icon_size = 128,
         energy_source = {
@@ -14,7 +14,7 @@ data:extend(
         },
         energy_usage = "120MW",
         crafting_speed = 1,
-        crafting_categories = {"DSP-ray-receiver"},
+        crafting_categories = {"ray-receiver"},
         module_specification = {
             module_slots = 1,
             allowed_effects = {"consumption", "speed"}

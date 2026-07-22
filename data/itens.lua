@@ -396,3 +396,135 @@ data:extend(
         }
     )
 )
+
+-- prism
+data:extend(
+    LDAFunctions.createAssemblerItemWithRecipe(
+        "prism",
+        2,
+        2,
+        {
+            {type = "item", name = "glass", amount = 3},
+        },
+        100
+    )
+)
+
+-- plasma-exciter
+data:extend(
+    LDAFunctions.createAssemblerItemWithRecipe(
+        "plasma-exciter",
+        2,
+        1,
+        {
+            {type = "item", name = "magnetic-coil", amount = 4},
+            {type = "item", name = "prism", amount = 2},
+        },
+        200
+    )
+)
+
+-- Tesla_Tower
+data:extend(
+    LDAFunctions.createAssemblerItemWithRecipe(
+        "tesla-tower",
+        1,
+        1,
+        {
+            {type = "item", name = "iron-plate", amount = 2},
+            {type = "item", name = "magnetic-coil", amount = 1},
+        },
+        100
+    )
+)
+
+-- Wireless_Power_Tower
+data:extend(
+    LDAFunctions.createAssemblerItemWithRecipe(
+        "wireless-power-tower",
+        3,
+        1,
+        {
+            {type = "item", name = "plasma-exciter", amount = 3},
+            {type = "item", name = "tesla-tower", amount = 1},
+        },
+        100
+    )
+)
+
+-- Thermal_Power_Plant
+data:extend(
+    LDAFunctions.createAssemblerItemWithRecipe(
+        "thermal-power-plant",
+        5,
+        1,
+        {
+            {type = "item", name = "iron-plate", amount = 10},
+            {type = "item", name = "stone-brick", amount = 4},
+            {type = "item", name = "gear", amount = 4},
+            {type = "item", name = "magnetic-coil", amount = 4},
+        },
+        50
+    )
+)
+
+-- Battlefield_Analysis_Base
+data:extend(
+    LDAFunctions.createAssemblerItemWithRecipe(
+        "battlefield-analysis-base",
+        6,
+        1,
+        {
+            {type = "item", name = "iron-plate", amount = 12},
+            {type = "item", name = "circuit-board", amount = 18},
+            {type = "item", name = "microcrystalline-component", amount = 6},
+            {type = "item", name = "engine", amount = 12},
+        },
+        50
+    )
+)
+
+-- Fractionator
+data:extend(
+    LDAFunctions.createAssemblerItemWithRecipe(
+        "fractionator",
+        3,
+        1,
+        {
+            {type = "item", name = "iron-plate", amount = 8},
+            {type = "item", name = "stone-brick", amount = 4},
+            {type = "item", name = "glass", amount = 4},
+            {type = "item", name = "quantum-chip", amount = 1},
+        },
+        30
+    )
+)
+
+-- Spray_Coater
+data:extend(
+    LDAFunctions.createAssemblerItemWithRecipe(
+        "spray-coater",
+        3,
+        1,
+        {
+            {type = "item", name = "steel-plate", amount = 4},
+            {type = "item", name = "plasma-exciter", amount = 2},
+            {type = "item", name = "ciruit-board", amount = 2},
+            {type = "item", name = "microcrystalline-component", amount = 2},
+        },
+        50
+    )
+)
+
+-- Proliferator_Mk
+data:extend(
+    LDAFunctions.createAssemblerItemWithRecipe(
+        "proliferator-mki",
+        0.5,
+        1,
+        {
+            {type = "item", name = "coal", amount = 1},
+        },
+        200
+    )
+)

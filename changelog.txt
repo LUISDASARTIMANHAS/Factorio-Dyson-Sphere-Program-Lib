@@ -12,6 +12,12 @@ Date: 22/07/2026
     - Recipe energy-matrix has malformed ingredients: ingredient fluid 'hydrogen' does not exist
     - Falha ao carregar mods: Error in assignID: item with name 'electromagnetic-matrix' does not exist.
     - Falha ao carregar mods: Error in assignID: technology with name 'tech-dyson-fluid-storage-encapsulation' does not exist.
+    - Recipe DSP-strange-matter has malformed ingredients: ingredient fluid 'deuterium' does not exist
+    - recipe-category with name 'particle-collider' does not exist.
+    - Error in assignID: item-subgroup with name 'other-consumables' does not exist.
+    - Error in assignID: item with name 'DSP-high-purity-silicon' does not exist.
+    - Error in assignID: recipe with name 'prism' does not exist.
+    - Error in assignID: recipe with name 'thermal-power-plant' does not exist.
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.3
 Date: 22/08/2025

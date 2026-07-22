@@ -7,18 +7,18 @@ local icon_path = path_main .. "graphics/blocos/advanced-solar-panel.png"
 -- definindo receita e item
 data:extend(
         LDAFunctions.createBlockItemWithRecipe(
-            "DSP-advanced-solar-panel",
+            "advanced-solar-panel",
             "power-generation",
             50,
             "advanced-crafting",
             6,
             {
                 {type = "item", name = "copper-plate", amount = 10},
-                {type = "item", name = "DSP-high-purity-silicon", amount = 10},
-                {type = "item", name = "DSP-circuit-board", amount = 5}
+                {type = "item", name = "high-purity-silicon", amount = 10},
+                {type = "item", name = "circuit-board", amount = 5}
             },
             {
-                {type = "item", name = "DSP-advanced-solar-panel", amount = 1}
+                {type = "item", name = "advanced-solar-panel", amount = 1}
             }
         )
 )
@@ -27,11 +27,11 @@ data:extend(
     {
         {
             type = "solar-panel",
-            name = "DSP-advanced-solar-panel",
+            name = "advanced-solar-panel",
             icon = icon_path,
             icon_size = 128,
             flags = {"placeable-neutral", "player-creation"},
-            minable = {mining_time = 3, result = "DSP-advanced-solar-panel"},
+            minable = {mining_time = 3, result = "advanced-solar-panel"},
             fast_replaceable_group = "solar-panel",
             max_health = 200,
             corpse = "solar-panel-remnants",
