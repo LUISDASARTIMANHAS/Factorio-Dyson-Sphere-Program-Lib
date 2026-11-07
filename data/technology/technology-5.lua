@@ -280,7 +280,7 @@ data:extend(
 -- Gas Giants Exploitation
 data:extend(
     {
-        -- unlock Orbital Collector
+        -- TODO: Unlock Orbital Collector when its recipe is implemented.
         utils.createDSPTechnology(
             "gas-giants-exploitation",
             {
@@ -292,7 +292,7 @@ data:extend(
                 "tech-dyson-interstellar-logistics-system",
                 "tech-dyson-interstellar-power-transmission"
             },
-            {"fluorine", "fluoroketone-hot"},
+            {},
             100
         )
     }

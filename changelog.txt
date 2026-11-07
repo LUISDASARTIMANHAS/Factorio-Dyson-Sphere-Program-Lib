@@ -16,6 +16,7 @@ Date: 07/11/2026
     - Added recipe unlocks for implemented DSP items across the active research tiers.
     - Fixed research prerequisites that blocked Energy Matrix and Structure Matrix progression.
     - Corrected Titanium Alloy recipe generation to use the chemistry category.
+    - Removed invalid recipe unlocks for fluid names from Gas Giants Exploitation.
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 22/07/2026

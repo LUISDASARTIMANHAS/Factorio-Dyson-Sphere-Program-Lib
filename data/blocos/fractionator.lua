@@ -1,11 +1,9 @@
 require ("__base__.prototypes.entity.pipecovers")
-require ("__base__.prototypes.entity.assemblerpipes")
 require ("__base__.prototypes.entity.entity-util")
 local LDA = require("__LDA-LIB__/init")
 local path_main = LDA.getBasePath()
 local icon_path = path_main .. "graphics/entities/fractionator.png"
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
-local sounds = require("__base__.prototypes.entity.sounds")
 local utils = LDA.utils
 local energy_utils = LDA.utilsEnergySource
 local animation_utils = LDA.utilsAnimations

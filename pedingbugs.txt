@@ -1,5 +1,4 @@
-Falha ao carregar mods: The given sprite rectangle (left_top=0x0, right_bottom=512x512) is outside the actual sprite size (left_top=0x0, right_bottom=256x256).
-See the log file for more information.: __Dyson-Sphere-Program-Lib__/graphics/item-group/dyson-category.png
+Falha ao carregar mods: File __Dyson-Sphere-Program-Lib__/graphics/technology/tech-dyson-casimir-crystal-256x256.png not found
 
 Mods para serem desativados:
 • Dyson-Sphere-Program-Lib (0.0.5)
