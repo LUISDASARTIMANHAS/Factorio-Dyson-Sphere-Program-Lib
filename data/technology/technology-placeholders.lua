@@ -1,7 +1,5 @@
 local utils = require("data.utils")
 
-local placeholderIcon = "__Dyson-Sphere-Program-Lib__/graphics/technology/dyson-256x256.png"
-
 local pendingTiers = {
     {
         tier = 4,
@@ -219,7 +217,6 @@ for _, tier in ipairs(pendingTiers) do
             1
         )
 
-        technology.icon = placeholderIcon
         technology.localised_name = {"technology-name.tech-dyson-" .. research[1]}
         technology.localised_description = {"technology-description.tech-dyson-placeholder"}
         prototypes[#prototypes + 1] = technology

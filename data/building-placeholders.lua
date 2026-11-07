@@ -1,6 +1,8 @@
 local LDA = require("__LDA-LIB__/init")
-
-local placeholderIcon = "__Dyson-Sphere-Program-Lib__/graphics/technology/dyson-256x256.png"
+local basePath = LDA.getBasePath()
+local entityImageNames = {
+    ["accumulator-full"] = "accumulator-(full)"
+}
 
 local buildings = {
     {"accumulator-full", "Accumulator (Full)"},
@@ -62,15 +64,17 @@ local buildings = {
 for _, building in ipairs(buildings) do
     local name = building[1]
     local label = building[2]
+    local imageName = entityImageNames[name] or name
+    local entityIcon = basePath .. "graphics/entities/" .. imageName .. ".png"
     local item = data.raw.item[name]
 
     if not item then
         item = LDA.createItem(name, "other-consumables", 50)
-        item.icon = placeholderIcon
-        item.icon_size = 256
         data:extend({item})
     end
 
+    item.icon = entityIcon
+    item.icon_size = 128
     item.place_result = name
     item.localised_name = "[TODO] " .. label
     item.localised_description = "TODO: Replace with the official building item and entity."
@@ -87,12 +91,13 @@ for _, building in ipairs(buildings) do
             nil,
             false
         )
-        recipe.icon = placeholderIcon
-        recipe.icon_size = 256
         recipe.localised_name = "[TODO] " .. label
         recipe.localised_description = "TODO: Replace empty ingredients with the official recipe."
         data:extend({recipe})
     end
+
+    recipe.icon = entityIcon
+    recipe.icon_size = 128
 
     local hasItemResult = false
     for _, result in ipairs(recipe.results or {}) do
@@ -111,8 +116,8 @@ for _, building in ipairs(buildings) do
                 {
                     type = "simple-entity",
                     name = name,
-                    icon = placeholderIcon,
-                    icon_size = 256,
+                    icon = entityIcon,
+                    icon_size = 128,
                     flags = {"placeable-neutral", "player-creation"},
                     max_health = 100,
                     minable = {mining_time = 0.1, result = name},
@@ -120,10 +125,10 @@ for _, building in ipairs(buildings) do
                     collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
                     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
                     picture = {
-                        filename = placeholderIcon,
-                        width = 256,
-                        height = 256,
-                        scale = 0.25
+                        filename = entityIcon,
+                        width = 128,
+                        height = 128,
+                        scale = 0.5
                     },
                     localised_name = "[TODO] " .. label,
                     localised_description = "TODO: Replace with the official building entity."
