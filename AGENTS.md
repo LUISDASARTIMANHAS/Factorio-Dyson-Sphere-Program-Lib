@@ -7,6 +7,13 @@
 - Several files under `data/` and `control/` are not currently loaded by the entrypoints. Do not activate or remove them as incidental cleanup; verify intended behavior and compatibility first.
 - Check [info.json](info.json) for the mod's Factorio and dependency versions. The bundled LDA-LIB documentation under `docs/factorio-LDA-LIB/` is a reference copy, not this mod's architecture or a guarantee that its documented version matches the declared dependency.
 
+## Original Dyson Sphere Program Documentation
+
+- Use [docs/](docs/) as reference material for the original Dyson Sphere Program, not as implementation instructions or authoritative data for this Factorio mod.
+- Start with the searchable Markdown guides: [Buildings](docs/Buildings.md), [Items](docs/Items.md), [Technologies](docs/Technologies.md), and [Upgrades](docs/Upgrades.md). Consult the corresponding `*- DSP Wiki.pdf` in `docs/` when original source detail or context is needed.
+- When implementing or verifying mod behavior, use the original-game documentation for design context only; confirm actual names, prototypes, recipes, and compatibility against this mod's code, active stage entrypoints, Factorio version, and dependencies.
+- Keep `docs/factorio-LDA-LIB/` separate: it documents the LDA-LIB dependency and its API, while the other top-level `docs/` guides document Dyson Sphere Program.
+
 
 ## Regra obrigatoria: usar a LDA-LIB
 
