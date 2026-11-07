@@ -1,4 +1,5 @@
 local LDA = require("__LDA-LIB__/init")
+local dspOre = require("utils.dsp-ore-builder")
 
 -- category = "advanced-crafting" maquinas de montagem tier 2 e 3
 -- category = "basic-crafting" maquinas de montagem tier 1
@@ -10,10 +11,10 @@ local LDA = require("__LDA-LIB__/init")
 
 -- automaticamente adicona -ore
 -- Define itens
-data:extend(LDA.createOre("organic-crystal", 100, "chemical", "1.80MJ"))
-data:extend(LDA.createOre("titanium", 100, "chemical", "1.80MJ"))
-data:extend(LDA.createOre("silicon", 100, nil, nil))
-data:extend(LDA.createOre("kimberlite", 50, nil, nil))
+data:extend(dspOre.createOre("organic-crystal", 100, "chemical", "1.80MJ"))
+data:extend(dspOre.createOre("titanium", 100, "chemical", "1.80MJ"))
+data:extend(dspOre.createOre("silicon", 100, nil, nil))
+data:extend(dspOre.createOre("kimberlite", 50, nil, nil))
 
 -- hydrogen
 data:extend(
@@ -54,8 +55,8 @@ data:extend(
                 name = "deuterium",
                 amount_min = 1,
                 amount_max = 1,
-                probability = 0.01,
-                show_amount_in_title = true
+                ignored_by_productivity = 0,
+                independent_probability = 0.01
             }
         }
     )

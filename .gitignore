@@ -4,8 +4,7 @@
 .env
 *.db
 *.html
-/docs
-**/docs
 **Thumbs.db
 Thumbs.db
 *.ps1
+docs/factorio-LDA-LIB/
