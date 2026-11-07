@@ -1,11 +1,70 @@
-local path_main = "__Dyson-Sphere-Program-Lib__/"
-local icon_path = path_main .. "graphics/entities/fractionator.png"
-local hit_effects = require("__base__.prototypes.entity.hit-effects")
-local sounds = require("__base__.prototypes.entity.sounds")
 require ("__base__.prototypes.entity.pipecovers")
 require ("__base__.prototypes.entity.assemblerpipes")
 require ("__base__.prototypes.entity.entity-util")
 local LDA = require("__LDA-LIB__/init")
+local path_main = LDA.getBasePath()
+local icon_path = path_main .. "graphics/entities/fractionator.png"
+local hit_effects = require("__base__.prototypes.entity.hit-effects")
+local sounds = require("__base__.prototypes.entity.sounds")
+local utils = LDA.utils
+local energy_utils = LDA.utilsEnergySource
+local animation_utils = LDA.utilsAnimations
+
+local energy_source = energy_utils.createElectricEnergySource(
+    "secondary-input",
+    "1MW",
+    "1MW",
+    nil,
+    nil,
+    nil,
+    nil,
+    {drain = "12kW"}
+)
+energy_source.output_flow_limit = nil
+
+local animation_layer = animation_utils.createLayer(
+    icon_path,
+    128,
+    128,
+    32,
+    8,
+    {0, 0},
+    1,
+    false,
+    "high",
+    {animation_speed = 0.5}
+)
+local picture_layers = {
+    animation_utils.createLayer(icon_path, 128, 128, nil, nil, util.by_pixel(-3, 3.5), 2),
+    animation_utils.createLayer(icon_path, 128, 128, nil, nil, util.by_pixel(9.5, 6), 2, true)
+}
+local light_animation = animation_utils.createLayer(
+    "__base__/graphics/entity/lab/lab-light-animation.png",
+    16,
+    16,
+    1,
+    1,
+    {0, 0},
+    1,
+    false,
+    "high",
+    {animation_speed = 1}
+)
+local fluid_box_covers = pipecoverspictures()
+local fluid_boxes = {
+    energy_utils.createFluidBox(1000, nil, "input", {
+        {flow_direction = "input", direction = defines.direction.north, position = {-1, -1}}
+    }, fluid_box_covers),
+    energy_utils.createFluidBox(1000, nil, "input", {
+        {flow_direction = "input", direction = defines.direction.north, position = {1, -1}}
+    }, fluid_box_covers),
+    energy_utils.createFluidBox(100, nil, "output", {
+        {flow_direction = "output", direction = defines.direction.south, position = {-1, 1}}
+    }, fluid_box_covers),
+    energy_utils.createFluidBox(100, nil, "output", {
+        {flow_direction = "output", direction = defines.direction.south, position = {1, 1}}
+    }, fluid_box_covers)
+}
 
 -- *** Definição do ITEM 'arc-smelter' ***
 -- definindo receita e item
@@ -68,52 +127,10 @@ data:extend(
             --     -- você pode adicioná-los aqui também para que este lab possa pesquisar essas tecnologias.
             -- },
             energy_usage = "360kW",
-            energy_source = {
-                type = "electric",
-                usage_priority = "secondary-input",
-                input_flow_limit = "1MW", -- Limite de energia que ele pode receber
-                buffer_capacity = "1MW", -- Capacidade do buffer de energia
-                drain = "12kW" -- *** Consumo de energia ocioso de 12 kW ***
-            },
-            module_specification = {
-                module_slots = 2 -- Quantidade de slots para módulos (produtividade, velocidade)
-            },
-            animation = {
-                layers = {
-                    {
-                        -- Caminho para a animação
-                        filename = icon_path,
-                        size = 128,
-                        frame_count = 32, -- Número de frames na animação
-                        line_length = 8, -- Número de frames por linha na imagem
-                        animation_speed = 0.5, -- Velocidade da animação
-                        shift = {0, 0}
-                    }
-                }
-            },
-            picture = {
-                layers = {
-                    {
-                        filename = icon_path,
-                        priority = "high",
-                        -- width = 230,
-                        -- height = 224,
-                        size = 128,
-                        shift = util.by_pixel(-3, 3.5),
-                        scale = 2
-                    },
-                    {
-                        filename = icon_path,
-                        priority = "high",
-                        -- width = 220,
-                        -- height = 180,
-                        size = 128,
-                        shift = util.by_pixel(9.5, 6),
-                        draw_as_shadow = true,
-                        scale = 2
-                    }
-                }
-            },
+            energy_source = energy_source,
+            module_specification = utils.createModuleSpec(2),
+            animation = animation_utils.createAnimation(animation_layer),
+            picture = {layers = picture_layers},
             working_sound = {
                 sound = {
                     filename = "__base__/sound/electric-furnace.ogg", -- Som de trabalho da fornalha
@@ -126,67 +143,10 @@ data:extend(
                     always_draw = true,
                     light = {intensity = 0.5, size = 6, color = {r = 1.0, g = 1.0, b = 1.0}},
                     draw_as_light = true,
-                    animation = {
-                        filename = "__base__/graphics/entity/lab/lab-light-animation.png",
-                        width = 16,
-                        height = 16,
-                        frame_count = 1,
-                        line_length = 1,
-                        animation_speed = 1,
-                        shift = {0, 0}
-                    }
+                    animation = light_animation
                 }
             },
-            fluid_boxes = {
-                {
-                    production_type = "input",
-                    pipe_covers = pipecoverspictures(),
-                    volume = 1000,
-                    pipe_connections = {
-                        {
-                            flow_direction = "input",
-                            direction = defines.direction.north,
-                            position = {-1, -1}
-                        }
-                    }
-                },
-                {
-                    production_type = "input",
-                    pipe_covers = pipecoverspictures(),
-                    volume = 1000,
-                    pipe_connections = {
-                        {
-                            flow_direction = "input",
-                            direction = defines.direction.north,
-                            position = {1, -1}
-                        }
-                    }
-                },
-                {
-                    production_type = "output",
-                    pipe_covers = pipecoverspictures(),
-                    volume = 100,
-                    pipe_connections = {
-                        {
-                            flow_direction = "output",
-                            direction = defines.direction.south,
-                            position = {-1, 1}
-                        }
-                    }
-                },
-                {
-                    production_type = "output",
-                    pipe_covers = pipecoverspictures(),
-                    volume = 100,
-                    pipe_connections = {
-                        {
-                            flow_direction = "output",
-                            direction = defines.direction.south,
-                            position = {1, 1}
-                        }
-                    }
-                }
-            },
+            fluid_boxes = fluid_boxes,
             water_reflection = {
                 pictures = {
                     filename = "__base__/graphics/entity/chemical-plant/chemical-plant-reflection.png",

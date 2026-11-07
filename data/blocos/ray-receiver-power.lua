@@ -1,4 +1,5 @@
-local path_main = "__Dyson-Sphere-Program-Lib__/"
+local LDA = require("__LDA-LIB__/init")
+local path_main = LDA.getBasePath()
 
 data:extend(
     {
