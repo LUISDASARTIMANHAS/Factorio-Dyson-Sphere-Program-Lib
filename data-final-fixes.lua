@@ -3,8 +3,9 @@
 -- permitindo a verificação e criação de protótipos dinamicamente.
 
 -- Requer o módulo que criará as receitas e itens genéricos
-local LDAFunctions = require("__LDA-LIB__/init")
-local PATH = LDAFunctions.setBasePath('Dyson-Sphere-Program-Lib')
+local LDA = require("__LDA-LIB__/init")
+-- setBasePath é necessário aqui pois data-final-fixes.lua é um estágio de carregamento separado
+LDA.setBasePath("Dyson-Sphere-Program-Lib")
 
 -- Itera sobre todas as tecnologias no jogo
 for name, technology in pairs(data.raw.technology) do
@@ -26,7 +27,7 @@ for name, technology in pairs(data.raw.technology) do
                     local recipe_name_without_prefix = string.gsub(recipe, "^DSP%-", "", 1)
                     
                     -- Chama a função para criar uma receita e um item genéricos
-                    local placeholders = LDAFunctions.createGenericRecipe(recipe_name_without_prefix)
+                    local placeholders = LDA.createGenericRecipe(recipe_name_without_prefix)
                     
                     -- Adiciona os novos protótipos ao jogo
                     data:extend(placeholders)

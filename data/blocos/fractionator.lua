@@ -5,12 +5,12 @@ local sounds = require("__base__.prototypes.entity.sounds")
 require ("__base__.prototypes.entity.pipecovers")
 require ("__base__.prototypes.entity.assemblerpipes")
 require ("__base__.prototypes.entity.entity-util")
-local LDAFunctions = require("__LDA-LIB__/init")
+local LDA = require("__LDA-LIB__/init")
 
 -- *** Definição do ITEM 'arc-smelter' ***
 -- definindo receita e item
 data:extend(
-    LDAFunctions.createBlockItemWithRecipe(
+    LDA.createBlockItemWithRecipe(
         "fractionator",
         "intermediate-products",
         30,

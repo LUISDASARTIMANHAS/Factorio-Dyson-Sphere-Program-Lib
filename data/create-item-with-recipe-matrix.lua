@@ -1,4 +1,4 @@
-local LDAFunctions = require("__LDA-LIB__/init")
+local LDA = require("__LDA-LIB__/init")
 
 -- category = "science-matrices" feito em Matrix Lab
 
@@ -9,8 +9,8 @@ local function createItemWithRecipeMatrix(name, time, qtde, ingredients)
         {type = "item", name = nameMatrix, amount = qtde}
     }
 
-    local item = LDAFunctions.createItemSearch(nameMatrix,200)
-    local recipe = LDAFunctions.createRecipe("icons", nameMatrix, crafted_in, time, ingredients, results)
+    local item = LDA.createItemSearch(nameMatrix,200)
+    local recipe = LDA.createRecipe("icons", nameMatrix, crafted_in, time, ingredients, results)
 
     return {item, recipe}
 end

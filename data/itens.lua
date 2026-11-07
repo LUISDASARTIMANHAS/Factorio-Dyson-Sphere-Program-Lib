@@ -1,4 +1,4 @@
-local LDAFunctions = require("__LDA-LIB__/init")
+local LDA = require("__LDA-LIB__/init")
 local createParticleColiderItemWithRecipe = require("data.create-particle-collider-item-with-recipe")
 -- category = "advanced-crafting" maquinas de montagem tier 2 e 3
 -- category = "basic-crafting" maquinas de montagem tier 1
@@ -23,7 +23,7 @@ local createParticleColiderItemWithRecipe = require("data.create-particle-collid
 -- circuit-board
 data:extend(
     -- createAssemblerItemWithRecipe(name, time, qtde, ingredients, stack_size, alt_unlocks, isEnabled)
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "circuit-board",
         1,
         2,
@@ -36,7 +36,7 @@ data:extend(
 
 -- Magnetic Coil
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "magnetic-coil",
         1,
         2,
@@ -50,7 +50,7 @@ data:extend(
 -- Engine
 data:extend(
     -- createAssemblerItemWithRecipe(name, time, qtde, ingredients, stack_size, alt_unlocks, isEnabled)
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "engine",
         3,
         1,
@@ -62,29 +62,10 @@ data:extend(
     )
 )
 
--- hydrogen X-ray-craking
-data:extend(
-    LDAFunctions.createFluidWithRecipe(
-        "hydrogen",
-        "9MJ",
-        "oil-processing",
-        4,
-        -- ingredients
-        {
-            {type = "fluid", name = "crude-oil", amount = 2}
-        },
-        -- results
-        {
-            {type = "fluid", name = "heavy-oil", amount = 2},
-            {type = "fluid", name = "hydrogen", amount = 2}
-        }
-    )
-)
-
 -- Graphene
 -- Made In		Chemical Facility fix in future
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "graphene",
         3,
         2,
@@ -98,7 +79,7 @@ data:extend(
 
 -- plastic
 data:extend(
-    LDAFunctions.createItemWithRecipe(
+    LDA.createItemWithRecipe(
         "plastic",
         "intermediate-products",
         100,
@@ -119,7 +100,7 @@ data:extend(
 -- carbon-nanotube
 -- Made In		Chemical Facility fix in future
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "carbon-nanotube",
         4,
         2,
@@ -134,7 +115,7 @@ data:extend(
 -- carbon-nanotube (FIRE ICE)
 -- Made In		Chemical Facility fix in future
 -- data:extend(
---     LDAFunctions.createItemWithRecipe(
+--     LDA.createItemWithRecipe(
 --         "carbon-nanotube",
 --         "intermediate-products"
 --         "itens",
@@ -149,7 +130,7 @@ data:extend(
 
 -- Titanium Crystal
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "titanium-crystal",
         4,
         1,
@@ -163,7 +144,7 @@ data:extend(
 
 -- particle-broadband
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "particle-broadband",
         8,
         1,
@@ -178,7 +159,7 @@ data:extend(
 
 -- microcrystalline-component
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "microcrystalline-component",
         2,
         1,
@@ -192,7 +173,7 @@ data:extend(
 
 -- Processor
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "processor",
         3,
         1,
@@ -206,7 +187,7 @@ data:extend(
 
 -- gear
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "gear",
         1,
         1,
@@ -219,7 +200,7 @@ data:extend(
 
 -- electric-motor
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "electric-motor",
         2,
         1,
@@ -234,7 +215,7 @@ data:extend(
 
 -- electromagnetic-turbine
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "electromagnetic-turbine",
         2,
         1,
@@ -248,7 +229,7 @@ data:extend(
 
 -- particle-container
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "particle-container",
         4,
         1,
@@ -278,7 +259,7 @@ data:extend(
 
 -- graviton-lens
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "graviton-lens",
         6,
         1,
@@ -292,7 +273,7 @@ data:extend(
 
 -- titanium-glass
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "titanium-glass",
         5,
         2,
@@ -307,7 +288,7 @@ data:extend(
 
 -- casimir-crystal
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "casimir-crystal",
         4,
         1,
@@ -322,7 +303,7 @@ data:extend(
 
 -- plane-filter
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "plane-filter",
         12,
         1,
@@ -336,7 +317,7 @@ data:extend(
 
 -- quantum-chip
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "quantum-chip",
         6,
         1,
@@ -350,7 +331,7 @@ data:extend(
 
 -- Critical Photon Receita básica (sem lens)
 data:extend(
-    LDAFunctions.createItemWithRecipe(
+    LDA.createItemWithRecipe(
         "critical-photon",
         "intermediate-products",
         100,
@@ -365,7 +346,7 @@ data:extend(
 
 -- Critical Photon Receita com lens
 data:extend({
-    LDAFunctions.createRecipe(
+    LDA.createRecipe(
         "icons",
         "critical-photon-lens",
         "ray-receiver",
@@ -399,7 +380,7 @@ data:extend(
 
 -- prism
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "prism",
         2,
         2,
@@ -412,7 +393,7 @@ data:extend(
 
 -- plasma-exciter
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "plasma-exciter",
         2,
         1,
@@ -426,7 +407,7 @@ data:extend(
 
 -- Tesla_Tower
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "tesla-tower",
         1,
         1,
@@ -440,7 +421,7 @@ data:extend(
 
 -- Wireless_Power_Tower
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "wireless-power-tower",
         3,
         1,
@@ -454,7 +435,7 @@ data:extend(
 
 -- Thermal_Power_Plant
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "thermal-power-plant",
         5,
         1,
@@ -470,7 +451,7 @@ data:extend(
 
 -- Battlefield_Analysis_Base
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "battlefield-analysis-base",
         6,
         1,
@@ -486,7 +467,7 @@ data:extend(
 
 -- Fractionator
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "fractionator",
         3,
         1,
@@ -502,7 +483,7 @@ data:extend(
 
 -- Spray_Coater
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "spray-coater",
         3,
         1,
@@ -518,7 +499,7 @@ data:extend(
 
 -- Proliferator_Mk
 data:extend(
-    LDAFunctions.createAssemblerItemWithRecipe(
+    LDA.createAssemblerItemWithRecipe(
         "proliferator-mki",
         0.5,
         1,

@@ -8,7 +8,7 @@
     "description": "Mod que importa tudo do jogo dyson sphere program, inspirado (mas não afiliado ao jogo dyson sphere program).",
     "factorio_version": "2.1",
     "dependencies": [
-        "base >= 2.0.0",
+        "base >= 2.1.24",
         "space-age",
         "LDA-LIB >= 0.0.17"
     ],

@@ -1,12 +1,12 @@
 local path_main = "__Dyson-Sphere-Program-Lib__/"
 local icon_path = path_main .. "graphics/entities/matrix-lab.png"
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
-local LDAFunctions = require("__LDA-LIB__/init")
+local LDA = require("__LDA-LIB__/init")
 
 -- *** Definição do ITEM 'matrix-lab' ***
 -- definindo receita e item
 data:extend(
-        LDAFunctions.createBlockItemWithRecipe(
+        LDA.createBlockItemWithRecipe(
             "matrix-lab",
             "science",
             50,

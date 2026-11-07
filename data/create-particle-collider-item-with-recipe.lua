@@ -1,4 +1,4 @@
-local LDAFunctions = require("__LDA-LIB__/init")
+local LDA = require("__LDA-LIB__/init")
 
 -- category = "science-matrices" feito em Matrix Lab
 -- category = "advanced-crafting" maquinas de montagem tier 2 e 3
@@ -22,7 +22,7 @@ local function createParticleColiderItemWithRecipe(name, time, qtde, stack_size,
     local size = stack_size or 200
 
     local itemAndRecipe =
-        LDAFunctions.createItemWithRecipe(personalName, subgroup, size, crafted_in, time, ingredients, results)
+        LDA.createItemWithRecipe(personalName, subgroup, size, crafted_in, time, ingredients, results)
 
     return itemAndRecipe
 end

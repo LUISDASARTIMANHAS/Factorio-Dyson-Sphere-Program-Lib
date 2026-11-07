@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 07/11/2026
+  Changes:
+    - Migrated to LDA-LIB >= 0.0.17 (updated dependency from 0.0.13).
+    - Updated base dependency to >= 2.1.24 to match LDA-LIB requirements.
+    - Standardized LDA-LIB alias from LDAFunctions to LDA across all data-stage files.
+    - Centralized LDA.setBasePath("Dyson-Sphere-Program-Lib") to data.lua entrypoint
+      (data-final-fixes.lua retains its own call as it is a separate load stage).
+    - Removed duplicate hydrogen fluid/recipe definition from data/itens.lua
+      (canonical definition kept in data/recursos.lua).
+---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 22/07/2026
   Changes:

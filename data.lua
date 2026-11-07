@@ -1,3 +1,7 @@
+-- Inicializa a LDA-LIB e define o caminho base do mod (deve ser a primeira coisa)
+local LDA = require("__LDA-LIB__/init")
+LDA.setBasePath("Dyson-Sphere-Program-Lib")
+
 require("data.grupos")
 
 -- presets Basicos do mods

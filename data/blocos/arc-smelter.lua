@@ -2,12 +2,12 @@ local path_main = "__Dyson-Sphere-Program-Lib__/"
 local icon_path = path_main .. "graphics/entities/arc-smelter.png"
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
-local LDAFunctions = require("__LDA-LIB__/init")
+local LDA = require("__LDA-LIB__/init")
 
 -- *** Definição do ITEM 'arc-smelter' ***
 -- definindo receita e item
 data:extend(
-        LDAFunctions.createBlockItemWithRecipe(
+        LDA.createBlockItemWithRecipe(
             "arc-smelter",
             "production-machine",
             50,

@@ -1,6 +1,5 @@
 -- createItemGroup(group_name, group_order, icon_size, subgroups, icon_mipmaps)
-local LDAFunctions = require("__LDA-LIB__/init")
-local PATH = LDAFunctions.setBasePath("Dyson-Sphere-Program-Lib")
+local LDA = require("__LDA-LIB__/init")
 local DSP_subgroups = {
     "intermediate-products",
     "natural-resources",
@@ -14,7 +13,7 @@ local DSP_subgroups = {
 }
 
 local dysonCategory =
-    LDAFunctions.createItemGroup(
+    LDA.createItemGroup(
     -- name
     "dyson-category",
     -- order
