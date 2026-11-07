@@ -1,4 +1,4 @@
-Falha ao carregar mods: File __Dyson-Sphere-Program-Lib__/graphics/technology/tech-dyson-casimir-crystal-256x256.png not found
+Falha ao carregar mods: File __Dyson-Sphere-Program-Lib__/graphics/technology/tech-dyson-thruster-256x256.png not found
 
 Mods para serem desativados:
 • Dyson-Sphere-Program-Lib (0.0.5)
