@@ -74,7 +74,8 @@ data:extend(
             },
             nil,
             {
-                "storage-tank"
+                "storage-tank",
+                "offshore-pump"
             },
             50
         )

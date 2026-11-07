@@ -525,16 +525,20 @@ data:extend(
 
 -- Titanium Alloy
 data:extend(
-    LDA.createSmeltingItemWithRecipe(
+    LDA.createItemWithRecipe(
         "titanium-alloy",
+        "intermediate-products",
+        100,
+        "chemistry",
         12,
-        4,
         {
             {type = "item", name = "titanium-ingot", amount = 4},
             {type = "item", name = "steel-plate", amount = 4},
             {type = "fluid", name = "sulfuric-acid", amount = 8}
         },
-        "chemistry"
+        {
+            {type = "item", name = "titanium-alloy", amount = 4}
+        }
     )
 )
 

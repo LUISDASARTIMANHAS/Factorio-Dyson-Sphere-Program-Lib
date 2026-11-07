@@ -9,6 +9,9 @@ Date: 07/11/2026
       (data-final-fixes.lua retains its own call as it is a separate load stage).
     - Removed duplicate hydrogen fluid/recipe definition from data/itens.lua
       (canonical definition kept in data/recursos.lua).
+    - Added recipe unlocks for implemented DSP items across the active research tiers.
+    - Fixed research prerequisites that blocked Energy Matrix and Structure Matrix progression.
+    - Corrected Titanium Alloy recipe generation to use the chemistry category.
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 22/07/2026

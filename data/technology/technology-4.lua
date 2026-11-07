@@ -99,7 +99,7 @@ data:extend(
                 {"energy-matrix", 3}
             },
             {
-                "tech-dyson-electromagnetic-matrix"
+                "tech-dyson-energy-matrix"
             },
             {
                 "fractionator",
@@ -143,7 +143,8 @@ data:extend(
             {
                 "chemical-plant",
                 "plastic",
-                "sulfuric-acid"
+                "sulfuric-acid",
+                "graphene"
             },
             200
         )
@@ -159,7 +160,7 @@ data:extend(
                 {"electromagnetic-matrix", 1}
             },
             {
-                "tech-dyson-deuterium-fractionation"
+                "tech-dyson-electromagnetic-matrix"
             },
             {
                 "energy-matrix"
@@ -173,13 +174,15 @@ data:extend(
 data:extend(
     {
         utils.createDSPTechnology(
-            "energy-matrix",
+            "magnetic-levitation",
             {
                 {"electromagnetic-matrix", 4},
                 {"energy-matrix", 1}
             },
             {
-                "tech-dyson-electromagnetic-drive"
+                "tech-dyson-electromagnetic-drive",
+                "tech-dyson-basic-chemical-engineering",
+                "tech-dyson-energy-matrix"
             },
             {
                 "electromagnetic-turbine"

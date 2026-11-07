@@ -5,7 +5,6 @@ local utils = require("data.utils")
 
 -- TIER 5
 
-
 -- Planetary Logistics System
 data:extend(
     {
@@ -16,8 +15,8 @@ data:extend(
                 {"energy-matrix", 1}
             },
             {
-                "tech-dyson-turbo-transport-belt",
-                "tech-dyson-sphere-program"
+                "tech-dyson-improved-logistics-system",
+                "tech-dyson-magnetic-levitation"
             },
             {"fast-transport-belt","fast-underground-belt","fast-splitter"},
             400
@@ -25,7 +24,7 @@ data:extend(
     }
 )
 
--- Titanium_Smelting
+-- Titanium Smelting
 data:extend(
     {
         utils.createDSPTechnology(
@@ -35,10 +34,53 @@ data:extend(
                 {"energy-matrix", 2}
             },
             {
-                "tech-dyson-steel-processing",
+                "tech-dyson-steel-smelting",
                 "tech-dyson-sphere-program"
             },
             {"titanium-ingot"},
+            100
+        )
+    }
+)
+
+-- Thruster
+data:extend(
+    {
+        utils.createDSPTechnology(
+            "thruster",
+            {
+                {"electromagnetic-matrix", 4},
+                {"energy-matrix", 2}
+            },
+            {
+                "tech-dyson-titanium-smelting",
+                "tech-dyson-basic-chemical-engineering"
+            },
+            {"thruster"},
+            100
+        )
+    }
+)
+
+-- High-Strength Crystal
+data:extend(
+    {
+        utils.createDSPTechnology(
+            "high-strength-crystal",
+            -- ingredients
+            {
+                {"electromagnetic-matrix", 6},
+                {"energy-matrix", 6}
+            },
+            -- prerequisites
+            {
+                "tech-dyson-titanium-smelting",
+                "tech-dyson-crystal-smelting"
+            },
+            -- unlocks
+            {
+                "titanium-crystal"
+            },
             100
         )
     }
@@ -56,7 +98,7 @@ data:extend(
             },
             {
                 "tech-dyson-titanium-smelting",
-                "tech-dyson-sphere-program"
+                "tech-dyson-structure-matrix"
             },
             {"titanium-alloy"},
             10
@@ -64,19 +106,132 @@ data:extend(
     }
 )
 
--- reinforced thruster
+-- Reinforced Thruster
 data:extend(
     {
         utils.createDSPTechnology(
             "reinforced-thruster",
             {
-                {"energy-matrix", 16}
+                {"energy-matrix", 16},
+                {"structure-matrix", 8}
             },
             {
-                "tech-dyson-sphere-program"
+                "tech-dyson-high-strength-titanium-alloy",
+                "tech-dyson-magnetic-levitation"
             },
             {"reinforced-thruster"},
             100
+        )
+    }
+)
+
+-- Processor
+data:extend(
+    {
+        utils.createDSPTechnology(
+            "processor",
+            -- ingredients
+            {
+                {"electromagnetic-matrix", 8}
+            },
+            -- prerequisites
+            {
+                "tech-dyson-semiconductor-material"
+            },
+            -- unlocks
+            {
+                "processor"
+            },
+            100
+        )
+    }
+)
+
+-- Casimir Crystal
+data:extend(
+    {
+        utils.createDSPTechnology(
+            "casimir-crystal",
+            {
+                {"electromagnetic-matrix", 10},
+                {"energy-matrix", 10}
+            },
+            {
+                "tech-dyson-high-strength-crystal",
+                "tech-dyson-basic-chemical-engineering"
+            },
+            {
+                "casimir-crystal",
+                "titanium-glass",
+                "plane-filter"
+            },
+            200
+        )
+    }
+)
+
+-- Particle Control
+data:extend(
+    {
+        utils.createDSPTechnology(
+            "particle-control",
+            {
+                {"electromagnetic-matrix", 20},
+                {"energy-matrix", 20},
+                {"structure-matrix", 4}
+            },
+            {
+                "tech-dyson-casimir-crystal",
+                "tech-dyson-magnetic-levitation"
+            },
+            {
+                "particle-container",
+                "particle-broadband",
+                "carbon-nanotube"
+            },
+            200
+        )
+    }
+)
+
+-- Structure Matrix
+data:extend(
+    {
+        utils.createDSPTechnology(
+            "structure-matrix",
+            {
+                {"electromagnetic-matrix", 20},
+                {"energy-matrix", 20}
+            },
+            {
+                "tech-dyson-high-strength-crystal"
+            },
+            {
+                "structure-matrix"
+            },
+            200
+        )
+    }
+)
+
+-- Information Matrix
+data:extend(
+    {
+        utils.createDSPTechnology(
+            "information-matrix",
+            {
+                {"electromagnetic-matrix", 30},
+                {"energy-matrix", 30},
+                {"structure-matrix", 6}
+            },
+            {
+                "tech-dyson-processor",
+                "tech-dyson-particle-control"
+            },
+            {
+                "information-matrix"
+            },
+            200
         )
     }
 )
@@ -94,9 +249,9 @@ data:extend(
             {
                 "tech-dyson-high-strength-titanium-alloy",
                 "tech-dyson-reinforced-thruster",
-                "tech-dyson-sphere-program"
+                "tech-dyson-planetary-logistics-system"
             },
-            {"roboport","logistic-robot"},
+            {"roboport", "logistic-robot"},
             10
         )
     }
@@ -114,9 +269,9 @@ data:extend(
                 {"structure-matrix", 12}
             },
             {
-                "sphere-program"
+                "tech-dyson-interstellar-logistics-system"
             },
-            {"substation"},
+            {"substation", "critical-photon", "critical-photon-lens"},
             100
         )
     }
@@ -135,56 +290,104 @@ data:extend(
             },
             {
                 "tech-dyson-interstellar-logistics-system",
-                "tech-dyson-interstellar-power-transmission",
-                "tech-dyson-sphere-program"
+                "tech-dyson-interstellar-power-transmission"
             },
-            {"fluorine","fluoroketone-hot"},
+            {"fluorine", "fluoroketone-hot"},
             100
         )
     }
 )
 
--- High-Strength Crystal
+-- Strange Matter
 data:extend(
     {
         utils.createDSPTechnology(
-            "high-strength-crystal",
-            -- ingredients
+            "strange-matter",
             {
-                {"electromagnetic-matrix", 6},
-                {"energy-matrix", 6}
+                {"electromagnetic-matrix", 60},
+                {"energy-matrix", 60},
+                {"structure-matrix", 10}
             },
-            -- prerequisites
             {
-                "tech-dyson-steel-processing"
+                "tech-dyson-particle-control",
+                "tech-dyson-deuterium-fractionation"
             },
-            -- unlocks
             {
-                "titanium-crystal"
+                "strange-matter",
+                "graviton-lens"
             },
-            100
+            200
         )
     }
 )
 
--- Processor
+-- Gravity Matrix
 data:extend(
     {
         utils.createDSPTechnology(
-            "processor",
-            -- ingredients
+            "gravity-matrix",
             {
-                {"electromagnetic-matrix", 8}
+                {"electromagnetic-matrix", 80},
+                {"energy-matrix", 80},
+                {"structure-matrix", 20},
+                {"information-matrix", 10}
             },
-            -- prerequisites
             {
-                "tech-dyson-sphere-program"
+                "tech-dyson-strange-matter",
+                "tech-dyson-information-matrix"
             },
-            -- unlocks
             {
-                "processor"
+                "gravity-matrix",
+                "quantum-chip"
             },
-            100
+            200
+        )
+    }
+)
+
+-- Controlled Annihilation Reaction
+data:extend(
+    {
+        utils.createDSPTechnology(
+            "controlled-annihilation-reaction",
+            {
+                {"electromagnetic-matrix", 100},
+                {"energy-matrix", 100},
+                {"structure-matrix", 60},
+                {"information-matrix", 60},
+                {"gravity-matrix", 60}
+            },
+            {
+                "tech-dyson-gravity-matrix",
+                "tech-dyson-gas-giants-exploitation"
+            },
+            {
+                "antimatter"
+            },
+            200
+        )
+    }
+)
+
+-- Universe Matrix
+data:extend(
+    {
+        utils.createDSPTechnology(
+            "universe-matrix",
+            {
+                {"electromagnetic-matrix", 1},
+                {"energy-matrix", 1},
+                {"structure-matrix", 1},
+                {"information-matrix", 1},
+                {"gravity-matrix", 1}
+            },
+            {
+                "tech-dyson-controlled-annihilation-reaction"
+            },
+            {
+                "universe-matrix"
+            },
+            200
         )
     }
 )

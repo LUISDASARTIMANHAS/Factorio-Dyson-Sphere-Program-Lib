@@ -113,7 +113,7 @@ data:extend(
                 "tech-dyson-basic-assembling-processes"
             },
             {
-                "pumpjack","oil-refinery"
+                "pumpjack","oil-refinery","hydrogen"
             },
             100
         )
