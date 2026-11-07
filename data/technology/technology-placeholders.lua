@@ -220,7 +220,7 @@ for _, tier in ipairs(pendingTiers) do
         )
 
         technology.icon = placeholderIcon
-        technology.localised_name = "[TODO T" .. tier.tier .. "] " .. research[2]
+        technology.localised_name = {"technology-name.tech-dyson-" .. research[1]}
         technology.localised_description = {"technology-description.tech-dyson-placeholder"}
         prototypes[#prototypes + 1] = technology
     end
