@@ -14,6 +14,7 @@ require("data.technology.technology-2")
 require("data.technology.technology-3")
 require("data.technology.technology-4")
 require("data.technology.technology-5")
+require("data.technology.technology-placeholders")
 
 -- require("data/soundMaker")
 
