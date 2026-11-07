@@ -10,6 +10,8 @@ Date: 07/11/2026
     - Removed duplicate hydrogen fluid/recipe definition from data/itens.lua
       (canonical definition kept in data/recursos.lua).
     - Added visible TODO item placeholders; recipe implementation is deferred.
+    - Added disabled item recipes and inert entity placeholders for documented DSP buildings.
+    - Activated the Fractionator block with its matching item and recipe prototypes.
     - Added visible TODO placeholders for documented technologies still pending implementation.
     - Added recipe unlocks for implemented DSP items across the active research tiers.
     - Fixed research prerequisites that blocked Energy Matrix and Structure Matrix progression.

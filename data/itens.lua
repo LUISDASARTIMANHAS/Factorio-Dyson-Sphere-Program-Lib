@@ -466,21 +466,6 @@ data:extend(
 )
 
 -- Fractionator
-data:extend(
-    LDA.createAssemblerItemWithRecipe(
-        "fractionator",
-        3,
-        1,
-        {
-            {type = "item", name = "iron-plate", amount = 8},
-            {type = "item", name = "stone-brick", amount = 4},
-            {type = "item", name = "glass", amount = 4},
-            {type = "item", name = "quantum-chip", amount = 1},
-        },
-        30
-    )
-)
-
 -- Spray_Coater
 data:extend(
     LDA.createAssemblerItemWithRecipe(
