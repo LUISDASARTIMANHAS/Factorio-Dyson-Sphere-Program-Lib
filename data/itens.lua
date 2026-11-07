@@ -509,3 +509,59 @@ data:extend(
         200
     )
 )
+
+-- Combustible Unit
+data:extend(
+    LDA.createAssemblerItemWithRecipe(
+        "combustible-unit",
+        3,
+        1,
+        {
+            {type = "item", name = "coal", amount = 3},
+        },
+        100
+    )
+)
+
+-- Titanium Alloy
+data:extend(
+    LDA.createSmeltingItemWithRecipe(
+        "titanium-alloy",
+        12,
+        4,
+        {
+            {type = "item", name = "titanium-ingot", amount = 4},
+            {type = "item", name = "steel-plate", amount = 4},
+            {type = "fluid", name = "sulfuric-acid", amount = 8}
+        },
+        "chemistry"
+    )
+)
+
+-- Thruster
+data:extend(
+    LDA.createAssemblerItemWithRecipe(
+        "thruster",
+        4,
+        1,
+        {
+            {type = "item", name = "steel-plate", amount = 2},
+            {type = "item", name = "copper-plate", amount = 3}
+        },
+        100
+    )
+)
+
+-- Reinforced Thruster
+data:extend(
+    LDA.createAssemblerItemWithRecipe(
+        "reinforced-thruster",
+        6,
+        1,
+        {
+            {type = "item", name = "titanium-alloy", amount = 5},
+            {type = "item", name = "electromagnetic-turbine", amount = 5}
+        },
+        100
+    )
+)

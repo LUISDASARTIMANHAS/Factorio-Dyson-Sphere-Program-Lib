@@ -74,8 +74,7 @@ data:extend(
             },
             nil,
             {
-                "storage-tank",
-                "offshore-pump"
+                "storage-tank"
             },
             50
         )
@@ -129,7 +128,9 @@ data:extend(
                 {"electromagnetic-matrix", 1}
             },
             nil,
-            {"engine"},
+            {
+                "engine"
+            },
             20
         )
     }
@@ -144,7 +145,9 @@ data:extend(
                 {"electromagnetic-matrix", 1}
             },
             nil,
-            {"gun-turret"},
+            {
+                "firearm-magazine"
+            },
             20
         )
     }

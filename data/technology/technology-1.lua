@@ -33,7 +33,8 @@ data:extend(
         utils.createDSPTechnologyCraftEntityTrigger(
             "electromagnetism",
             {
-                "electric-mining-drill"
+                "electric-mining-drill",
+                "tesla-tower"
             },
             {"tech-dyson-sphere-program"},
             "magnetic-coil"

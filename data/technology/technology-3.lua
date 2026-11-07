@@ -56,7 +56,7 @@ data:extend(
             },
             nil,
             {
-                "rocket-fuel"
+                "combustible-unit"
             },
             120
         )

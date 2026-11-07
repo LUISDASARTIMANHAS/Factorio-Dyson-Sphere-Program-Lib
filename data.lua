@@ -13,6 +13,7 @@ require("data.technology.technology-1")
 require("data.technology.technology-2")
 require("data.technology.technology-3")
 require("data.technology.technology-4")
+require("data.technology.technology-5")
 
 -- require("data/soundMaker")
 
