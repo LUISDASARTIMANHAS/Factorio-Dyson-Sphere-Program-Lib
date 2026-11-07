@@ -2,6 +2,10 @@
 .vscode/
 .git
 .env
+*.db
+*.html
+/docs
+**/docs
 **Thumbs.db
 Thumbs.db
-*.db
+*.ps1

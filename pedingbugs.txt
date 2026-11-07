@@ -1,4 +1,0 @@
-Falha ao carregar mods: File __Dyson-Sphere-Program-Lib__/graphics/item-group/dyson-category.png not found
-
-Mods para serem desativados:
-• Dyson-Sphere-Program-Lib (0.0.4)

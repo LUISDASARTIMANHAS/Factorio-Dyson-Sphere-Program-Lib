@@ -5,6 +5,12 @@
 *.git
 ./.vscode/
 *.bat
+*.html
 *.exe
+/docs
+**/docs
+docs/**
+**Thumbs.db
+Thumbs.db
 *.ps1
 exclusions.txt
