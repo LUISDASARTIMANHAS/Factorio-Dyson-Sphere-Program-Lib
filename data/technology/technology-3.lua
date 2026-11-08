@@ -143,7 +143,7 @@ data:extend(
             {
                 "oil-extractor",
                 "oil-refinery",
-                "plasma-refining"
+                "simple-coal-liquefaction"
             },
             30,
             1

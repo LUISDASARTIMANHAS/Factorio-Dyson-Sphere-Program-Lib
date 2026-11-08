@@ -40,9 +40,9 @@ data:extend(
             },
             -- unlocks
             {
-                "conveyor-belt-mkii",
-                "sorter-mkiii",
-                "storage-mkii"
+                "express-transport-belt",
+                "turbo-splitter",
+                "steel-chest"
             },
             30,
             1
@@ -224,7 +224,7 @@ data:extend(
             },
             -- unlocks
             {
-                "x-ray-cracking"
+                "oil-refinery"
             },
             30,
             1

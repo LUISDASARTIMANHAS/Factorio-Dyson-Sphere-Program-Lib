@@ -27,7 +27,7 @@ data:extend(
 			},
 			-- unlocks
 			{
-				"mass-energy-storage"
+				-- "mass-energy-storage"
 			},
 			30,
 			1

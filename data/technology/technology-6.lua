@@ -31,7 +31,7 @@ data:extend(
 			},
 			-- unlocks
 			{
-				"conveyor-belt-mkiii",
+				"turbo-transport-belt",
 				"planetary-logistics-station",
 				"logistics-drone"
 			},
@@ -147,7 +147,7 @@ data:extend(
 			},
 			-- unlocks
 			{
-				"reformed-refinement"
+				"advanced-oil-processing"
 			},
 			30,
 			1
