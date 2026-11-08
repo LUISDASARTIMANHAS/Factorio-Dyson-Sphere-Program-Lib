@@ -213,7 +213,7 @@ data:extend(
 
 -- Dyson Sphere Stress System
 local stressSystem = utils.createDSPTechnology(
-	"dyson-sphere-stress-system",
+	"sphere-stress-system",
 	{
 		{"electromagnetic-matrix", 1},
 		{"energy-matrix", 1},
