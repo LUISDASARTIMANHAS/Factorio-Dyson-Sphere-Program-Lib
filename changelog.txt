@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.7
+Date: 08/11/2026
+  Changes:
+---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: 08/11/2026
+  Changes:
+    - Expanded and activated DSP research through technology tiers 1-16, with new technologies, prerequisites, research costs, and recipe unlocks.
+    - Added the Self-Evolution Lab and its associated research content.
+    - Updated building and item placeholders, technology progression, and ammunition-related content.
+    - Added and updated graphics for buildings, items, ammunition, and technologies.
+    - Added a technology reference table in docs/table techs.md.
+    - Updated generic recipe generation to process only DSP technologies and avoid redefining existing items.
+    - Updated the Dyson-Sphere-Program-Lib_0.0.6.zip release package.
+---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 07/11/2026
   Changes:
