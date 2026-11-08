@@ -40,7 +40,6 @@ local buildings = {
     {"ray-receiver", "Ray Receiver"},
     {"re-composing-assembler", "Re-composing Assembler"},
     {"satellite-substation", "Satellite Substation"},
-    {"self-evolution-lab", "Self-evolution Lab"},
     {"signal-tower", "Signal Tower"},
     {"spray-coater", "Spray Coater"},
     {"sr-plasma-turret", "SR Plasma Turret"},

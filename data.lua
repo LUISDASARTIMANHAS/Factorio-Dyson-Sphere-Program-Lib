@@ -31,6 +31,7 @@ require("data.technology.technology-16")
 
 -- blocos e qeuipamentos
 require("data.blocos.matrix-lab")
+require("data.blocos.self-evolution-lab")
 require("data.blocos.advanced-solar-painel")
 require("data.blocos.arc-smelter")
 require("data.blocos.fractionator")
