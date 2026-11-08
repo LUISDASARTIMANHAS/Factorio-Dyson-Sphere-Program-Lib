@@ -19,3 +19,305 @@ local utils = require("data.utils")
 ]]
 
 -- TIER 7
+
+-- Integrated Logistics System
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"integrated-logistics-system",
+			{
+				{"electromagnetic-matrix", 1000},
+				{"energy-matrix", 500},
+				{"structure-matrix", 50}
+			},
+			{
+				"tech-dyson-high-efficiency-logistics-system",
+				"tech-dyson-super-magnetic-field-generator"
+			},
+			-- unlocks
+			{
+				"automatic-piler",
+				"pile-sorter"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- High-Strength Titanium Alloy
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"high-strength-titanium-alloy",
+			{
+				{"electromagnetic-matrix", 800},
+				{"energy-matrix", 800},
+				{"structure-matrix", 80}
+			},
+			{
+				"tech-dyson-titanium-smelting"
+			},
+			-- unlocks
+			{
+				"titanium-alloy"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- High-Strength Lightweight Structure
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"high-strength-lightweight-structure",
+			{
+				{"electromagnetic-matrix", 1200},
+				{"structure-matrix", 200}
+			},
+			{
+				"tech-dyson-solar-sail-orbit-system",
+				"tech-dyson-high-strength-material"
+			},
+			-- unlocks
+			{
+				"frame-material",
+				"dyson-sphere-component"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Ray Receiver
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"ray-receiver",
+			{
+				{"electromagnetic-matrix", 600},
+				{"energy-matrix", 600}
+			},
+			{
+				"tech-dyson-solar-sail-orbit-system"
+			},
+			-- unlocks
+			{
+				"ray-receiver"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Mini Fusion Power Generation
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"mini-fusion-power-generation",
+			{
+				{"electromagnetic-matrix", 1000},
+				{"energy-matrix", 500},
+				{"structure-matrix", 250}
+			},
+			{
+				"tech-dyson-deuterium-fractionation",
+				"tech-dyson-high-strength-titanium-alloy"
+			},
+			-- unlocks
+			{
+				"mini-fusion-power-plant",
+				"deuteron-fuel-rod"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- High-Strength Material
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"high-strength-material",
+			{
+				{"energy-matrix", 600},
+				{"structure-matrix", 150}
+			},
+			{
+				"tech-dyson-applied-superconductor"
+			},
+			-- unlocks
+			{
+				"carbon-nanotube",
+				"carbon-nanotube-advanced"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Structure Matrix
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"structure-matrix",
+			{
+				{"electromagnetic-matrix", 800},
+				{"energy-matrix", 800}
+			},
+			{
+				"tech-dyson-high-strength-crystal"
+			},
+			-- unlocks
+			{
+				"structure-matrix"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Explosive Unit
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"explosive-unit",
+			{
+				{"electromagnetic-matrix", 400},
+				{"energy-matrix", 200}
+			},
+			{
+				"tech-dyson-high-strength-crystal"
+			},
+			-- unlocks
+			{
+				"explosive-unit"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Reinforced Thruster
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"reinforced-thruster",
+			{
+				{"energy-matrix", 1600}
+			},
+			{
+				"tech-dyson-thruster"
+			},
+			-- unlocks
+			{
+				"reinforced-thruster"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- High-Explosive Shell Set
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"high-explosive-shell-set",
+			{
+				{"electromagnetic-matrix", 400},
+				{"energy-matrix", 400}
+			},
+			{
+				"tech-dyson-implosion-cannon",
+				"tech-dyson-titanium-smelting"
+			},
+			-- unlocks
+			{
+				"high-explosive-shell-set"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Planetary Defense System
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"planetary-defense-system",
+			{
+				{"electromagnetic-matrix", 600},
+				{"energy-matrix", 600}
+			},
+			{
+				"tech-dyson-implosion-cannon",
+				"tech-dyson-magnetic-particle-trap"
+			},
+			-- unlocks
+			{
+				"laser-turret",
+				"planetary-shield-generator"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Superalloy Ammo Box
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"superalloy-ammo-box",
+			{
+				{"electromagnetic-matrix", 600},
+				{"energy-matrix", 600},
+				{"structure-matrix", 300}
+			},
+			{
+				"tech-dyson-titanium-ammo-box",
+				"tech-dyson-high-strength-titanium-alloy"
+			},
+			-- unlocks
+			{
+				"superalloy-ammo-box"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Attack Drone
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"attack-drone",
+			{
+				{"electromagnetic-matrix", 500},
+				{"energy-matrix", 500},
+				{"structure-matrix", 500}
+			},
+			{
+				"tech-dyson-precision-drone",
+				"tech-dyson-magnetic-particle-trap"
+			},
+			-- unlocks
+			{
+				"attack-drone"
+			},
+			30,
+			1
+		)
+	}
+)

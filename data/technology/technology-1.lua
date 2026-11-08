@@ -38,6 +38,7 @@ data:extend(
         utils.createDSPTechnologyCraftEntityTrigger(
             "electromagnetism",
             {
+                "wind-turbine",
                 "electric-mining-drill",
                 "tesla-tower"
             },

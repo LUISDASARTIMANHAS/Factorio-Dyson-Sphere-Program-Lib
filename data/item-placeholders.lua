@@ -114,8 +114,10 @@ local itemGroups = {
 for _, group in ipairs(itemGroups) do
     for _, entry in ipairs(group.items) do
         local name = entry[1]
-        if not data.raw.item[name] then
-            local item = LDA.createItem(name, group.subgroup, 100)
+        if not data.raw.item[name] and not data.raw.tool[name] then
+            local item = name == "dark-fog-matrix"
+                and LDA.createItemSearch(name, 100)
+                or LDA.createItem(name, group.subgroup, 100)
             item.icon = placeholderIcon
             item.icon_size = 256
             item.localised_name = "[TODO] " .. entry[2]

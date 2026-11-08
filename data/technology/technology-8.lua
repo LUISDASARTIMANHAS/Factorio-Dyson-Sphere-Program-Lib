@@ -15,3 +15,230 @@ local utils = require("data.utils")
 ]]
 
 -- TIER 8
+
+local technologies = {
+	{"interstellar-logistics-system", {{"electromagnetic-matrix", 1200}, {"energy-matrix", 1200}, {"structure-matrix", 120}}, {"tech-dyson-planetary-logistics-system", "tech-dyson-high-strength-titanium-alloy", "tech-dyson-reinforced-thruster"}, {"interstellar-logistics-station", "interstellar-logistics-vessel"}},
+	{"interstellar-power-transmission", {{"electromagnetic-matrix", 1200}, {"energy-matrix", 1200}, {"structure-matrix", 120}}, {"tech-dyson-high-strength-titanium-alloy", "tech-dyson-energy-storage"}, {"energy-exchanger"}},
+	{"particle-control", {{"electromagnetic-matrix", 800}, {"energy-matrix", 800}, {"structure-matrix", 200}}, {"tech-dyson-structure-matrix"}, {"particle-broadband", "crystal-silicon-advanced"}},
+	{"high-strength-glass", {{"energy-matrix", 800}, {"structure-matrix", 400}}, {"tech-dyson-high-strength-material"}, {"titanium-glass"}},
+	{"casimir-crystal", {{"electromagnetic-matrix", 800}, {"energy-matrix", 800}, {"structure-matrix", 800}}, {"tech-dyson-structure-matrix"}, {"casimir-crystal", "casimir-crystal-advanced"}},
+	{"miniature-particle-collider", {{"electromagnetic-matrix", 800}, {"energy-matrix", 800}, {"structure-matrix", 800}}, {"tech-dyson-high-strength-material"}, {"miniature-particle-collider", "deuterium"}},
+	{"proliferator-mkiii", {{"electromagnetic-matrix", 800}, {"energy-matrix", 600}, {"structure-matrix", 400}}, {"tech-dyson-proliferator-mkii", "tech-dyson-high-strength-material"}, {"proliferator-mkiii"}},
+	{"satellite-power-distribution-system", {{"electromagnetic-matrix", 800}, {"energy-matrix", 800}, {"structure-matrix", 800}}, {"tech-dyson-super-magnetic-field-generator"}, {"satellite-substation"}},
+	{"supersonic-missile-set", {{"electromagnetic-matrix", 800}, {"energy-matrix", 800}, {"structure-matrix", 200}}, {"tech-dyson-high-explosive-shell-set", "tech-dyson-thruster"}, {"supersonic-missile-set"}}
+}
+
+-- Interstellar Logistics System
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"interstellar-logistics-system",
+			{
+				{"electromagnetic-matrix", 1200},
+				{"energy-matrix", 1200},
+				{"structure-matrix", 120}
+			},
+			{
+				"tech-dyson-planetary-logistics-system",
+				"tech-dyson-high-strength-titanium-alloy",
+				"tech-dyson-reinforced-thruster"
+			},
+			-- unlocks
+			{
+				"interstellar-logistics-station",
+				"interstellar-logistics-vessel"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Interstellar Power Transmission
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"interstellar-power-transmission",
+			{
+				{"electromagnetic-matrix", 1200},
+				{"energy-matrix", 1200},
+				{"structure-matrix", 120}
+			},
+			{
+				"tech-dyson-high-strength-titanium-alloy",
+				"tech-dyson-energy-storage"
+			},
+			-- unlocks
+			{
+				"energy-exchanger"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Particle Control
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"particle-control",
+			{
+				{"electromagnetic-matrix", 800},
+				{"energy-matrix", 800},
+				{"structure-matrix", 200}
+			},
+			{
+				"tech-dyson-structure-matrix"
+			},
+			-- unlocks
+			{
+				"particle-broadband",
+				"crystal-silicon-advanced"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- High-Strength Glass
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"high-strength-glass",
+			{
+				{"energy-matrix", 800},
+				{"structure-matrix", 400}
+			},
+			{
+				"tech-dyson-high-strength-material"
+			},
+			-- unlocks
+			{
+				"titanium-glass"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Casimir Crystal
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"casimir-crystal",
+			{
+				{"electromagnetic-matrix", 800},
+				{"energy-matrix", 800},
+				{"structure-matrix", 800}
+			},
+			{
+				"tech-dyson-structure-matrix"
+			},
+			-- unlocks
+			{
+				"casimir-crystal",
+				"casimir-crystal-advanced"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Miniature Particle Collider
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"miniature-particle-collider",
+			{
+				{"electromagnetic-matrix", 800},
+				{"energy-matrix", 800},
+				{"structure-matrix", 800}
+			},
+			{
+				"tech-dyson-high-strength-material"
+			},
+			-- unlocks
+			{
+				"miniature-particle-collider",
+				"deuterium"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Proliferator Mk.III
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"proliferator-mkiii",
+			{
+				{"electromagnetic-matrix", 800},
+				{"energy-matrix", 600},
+				{"structure-matrix", 400}
+			},
+			{
+				"tech-dyson-proliferator-mkii",
+				"tech-dyson-high-strength-material"
+			},
+			-- unlocks
+			{
+				"proliferator-mkiii"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Satellite Power Distribution System
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"satellite-power-distribution-system",
+			{
+				{"electromagnetic-matrix", 800},
+				{"energy-matrix", 800},
+				{"structure-matrix", 800}
+			},
+			{
+				"tech-dyson-super-magnetic-field-generator"
+			},
+			-- unlocks
+			{
+				"satellite-substation"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Supersonic Missile Set
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"supersonic-missile-set",
+			{
+				{"electromagnetic-matrix", 800},
+				{"energy-matrix", 800},
+				{"structure-matrix", 200}
+			},
+			{
+				"tech-dyson-high-explosive-shell-set",
+				"tech-dyson-thruster"
+			},
+			-- unlocks
+			{
+				"supersonic-missile-set"
+			},
+			30,
+			1
+		)
+	}
+)
