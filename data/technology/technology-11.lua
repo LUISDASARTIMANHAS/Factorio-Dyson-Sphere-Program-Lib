@@ -15,3 +15,221 @@ local utils = require("data.utils")
 ]]
 
 -- TIER 11
+
+-- TIER 11
+-- Planetary Ionosphere Utilization
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"planetary-ionosphere-utilization",
+			{
+				{"electromagnetic-matrix", 2000},
+				{"energy-matrix", 2000},
+				{"structure-matrix", 2000},
+				{"gravity-matrix", 2000}
+			},
+			{
+				"tech-dyson-ray-receiver",
+				"tech-dyson-gravitational-wave-refraction"
+			},
+			-- unlocks
+			{},
+			30,
+			1
+		)
+	}
+)
+
+-- Quantum Printing
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"quantum-printing",
+			{
+				{"electromagnetic-matrix", 800},
+				{"energy-matrix", 800},
+				{"structure-matrix", 800},
+				{"information-matrix", 800}
+			},
+			{
+				"tech-dyson-high-speed-assembling-processes",
+				"tech-dyson-quantum-chip"
+			},
+			-- unlocks
+			{
+				"assembling-machine-3"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Photon Spotlight Mining
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"photon-spotlight-mining",
+			{
+				{"electromagnetic-matrix", 1000},
+				{"energy-matrix", 1000},
+				{"structure-matrix", 1000},
+				{"information-matrix", 1000},
+				{"gravity-matrix", 600}
+			},
+			{
+				"tech-dyson-quantum-chip"
+			},
+			-- unlocks
+			{
+				"advanced-mining-machine"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Negentropy Recursion
+local negentropyRecursion = utils.createDSPTechnology(
+	"negentropy-recursion",
+	{
+		{"dark-fog-matrix", 1200}
+	},
+	{
+		"tech-dyson-plane-filter-smelting"
+	},
+	-- unlocks
+	{
+		"negentropy-smelter"
+	},
+	30,
+	1
+)
+negentropyRecursion.hidden = true
+data:extend({negentropyRecursion})
+
+-- Mesoscopic Quantum Entanglement
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"mesoscopic-quantum-entanglement",
+			{
+				{"electromagnetic-matrix", 1000},
+				{"energy-matrix", 1000},
+				{"structure-matrix", 1000},
+				{"information-matrix", 1000}
+			},
+			{
+				"tech-dyson-quantum-chip",
+				"tech-dyson-strange-matter"
+			},
+			-- unlocks
+			{
+				"quantum-chemical-plant"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Gravity Matrix
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"gravity-matrix",
+			{
+				{"electromagnetic-matrix", 1600},
+				{"energy-matrix", 1600},
+				{"structure-matrix", 1600}
+			},
+			{
+				"tech-dyson-quantum-chip",
+				"tech-dyson-gravitational-wave-refraction"
+			},
+			-- unlocks
+			{
+				"gravity-matrix",
+				"space-warper-advanced"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Gravity Missile Set
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"gravity-missile-set",
+			{
+				{"electromagnetic-matrix", 1000},
+				{"energy-matrix", 1000},
+				{"structure-matrix", 1000},
+				{"information-matrix", 1000},
+				{"gravity-matrix", 1000}
+			},
+			{
+				"tech-dyson-crystal-shell-set",
+				"tech-dyson-strange-matter"
+			},
+			-- unlocks
+			{
+				"gravity-missile-set"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Destroyer
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"destroyer",
+			{
+				{"electromagnetic-matrix", 800},
+				{"energy-matrix", 800},
+				{"structure-matrix", 800},
+				{"information-matrix", 800},
+				{"gravity-matrix", 800}
+			},
+			{
+				"tech-dyson-corvette",
+				"tech-dyson-attack-drone"
+			},
+			-- unlocks
+			{
+				"destroyer"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Dyson Sphere Stress System
+local stressSystem = utils.createDSPTechnology(
+	"dyson-sphere-stress-system",
+	{
+		{"electromagnetic-matrix", 1},
+		{"energy-matrix", 1},
+		{"structure-matrix", 1},
+		{"information-matrix", 1},
+		{"gravity-matrix", 1}
+	},
+	{
+		"tech-dyson-vertical-launching-silo"
+	},
+	-- unlocks
+	{},
+	30,
+	1
+)
+stressSystem.max_level = 6
+stressSystem.unit.count = nil
+stressSystem.unit.count_formula = "2000 * L"
+data:extend({stressSystem})

@@ -7,3 +7,25 @@ local utils = require("data.utils")
 ]]
 
 -- TIER 13
+-- Controlled Annihilation Reaction
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"controlled-annihilation-reaction",
+			{
+				{"energy-matrix", 4000},
+				{"gravity-matrix", 2000}
+			},
+			{
+				"tech-dyson-dirac-inversion-mechanism"
+			},
+			-- unlocks
+			{
+				"annihilation-constraint-sphere",
+				"antimatter-fuel-rod"
+			},
+			30,
+			1
+		)
+	}
+)

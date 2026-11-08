@@ -7,3 +7,27 @@ local utils = require("data.utils")
 ]]
 
 -- TIER 15
+-- Universe Matrix
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"universe-matrix",
+			{
+				{"electromagnetic-matrix", 2000},
+				{"energy-matrix", 2000},
+				{"structure-matrix", 2000},
+				{"information-matrix", 2000},
+				{"gravity-matrix", 2000}
+			},
+			{
+				"tech-dyson-dirac-inversion-mechanism"
+			},
+			-- unlocks
+			{
+				"universe-matrix"
+			},
+			30,
+			1
+		)
+	}
+)

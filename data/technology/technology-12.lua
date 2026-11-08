@@ -8,3 +8,48 @@ local utils = require("data.utils")
 ]]
 
 -- TIER 12
+
+-- TIER 12
+-- Dirac Inversion Mechanism
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"dirac-inversion-mechanism",
+			{
+				{"electromagnetic-matrix", 3000},
+				{"energy-matrix", 3000},
+				{"structure-matrix", 750},
+				{"information-matrix", 750},
+				{"gravity-matrix", 1500}
+			},
+			{
+				"tech-dyson-planetary-ionosphere-utilization"
+			},
+			-- unlocks
+			{
+				"mass-energy-storage"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- Matter Recombination
+local matterRecombination = utils.createDSPTechnology(
+	"matter-recombination",
+	{
+		{"dark-fog-matrix", 600}
+	},
+	{
+		"tech-dyson-quantum-printing"
+	},
+	-- unlocks
+	{
+		"re-composing-assembler"
+	},
+	30,
+	1
+)
+matterRecombination.hidden = true
+data:extend({matterRecombination})

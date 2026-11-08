@@ -9,3 +9,74 @@ local utils = require("data.utils")
 ]]
 
 -- TIER 14
+
+-- TIER 14
+-- Artificial Star
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"artificial-star",
+			{
+				{"electromagnetic-matrix", 1200},
+				{"energy-matrix", 1200},
+				{"structure-matrix", 1200},
+				{"information-matrix", 1200},
+				{"gravity-matrix", 1200}
+			},
+			{
+				"tech-dyson-controlled-annihilation-reaction"
+			},
+			-- unlocks
+			{
+				"artificial-star"
+			},
+			30,
+			1
+		)
+	}
+)
+
+-- High-Density Controlling Annihilation
+local highDensityAnnihilation = utils.createDSPTechnology(
+	"high-density-controlling-annihilation",
+	{
+		{"dark-fog-matrix", 2000}
+	},
+	{
+		"tech-dyson-controlled-annihilation-reaction"
+	},
+	-- unlocks
+	{
+		"strange-annihilation-fuel-rod"
+	},
+	30,
+	1
+)
+highDensityAnnihilation.hidden = true
+data:extend({highDensityAnnihilation})
+
+-- Antimatter Capsule
+data:extend(
+	{
+		utils.createDSPTechnology(
+			"antimatter-capsule",
+			{
+				{"electromagnetic-matrix", 3000},
+				{"energy-matrix", 3000},
+				{"structure-matrix", 3000},
+				{"information-matrix", 3000},
+				{"gravity-matrix", 3000}
+			},
+			{
+				"tech-dyson-controlled-annihilation-reaction",
+				"tech-dyson-plasma-turret"
+			},
+			-- unlocks
+			{
+				"antimatter-capsule"
+			},
+			30,
+			1
+		)
+	}
+)
