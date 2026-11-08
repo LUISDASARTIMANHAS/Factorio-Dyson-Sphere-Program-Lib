@@ -3,6 +3,16 @@ local utils = require("data.utils")
 -- nameofTech
 
 -- TIER 2
+-- | 2 | Basic Logistics System | 1601 | Electromagnetism (Tech) | Circuit Board: 10; Gear: 10 | Conveyor Belt Mk.I; Sorter Mk.I; Storage Mk.I |  |
+-- | 2 | Automatic Metallurgy | 1401 | Electromagnetism (Tech) | Magnetic Coil: 10; Circuit Board: 10 | Arc Smelter; Glass |  |
+-- | 2 | Electromagnetic Matrix | 1002 | Electromagnetism (Tech) | Magnetic Coil: 10; Circuit Board: 10 | Electromagnetic Matrix; Matrix Lab |  |
+-- | 2 | Basic Assembling Processes | 1201 | Electromagnetism (Tech) | Circuit Board: 10; Gear: 10 | Assembling Machine Mk.I |  |
+-- | 2 | Fluid Storage Encapsulation | 1120 | Electromagnetism (Tech) | Electromagnetic Matrix: 50 | Storage Tank; Water Pump |  |
+-- | 2 | High-Efficiency Plasma Control | 1101 | Electromagnetism (Tech) | Electromagnetic Matrix: 50 | Prism; Plasma Exciter; Wireless Power Tower |  |
+-- | 2 | Electromagnetic Drive | 1701 | Electromagnetism (Tech) | Electromagnetic Matrix: 50 | Electric Motor |  |
+-- | 2 | Engine [ 1 ] | 1805 | Electromagnetism (Tech) | Electromagnetic Matrix: 20 | Engine |  |
+-- | 2 | Weapon System [ 1 ] | 1801 | Electromagnetism (Tech) Automatic Metallurgy (Tech) | Electromagnetic Matrix: 20 | Gauss Turret; Magnum Ammo Box | Requires Automatic Metallurgy |
+
 -- Basic Logistics System
 data:extend(
     {

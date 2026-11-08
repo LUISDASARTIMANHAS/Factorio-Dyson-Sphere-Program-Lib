@@ -3,6 +3,21 @@ local utils = require("data.utils")
 -- default create name
 -- nameofTech
 
+-- | 5 | High-Efficiency Logistics System | 1603 | Improved Logistics System (Tech) Magnetic Levitation (Tech) | Electromagnetic Matrix: 400; Energy Matrix: 100 | Conveyor Belt Mk.II; Sorter Mk.III; Storage Mk.II | Requires Magnetic Levitation |
+-- | 5 | Distribution Logistics System [ 2 ] | 1608 | Improved Logistics System (Tech) Magnetic Levitation (Tech) | Electromagnetic Matrix: 600; Energy Matrix: 300 | Logistics Distributor; Logistics Bot | Requires Magnetic Levitation |
+-- | 5 | Titanium Smelting | 1413 | Steel Smelting (Tech) | Electromagnetic Matrix: 200; Energy Matrix: 200 | Titanium Ingot |  |
+-- | 5 | Energy Storage | 1511 | Crystal Smelting (Tech) Solar Collection (Tech) | Electromagnetic Matrix: 600; Energy Matrix: 600 | Accumulator | Requires Super Magnetic Field Generator |
+-- | 5 | Photon Frequency Conversion | 1502 | Solar Collection (Tech) | Electromagnetic Matrix: 200; Energy Matrix: 200 | Photon Combiner; Photon Combiner Advanced |  |
+-- | 5 | Processor | 1302 | Semiconductor Material (Tech) | Electromagnetic Matrix: 800 | Processor |  |
+-- | 5 | Applied Superconductor | 1131 | Basic Chemical Engineering (Tech) | Electromagnetic Matrix: 400 | Graphene; Graphene Advanced |  |
+-- | 5 | Polymer Chemical Engineering | 1122 | Basic Chemical Engineering (Tech) | Electromagnetic Matrix: 400; Energy Matrix: 400 | Organic Crystal; Organic Crystal Original |  |
+-- | 5 | X-ray Cracking | 1103 | Basic Chemical Engineering (Tech) Plasma Extract Refining (Tech) | Electromagnetic Matrix: 400; Energy Matrix: 400 | X-Ray Cracking |  |
+-- | 5 | Hydrogen Fuel Rod | 1112 | Energy Matrix (Tech) | Energy Matrix: 400 | Hydrogen Fuel Rod |  |
+-- | 5 | Super Magnetic Field Generator | 1711 | Magnetic Levitation (Tech) | Electromagnetic Matrix: 1000; Energy Matrix: 250 | Super-Magnetic Ring |  |
+-- | 5 | Signal Tower [ 1 ] | 1808 | Missile Turret (Tech) High-Efficiency Plasma Control (Tech) | Electromagnetic Matrix: 400; Energy Matrix: 400 | Signal Tower | Requires High-Efficiency Plasma Control |
+-- | 5 | Implosion Cannon [ 1 ] | 1809 | Missile Turret (Tech) Magnetic Levitation (Tech) | Electromagnetic Matrix: 300; Energy Matrix: 300 | Implosion Cannon; Shell Set | Requires Magnetic Levitation |
+-- | 5 | Precision Drone [ 1 ] | 1820 | Prototype (Tech) Photon Frequency Conversion (Tech) | Electromagnetic Matrix: 400; Energy Matrix: 400 | Precision Drone | Requires Photon Frequency Conversion |
+
 -- TIER 5
 
 -- Planetary Logistics System

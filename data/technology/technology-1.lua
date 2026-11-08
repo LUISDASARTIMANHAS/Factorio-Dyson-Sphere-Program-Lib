@@ -5,6 +5,11 @@ local utils = require("data.utils")
 -- default result name
 -- "tech-dyson-nameofRecipe"
 
+-- | Tier | Technology | ID | Prerequisites | Resource Consumption | Unlocks | Notes |
+-- | --- | --- | --- | --- | --- | --- | --- |
+-- | 0 | Dyson Sphere Program | 1 |  |  |  | Already Completed on Game Start |
+-- | 1 | Electromagnetism | 1001 | Dyson Sphere Program (Tech) | Magnetic Coil: 10 | Wind Turbine; Tesla Tower; Mining Machine |  |
+
 -- TIER 1
 -- tech-dyson-sphere-program
 data:extend(

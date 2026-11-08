@@ -3,6 +3,18 @@ local utils = require("data.utils")
 -- default create name
 -- nameofTech
 
+-- | 4 | Environment Modification | 1415 | Steel Smelting (Tech) | Electromagnetic Matrix: 400 | Foundation |  |
+-- | 4 | Crystal Smelting | 1403 | Smelting Purification (Tech) | Electromagnetic Matrix: 500; Energy Matrix: 500 | Diamond; Diamond Advanced; Crystal Silicon |  |
+-- | 4 | Solar Collection | 1501 | Smelting Purification (Tech) Electromagnetic Matrix (Tech) Basic Assembling Processes (Tech) | Electromagnetic Matrix: 200 | Solar Panel |  |
+-- | 4 | Semiconductor Material | 1311 | Basic Assembling Processes (Tech) | Electromagnetic Matrix: 200 | Microcrystalline Component |  |
+-- | 4 | Proliferator Mk.I | 1151 | Semiconductor Material (Tech) High-Efficiency Plasma Control (Tech) | Electromagnetic Matrix: 200 | Proliferator Mk.I; Spray Coater |  |
+-- | 4 | Deuterium Fractionation | 1134 | Thermal Power (Tech) Plasma Extract Refining (Tech) | Electromagnetic Matrix: 200; Energy Matrix: 300 | Fractionator; Deuterium Fractionation |  |
+-- | 4 | Basic Chemical Engineering | 1121 | Fluid Storage Encapsulation (Tech) Plasma Extract Refining (Tech) | Electromagnetic Matrix: 200 | Chemical Plant; Plastic; Sulfuric Acid |  |
+-- | 4 | Energy Matrix | 1111 | Plasma Extract Refining (Tech) | Electromagnetic Matrix: 200 | Energy Matrix |  |
+-- | 4 | Magnetic Levitation | 1702 | Electromagnetic Drive (Tech) | Electromagnetic Matrix: 400; Energy Matrix: 100 | Electromagnetic Turbine |  |
+-- | 4 | Missile Turret [ 1 ] | 1806 | Engine (Tech) Weapon System (Tech) Combustible Unit (Tech) | Electromagnetic Matrix: 150 | Missile Turret; Missile Set | Requires Combustible Unit |
+-- | 4 | Prototype [ 1 ] | 1819 | Battlefield Analysis Base (Tech) High-Efficiency Plasma Control (Tech) | Electromagnetic Matrix: 200 | Prototype | Requires High-Efficiency Plasma Control Number of Ground Squadrons +1 Ground Squadron Slots +4 |
+
 -- TIER 4
 -- Environment Modification
 data:extend(

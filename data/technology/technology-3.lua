@@ -9,6 +9,14 @@ local utils = require("data.utils")
 -- default create name
 -- nameofTech
 
+-- | 3 | Improved Logistics System | 1602 | Electromagnetic Drive (Tech) | Electromagnetic Matrix: 100 | Splitter; Sorter Mk.II; Traffic Monitor |  |
+-- | 3 | Steel Smelting | 1411 | Automatic Metallurgy (Tech) | Electromagnetic Matrix: 120 | Steel |  |
+-- | 3 | Combustible Unit [ 1 ] | 1802 | Automatic Metallurgy (Tech) | Electromagnetic Matrix: 120 | Combustible Unit |  |
+-- | 3 | Smelting Purification | 1402 | Automatic Metallurgy (Tech) | Electromagnetic Matrix: 100 | Silicon Ore; Energetic Graphite; High-Purity Silicon |  |
+-- | 3 | Thermal Power | 1412 | Basic Assembling Processes (Tech) | Electromagnetic Matrix: 30 | Thermal Power Station |  |
+-- | 3 | Plasma Extract Refining | 1102 | Fluid Storage Encapsulation (Tech) High-Efficiency Plasma Control (Tech) | Electromagnetic Matrix: 100 | Oil Extractor; Oil Refinery; Plasma Refining |  |
+-- | 3 | Battlefield Analysis Base [ 1 ] | 1826 | Engine (Tech) Weapon System (Tech) | Electromagnetic Matrix: 100 | Battlefield Analysis Base |  |
+
 -- TIER 3
 -- Improved Logistics System
 data:extend(
